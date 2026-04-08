@@ -1,0 +1,47 @@
+name: Aggiornamento giornaliero Olimpia PB
+
+on:
+  schedule:
+    - cron: '0 7 * * *'   # ogni giorno alle 07:00 UTC (09:00 ora italiana)
+  workflow_dispatch:        # esecuzione manuale dalla UI GitHub
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Cache dipendenze Python
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+
+      - name: Installa dipendenze
+        run: |
+          pip install playwright python-dotenv
+          playwright install chromium --with-deps
+
+      - name: Recupera dati dal sito IVL
+        run: python scripts/fetch_data.py
+
+      - name: Aggiorna classifica locale
+        run: python scripts/update_classifica.py
+
+      - name: Genera sito statico
+        run: python scripts/build_site.py
+
+      - name: Commit e push (se ci sono modifiche)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ site/ logs/
+          git diff --staged --quiet || git commit -m "data: aggiornamento automatico $(date '+%Y-%m-%d')"
+          git push

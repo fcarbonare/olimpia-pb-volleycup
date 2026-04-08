@@ -1,0 +1,122 @@
+{
+  "classifica": [
+    {
+      "squadra": "PLESIOS Basic",
+      "punti": 0,
+      "partite_giocate": 0,
+      "partite_vinte": 0,
+      "partite_perse": 0,
+      "set_vinti": 0,
+      "set_persi": 0,
+      "quoziente_set": 0.0,
+      "punti_vinti": 0,
+      "punti_persi": 0,
+      "quoziente_punti": 0.0
+    },
+    {
+      "squadra": "ALVOLLEY ROYAL Basic",
+      "punti": 0,
+      "partite_giocate": 0,
+      "partite_vinte": 0,
+      "partite_perse": 0,
+      "set_vinti": 0,
+      "set_persi": 0,
+      "quoziente_set": 0.0,
+      "punti_vinti": 0,
+      "punti_persi": 0,
+      "quoziente_punti": 0.0
+    },
+    {
+      "squadra": "CANTALUPO Basic",
+      "punti": 0,
+      "partite_giocate": 0,
+      "partite_vinte": 0,
+      "partite_perse": 0,
+      "set_vinti": 0,
+      "set_persi": 0,
+      "quoziente_set": 0.0,
+      "punti_vinti": 0,
+      "punti_persi": 0,
+      "quoziente_punti": 0.0
+    },
+    {
+      "squadra": "VOLLEY CUP TEAM Basic",
+      "punti": 0,
+      "partite_giocate": 0,
+      "partite_vinte": 0,
+      "partite_perse": 0,
+      "set_vinti": 0,
+      "set_persi": 0,
+      "quoziente_set": 0.0,
+      "punti_vinti": 0,
+      "punti_persi": 0,
+      "quoziente_punti": 0.0
+    },
+    {
+      "squadra": "PM SPORT Basic",
+      "punti": 0,
+      "partite_giocate": 0,
+      "partite_vinte": 0,
+      "partite_perse": 0,
+      "set_vinti": 0,
+      "set_persi": 0,
+      "quoziente_set": 0.0,
+      "punti_vinti": 0,
+      "punti_persi": 0,
+      "quoziente_punti": 0.0
+    },
+    {
+      "squadra": "REVENANT Basic",
+      "punti": 0,
+      "partite_giocate": 0,
+      "partite_vinte": 0,
+      "partite_perse": 0,
+      "set_vinti": 0,
+      "set_persi": 0,
+      "quoziente_set": 0.0,
+      "punti_vinti": 0,
+      "punti_persi": 0,
+      "quoziente_punti": 0.0
+    },
+    {
+      "squadra": "BRESSO 4 Basic",
+      "punti": 0,
+      "partite_giocate": 0,
+      "partite_vinte": 0,
+      "partite_perse": 0,
+      "set_vinti": 0,
+      "set_persi": 0,
+      "quoziente_set": 0.0,
+      "punti_vinti": 0,
+      "punti_persi": 0,
+      "quoziente_punti": 0.0
+    },
+    {
+      "squadra": "OLIMPIA PB Basic",
+      "punti": 0,
+      "partite_giocate": 0,
+      "partite_vinte": 0,
+      "partite_perse": 0,
+      "set_vinti": 0,
+      "set_persi": 0,
+      "quoziente_set": 0.0,
+      "punti_vinti": 0,
+      "punti_persi": 0,
+      "quoziente_punti": 0.0
+    },
+    {
+      "squadra": "PINCO PALLINO VOLLEY Basic",
+      "punti": 0,
+      "partite_giocate": 0,
+      "partite_vinte": 0,
+      "partite_perse": 0,
+      "set_vinti": 0,
+      "set_persi": 0,
+      "quoziente_set": 0.0,
+      "punti_vinti": 0,
+      "punti_persi": 0,
+      "quoziente_punti": 0.0
+    }
+  ],
+  "ultimo_aggiornamento": "2026-04-08T10:25:09.635856+00:00"
+}

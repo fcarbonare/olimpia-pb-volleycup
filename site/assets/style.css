@@ -1,0 +1,279 @@
+/* ===== Reset & base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --rosso: #cc0000;
+  --rosso-scuro: #990000;
+  --rosso-chiaro: #fde8e8;
+  --nero: #1a1a1a;
+  --grigio-bg: #f4f4f4;
+  --grigio-bordo: #d1d5db;
+  --bianco: #ffffff;
+  --testo: #1a1a1a;
+  --testo-chiaro: #6b7280;
+  --raggio: 10px;
+  --ombra: 0 2px 8px rgba(0,0,0,.12);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--grigio-bg);
+  color: var(--testo);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a { color: var(--rosso-scuro); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ===== Header ===== */
+header {
+  background: var(--nero);
+  color: var(--bianco);
+  padding: 0 1rem;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  padding: .85rem 0 .5rem;
+}
+
+.header-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: var(--bianco);
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+.header-text { display: flex; flex-direction: column; }
+
+.logo-text {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -.5px;
+  color: var(--bianco);
+}
+
+.logo-text span { color: var(--rosso); }
+
+.subtitle {
+  font-size: .78rem;
+  opacity: .65;
+  margin-top: .05rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: .25rem;
+  padding-bottom: .6rem;
+  overflow-x: auto;
+}
+
+nav a {
+  display: block;
+  color: rgba(255,255,255,.75);
+  padding: .35rem .8rem;
+  border-radius: 6px;
+  font-size: .88rem;
+  white-space: nowrap;
+  transition: background .15s, color .15s;
+}
+
+nav a:hover {
+  background: rgba(204,0,0,.4);
+  color: var(--bianco);
+  text-decoration: none;
+}
+
+nav a.active {
+  background: var(--rosso);
+  color: var(--bianco);
+  font-weight: 700;
+}
+
+/* ===== Main ===== */
+main {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ===== Card ===== */
+.card {
+  background: var(--bianco);
+  border-radius: var(--raggio);
+  box-shadow: var(--ombra);
+  padding: 1.25rem;
+}
+
+.card h2 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--nero);
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 3px solid var(--rosso);
+  text-transform: uppercase;
+  letter-spacing: .3px;
+}
+
+/* ===== Match card ===== */
+.match-card {
+  padding: .8rem 1rem;
+  border-radius: 8px;
+  background: var(--grigio-bg);
+}
+
+.match-card.olimpia-match {
+  background: var(--rosso-chiaro);
+  border-left: 4px solid var(--rosso);
+}
+
+.match-date {
+  font-size: .78rem;
+  color: var(--testo-chiaro);
+  margin-bottom: .4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+}
+
+.match-teams {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.match-teams .team.olimpia { color: var(--rosso); }
+
+.match-teams .vs {
+  font-size: .9rem;
+  font-weight: 400;
+  color: var(--testo-chiaro);
+  padding: 0 .25rem;
+}
+
+.match-venue {
+  font-size: .8rem;
+  color: var(--testo-chiaro);
+  margin-top: .4rem;
+}
+
+/* ===== Tables ===== */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .9rem;
+}
+
+th, td {
+  padding: .5rem .6rem;
+  text-align: center;
+  border-bottom: 1px solid var(--grigio-bordo);
+}
+
+thead th {
+  background: var(--nero);
+  color: var(--bianco);
+  font-weight: 700;
+  font-size: .78rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+}
+
+tbody tr:hover { background: #f9f0f0; }
+
+.team-name, td.team-name { text-align: left; font-weight: 500; }
+
+td.highlight { font-weight: 800; color: var(--rosso); }
+
+/* Olimpia PB rows */
+tr.olimpia-row {
+  background: var(--rosso-chiaro);
+  font-weight: 700;
+}
+tr.olimpia-row:hover { background: #fbdada; }
+
+/* ===== Calendario table ===== */
+.calendario-table td.data { white-space: nowrap; font-size: .85rem; }
+.calendario-table td.team { text-align: left; }
+.calendario-table td.team.olimpia { color: var(--rosso); font-weight: 700; }
+.calendario-table td.vs { color: var(--testo-chiaro); font-size: .8rem; width: 30px; }
+.calendario-table td.risultato { font-size: .85rem; white-space: nowrap; }
+.calendario-table td.risultato.futuro { color: var(--testo-chiaro); font-style: italic; }
+.calendario-table td.risultato.tbd { color: #9ca3af; font-style: italic; }
+
+/* ===== Badge ===== */
+.badge {
+  display: inline-block;
+  background: var(--rosso);
+  color: var(--bianco);
+  font-size: .65rem;
+  font-weight: 800;
+  padding: .1rem .35rem;
+  border-radius: 999px;
+  vertical-align: middle;
+  margin-right: .25rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+}
+
+/* ===== Classifica table ===== */
+.classifica-table td.pos { font-weight: 800; width: 36px; }
+
+/* ===== Misc ===== */
+.nota {
+  font-size: .8rem;
+  color: var(--testo-chiaro);
+  margin-bottom: .75rem;
+}
+
+.link-more {
+  text-align: right;
+  margin-top: .75rem;
+  font-size: .875rem;
+}
+
+.link-more a { color: var(--rosso); font-weight: 600; }
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: var(--testo-chiaro);
+  font-size: .8rem;
+  line-height: 2;
+  border-top: 3px solid var(--rosso);
+  background: var(--nero);
+  color: rgba(255,255,255,.55);
+  margin-top: 2rem;
+}
+
+footer a { color: rgba(255,255,255,.7); }
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .header-logo { width: 40px; height: 40px; }
+  .logo-text { font-size: 1.1rem; }
+  .card { padding: 1rem; }
+  .match-teams { font-size: .95rem; }
+
+  .classifica-table th:nth-child(n+10),
+  .classifica-table td:nth-child(n+10) { display: none; }
+}
