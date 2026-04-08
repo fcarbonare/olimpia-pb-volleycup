@@ -1,6 +1,6 @@
 # CLAUDE.md — Olimpia PB · Volleycup Basic Tracker
 
-Questo file è il punto di riferimento principale per Claude Code e Claude Cowork
+Questo file è il punto di riferimento principale per Claude Code
 in tutti i repository e script di questo progetto.
 
 ---
@@ -8,17 +8,17 @@ in tutti i repository e script di questo progetto.
 ## Panoramica del progetto
 
 Raccogliere, aggiornare e pubblicare i **risultati e il calendario** della squadra
-**Olimpia PB** (categoria Mista) nel campionato **Volleycup Basic — Girone 910**,
+**Olimpia PB Basic** (categoria Mista) nel campionato **Volleycup Basic — Girone L (910)**,
 organizzato da US ACLI Milano (territorio 3, campionato 342, stagione 2025-26).
 
 ### Obiettivi principali
 
 | # | Obiettivo |
 |---|-----------|
-| 1 | Recuperare automaticamente i risultati delle partite dal sito IVL USACLI |
+| 1 | Recuperare automaticamente i risultati delle partite via API JSON IVL USACLI |
 | 2 | Aggiornare la classifica locale (basata sui set vinti, non sulle partite) |
 | 3 | Pubblicare una pagina web pubblica su **GitHub Pages** (in italiano) |
-| 4 | Eseguire aggiornamenti giornalieri tramite **Claude Cowork** |
+| 4 | Eseguire aggiornamenti giornalieri automatici tramite **GitHub Actions** |
 
 ### Regole del campionato (IMPORTANTE)
 
@@ -30,84 +30,93 @@ organizzato da US ACLI Milano (territorio 3, campionato 342, stagione 2025-26).
 
 ---
 
-## Struttura dei repository
+## Struttura del repository
 
 ```
-olimpia-pb-volleycup/          ← repository principale (questo)
+olimpia-pb-volleycup/
 ├── CLAUDE.md                  ← questo file
 ├── data/
 │   ├── partite.json           ← tutte le partite con risultati (fonte di verità)
 │   ├── classifica.json        ← classifica aggiornata
 │   └── squadre.json           ← elenco squadre del girone
 ├── scripts/
-│   ├── fetch_data.py          ← scraping dal sito IVL (usa Playwright)
+│   ├── fetch_data.py          ← fetch dati via API JSON IVL
 │   ├── update_classifica.py   ← ricalcola la classifica dai dati grezzi
-│   ├── build_site.py          ← genera i file HTML statici per GitHub Pages
-│   └── cowork_daily.md        ← istruzioni per il task Cowork giornaliero
-├── site/                      ← output GitHub Pages (pubblicato su /docs o branch gh-pages)
-│   ├── index.html             ← homepage (classifica + prossima partita)
-│   ├── calendario.html        ← tutte le partite passate e future
+│   └── build_site.py          ← genera i file HTML statici per GitHub Pages
+├── docs/                      ← output GitHub Pages (pubblicato da /docs su main)
+│   ├── index.html             ← homepage (classifica top 5 + prossima/ultima partita)
+│   ├── calendario.html        ← tutte le partite del girone
 │   ├── classifica.html        ← classifica completa del girone
 │   └── assets/
-│       ├── style.css
-│       └── logo.png
+│       ├── style.css          ← stile rosso/nero/bianco (colori Dobermanns)
+│       └── logo.png           ← logo Olimpia PB Dobermanns
+├── .claude/
+│   └── settings.json          ← hook pre-commit: git pull --rebase automatico
 ├── .github/
 │   └── workflows/
-│       └── update.yml         ← GitHub Actions: aggiornamento giornaliero automatico
-└── README.md
+│       └── update.yml         ← GitHub Actions: aggiornamento giornaliero 07:00 UTC
+├── .env.example               ← template variabili d'ambiente
+├── requirements.txt           ← requests, python-dotenv
+└── .gitignore
 ```
-
-> **Multi-repo**: Se in futuro si separa il sito dalla logica di scraping,
-> creare `olimpia-pb-site` (solo GitHub Pages) e `olimpia-pb-scripts`
-> (solo automazione). Questo CLAUDE.md rimane nel repo principale e va
-> copiato/linkato negli altri.
 
 ---
 
-## Fonti dati
+## Fonti dati (API JSON)
 
-### Calendario e risultati
+Il sito IVL espone endpoint JSON che si chiamano direttamente con `requests` — **niente browser headless**.
+
+### Partite (calendario + risultati)
 
 ```
-URL: https://ivl.usacli.it/CalendarioView
-Parametri:
-  girone_id=910
-  territorio_id=3
-  campionato_id=342
-  inizio_stagione=2025-09-01T00:00:00.000Z
-  fine_stagione=2026-08-31T00:00:00.000Z
-  societa_id=null
-  squadra_id=null
+GET https://ivl.usacli.it/PartiteData
+  ?girone_id=910
+  &territorio_id=3
+  &campionato_id=342
+  &inizio_stagione=2025-09-01T00:00:00.000Z
+  &fine_stagione=2026-08-31T00:00:00.000Z
+  &societa_id=null
+  &squadra_id=null
+  &pubblicato=1
+  &offset=0
+  &limit=500
 ```
+
+Risposta: `{ "rows": [...], "total": N }` — una riga per partita.
+
+Campi rilevanti per riga:
+
+| Campo API | Significato |
+|-----------|-------------|
+| `data_orario` | Data e ora (`YYYY-MM-DD HH:MM:SS`) |
+| `squadra_casa_name` | Nome squadra casa |
+| `squadra_ospite_name` | Nome squadra ospite |
+| `palestra1_name` | Nome palestra |
+| `Palestra_indirizzo` | Indirizzo completo |
+| `ris_set_casa` / `ris_set_ospite` | Set vinti (null se non giocata) |
+| `ris_punti1set_casa` … `ris_punti5set_casa` | Punti per set (casa) |
+| `ris_punti1set_ospite` … `ris_punti5set_ospite` | Punti per set (ospite) |
+| `npartita_custom` | Codice partita (es. `BA - L 135`) |
 
 ### Classifica
 
 ```
-URL: https://ivl.usacli.it/classificaterritorio/3
-Parametri:
-  girone_id=910
+GET https://ivl.usacli.it/Classifica/910
+  ?_a=
+  &inizio_stagione=2025-09-01T00:00:00.000Z
+  &fine_stagione=2026-08-31T00:00:00.000Z
 ```
 
-> ⚠️ **Attenzione**: Il sito IVL è un'applicazione a pagina singola (SPA) che
-> carica i dati tramite JavaScript. **Non è sufficiente un semplice HTTP GET.**
-> Usare sempre **Playwright** (Python) per il rendering completo della pagina
-> prima di estrarre i dati.
+Risposta: array di oggetti squadra.
 
-### Colonne della classifica (struttura attesa)
-
-| Campo | Descrizione |
-|-------|-------------|
-| `squadra` | Nome della squadra |
-| `punti` | Punti classifica (calcolati dal sistema IVL) |
-| `partite_giocate` | Partite totali giocate (G) |
-| `partite_vinte` | Partite vinte (V) |
-| `partite_perse` | Partite perse (P) |
-| `set_vinti` | **Set vinti — campo principale per l'ordinamento** |
-| `set_persi` | Set persi |
-| `quoziente_set` | Rapporto set V/P |
-| `punti_vinti` | Punti (palloni) vinti |
-| `punti_persi` | Punti (palloni) persi |
-| `quoziente_punti` | Rapporto punti V/P |
+| Campo API | Significato |
+|-----------|-------------|
+| `name` | Nome squadra |
+| `Punteggio` | Punti classifica IVL |
+| `PartiteGiocate` | Partite giocate |
+| `PartiteVinte` | Partite vinte |
+| `SetVinti` / `SetPersi` | Set vinti/persi |
+| `PuntiVinti` / `PuntiPersi` | Punti (palloni) vinti/persi |
 
 ### Schema `partite.json`
 
@@ -115,13 +124,15 @@ Parametri:
 {
   "partite": [
     {
-      "id": "string",
-      "data": "YYYY-MM-DD",
-      "ora": "HH:MM",
-      "squadra_casa": "string",
-      "squadra_ospite": "string",
-      "palestra": "string",
-      "indirizzo": "string",
+      "id": "2026-04-08_pinco_pallino_volley_basic_olimpia_pb_basic",
+      "ivl_id": 32281,
+      "npartita": "BA - L 135",
+      "data": "2026-04-08",
+      "ora": "21:30",
+      "squadra_casa": "PINCO PALLINO VOLLEY Basic",
+      "squadra_ospite": "OLIMPIA PB Basic",
+      "palestra": "Palestra Istituto ALEXIS CARREL",
+      "indirizzo": "Via Inganni 12 MILANO",
       "risultato": {
         "set_casa": [25, 18, 25, 22, 15],
         "set_ospite": [20, 25, 20, 25, 12],
@@ -133,12 +144,11 @@ Parametri:
       "giocata": true
     }
   ],
-  "ultimo_aggiornamento": "ISO8601"
+  "ultimo_aggiornamento": "2026-04-08T11:25:40.870492+00:00"
 }
 ```
 
 > `risultato` è `null` se la partita non è ancora stata giocata.
-> `olimpia_pb_gioca` è `true` quando una delle due squadre è Olimpia PB.
 
 ---
 
@@ -146,25 +156,19 @@ Parametri:
 
 ### `scripts/fetch_data.py`
 
-**Scopo**: Recupera il calendario e la classifica aggiornati dal sito IVL USACLI.
+**Scopo**: Recupera partite e classifica aggiornate via API JSON IVL.
 
-**Comportamento atteso**:
-1. Apre il browser headless con Playwright.
-2. Naviga su entrambi gli URL (calendario + classifica).
-3. Attende che la tabella dati sia visibile nel DOM.
-4. Estrae tutte le righe e aggiorna `data/partite.json` e `data/classifica.json`.
-5. Non sovrascrive i risultati già presenti se il sito li mostra vuoti (protezione da regressioni).
-6. Stampa un riepilogo: quante partite nuove, quanti risultati aggiornati.
+**Comportamento**:
+1. `GET /PartiteData` con `limit=500` — recupera tutte le partite in una chiamata.
+2. `GET /Classifica/910` — recupera la classifica ufficiale IVL.
+3. Fa merge delle partite nuove con quelle esistenti (protezione da regressioni: non sovrascrive risultati già presenti se il nuovo fetch li restituisce vuoti).
+4. Aggiorna `data/partite.json` e `data/classifica.json`.
+5. Appende una riga a `logs/ultimo_aggiornamento.log`.
 
-**Dipendenze**:
-```
-playwright
-python-dotenv
-```
+**Dipendenze**: `requests`, `python-dotenv`
 
-**Esecuzione**:
 ```bash
-python scripts/fetch_data.py
+python3 scripts/fetch_data.py
 ```
 
 ---
@@ -180,133 +184,75 @@ indipendente rispetto alla classifica ufficiale IVL.
 3. Quoziente punti (punti vinti / punti persi) (DESC)
 4. Nome squadra (ASC) — spareggio alfabetico
 
-**Output**: aggiorna `data/classifica.json` con la classifica ricalcolata.
+```bash
+python3 scripts/update_classifica.py
+```
 
 ---
 
 ### `scripts/build_site.py`
 
-**Scopo**: Genera tutti i file HTML statici nella cartella `site/`.
-
-**Pagine generate**:
+**Scopo**: Genera i file HTML statici nella cartella `docs/`.
 
 | File | Contenuto |
 |------|-----------|
-| `index.html` | Classifica sintetica (top 5) + prossima partita di Olimpia PB + ultima partita con risultato |
-| `calendario.html` | Tutte le partite del girone, ordinate per data, con evidenza delle partite di Olimpia PB |
-| `classifica.html` | Classifica completa del girone con tutti i dettagli |
+| `index.html` | Classifica top 5 + prossima partita Olimpia PB + ultima con risultato |
+| `calendario.html` | Tutte le partite del girone ordinate per data |
+| `classifica.html` | Classifica completa con tutti i dettagli |
 
 **Requisiti UI/UX**:
-- Tutto il testo è in **italiano**.
-- Le partite di Olimpia PB sono **evidenziate visivamente** (sfondo colorato, bordo, badge).
-- Le partite future mostrano data, ora e palestra.
-- Le partite passate mostrano il risultato set per set (es. `3-2 (25-20, 18-25, 25-22, 22-25, 15-12)`).
-- Il sito è **responsive** (funziona bene su smartphone).
-- In fondo a ogni pagina: data e ora dell'ultimo aggiornamento.
-- Nessuna dipendenza da framework JavaScript pesanti: HTML + CSS puro, al massimo vanilla JS.
+- Testo in **italiano**. Formato data: `gg/mm/aaaa`. Formato ora: `HH:MM`.
+- Colori squadra: **rosso, bianco, nero** (Dobermanns).
+- Le partite di Olimpia PB Basic sono **evidenziate** (sfondo rosso chiaro, testo rosso).
+- Sito **responsive**, ottimizzato per smartphone.
+- HTML + CSS puro, nessun framework JS.
 
----
-
-### `scripts/cowork_daily.md`
-
-Questo file contiene le istruzioni per il **task Claude Cowork** che esegue
-l'aggiornamento giornaliero. Claude Cowork leggerà questo file per sapere
-cosa fare.
-
-**Contenuto di `cowork_daily.md`**:
-
-```markdown
-# Task: Aggiornamento giornaliero Olimpia PB
-
-## Quando eseguire
-Ogni giorno, preferibilmente la mattina (08:00 ora italiana).
-
-## Passi
-
-1. Apri il terminale nel repository `olimpia-pb-volleycup`.
-2. Esegui: `python scripts/fetch_data.py`
-3. Controlla l'output: se ci sono errori, annotali e ferma il task.
-4. Esegui: `python scripts/update_classifica.py`
-5. Esegui: `python scripts/build_site.py`
-6. Fai commit e push dei file modificati:
-   ```
-   git add data/ site/
-   git commit -m "aggiornamento automatico: $(date '+%Y-%m-%d')"
-   git push
-   ```
-7. Verifica che GitHub Pages pubblichi correttamente (attendi 1-2 minuti).
-
-## In caso di errore
-- Se lo scraping fallisce (timeout, sito non raggiungibile), non fare commit.
-- Se i dati sembrano anomali (es. classifica vuota), non sovrascrivere.
-- Annota l'errore nel file `logs/ultimo_aggiornamento.log`.
+```bash
+python3 scripts/build_site.py
 ```
 
 ---
 
-## GitHub Actions (automazione alternativa/complementare)
+## GitHub Actions
 
 File: `.github/workflows/update.yml`
-
-```yaml
-name: Aggiornamento giornaliero Olimpia PB
-
-on:
-  schedule:
-    - cron: '0 7 * * *'   # ogni giorno alle 07:00 UTC (09:00 ora italiana)
-  workflow_dispatch:        # esecuzione manuale dalla UI GitHub
-
-jobs:
-  update:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Installa dipendenze
-        run: |
-          pip install playwright python-dotenv
-          playwright install chromium
-      - name: Recupera dati
-        run: python scripts/fetch_data.py
-      - name: Aggiorna classifica
-        run: python scripts/update_classifica.py
-      - name: Genera sito
-        run: python scripts/build_site.py
-      - name: Commit e push
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ site/
-          git diff --staged --quiet || git commit -m "aggiornamento: $(date '+%Y-%m-%d')"
-          git push
-```
+- Schedule: **ogni giorno alle 07:00 UTC** (09:00 ora italiana)
+- Trigger manuale disponibile da GitHub UI (`workflow_dispatch`)
+- Dipendenze: `pip install requests python-dotenv` (niente browser)
+- Passi: fetch → update classifica → build site → commit & push `data/` e `docs/`
+- Sito live: **https://fcarbonare.github.io/olimpia-pb-volleycup/**
 
 ---
 
 ## GitHub Pages
 
-- Configurare GitHub Pages per pubblicare dalla cartella `site/` del branch `main`
-  (oppure da un branch dedicato `gh-pages`).
-- L'URL del sito sarà del tipo: `https://<username>.github.io/olimpia-pb-volleycup/`
-- Non committare mai file generati automaticamente nel branch `main` se si usa
-  il branch `gh-pages`; in quel caso il workflow fa push direttamente sul branch
-  corretto.
+- Configurato su branch `main`, cartella `/docs`.
+- URL: `https://fcarbonare.github.io/olimpia-pb-volleycup/`
+
+---
+
+## Claude Code — hook pre-commit
+
+Configurato in `.claude/settings.json` (PreToolUse su `git commit`):
+
+```bash
+git fetch origin main && git rebase --autostash origin/main
+```
+
+Previene conflitti con i commit automatici di GitHub Actions sincronizzando il branch locale prima di ogni commit.
 
 ---
 
 ## Convenzioni di codice
 
-- **Linguaggio principale**: Python 3.12+
-- **Formattazione**: `black` + `isort`
-- **Linting**: `ruff`
+- **Linguaggio**: Python 3.12+
+- **Dipendenze**: `requests`, `python-dotenv` (niente Playwright, niente framework)
 - **Commit message**: in italiano, formato `tipo: descrizione breve`
-  - Es: `fix: correzione estrazione set dalla tabella IVL`
-  - Es: `feat: aggiunta pagina calendario`
-  - Es: `data: aggiornamento risultati giornata 12`
-- **Nessun segreto nel codice**: usare `.env` per variabili d'ambiente (mai
-  committare `.env`).
+  - `fix:` — correzione bug
+  - `feat:` — nuova funzionalità
+  - `data:` — aggiornamento dati/risultati
+  - `chore:` — manutenzione, config
+- **Nessun segreto nel codice**: usare `.env` (mai committare `.env`)
 
 ---
 
@@ -325,7 +271,7 @@ SQUADRA_MONITORATA=Olimpia PB Basic
 
 # Percorsi output
 DATA_DIR=data
-SITE_DIR=site
+SITE_DIR=docs
 LOG_DIR=logs
 ```
 
@@ -333,32 +279,27 @@ LOG_DIR=logs
 
 ## Linee guida per Claude
 
-Quando lavori su questo progetto, tieni sempre presente:
+1. **La classifica si basa sui set, non sulle vittorie**: ogni partita ha sempre 5 set,
+   la posizione dipende dal totale dei set vinti durante la stagione.
 
-1. **La classifica si basa sui set, non sulle vittorie**: non confonderti con i
-   campionati di volley standard. Ogni partita ha sempre 5 set e la posizione
-   dipende dal totale dei set vinti durante la stagione.
+2. **Usare sempre le API JSON IVL**: `GET /PartiteData` e `GET /Classifica/910`
+   con `requests`. Non usare Playwright o scraping HTML — gli endpoint JSON
+   restituiscono dati strutturati completi.
 
-2. **Il sito IVL richiede rendering JavaScript**: non usare `requests` o `httpx`
-   per estrarre i dati dalla tabella. Usa sempre Playwright con attesa esplicita
-   sul selettore della tabella.
+3. **Non perdere dati esistenti**: se il fetch restituisce 0 partite, è un errore —
+   non sovrascrivere `partite.json`.
 
-3. **Non perdere dati esistenti**: prima di sovrascrivere `partite.json`,
-   verifica che i nuovi dati siano completi. Se lo scraping restituisce 0 partite,
-   è un errore — non sovrascrivere.
+4. **Output in `docs/`**: il sito statico va in `docs/`, non in `site/`.
+   GitHub Pages è configurato su `/docs` del branch `main`.
 
-4. **Tutte le pagine web in italiano**: label, intestazioni, date, messaggi di
-   errore — tutto in italiano. Formato data: `gg/mm/aaaa`. Formato ora: `HH:MM`.
+5. **Evidenziare sempre Olimpia PB Basic**: righe evidenziate in rosso chiaro
+   in calendario e classifica, nome in rosso.
 
-5. **Evidenziare sempre Olimpia PB**: in qualsiasi pagina che elenca partite o
-   classifiche, le righe di Olimpia PB devono essere visivamente distinte.
+6. **Commit: sincronizzare prima**: l'hook pre-commit fa `git fetch && git rebase`
+   automaticamente. In caso di conflitti, risolvere prima di riprovare.
 
-6. **Semplicità del sito**: il sito è statico, per uso amatoriale, visto
-   principalmente da smartphone. Priorità a leggibilità e velocità di caricamento.
-
-7. **Log degli aggiornamenti**: ogni esecuzione degli script deve appendere
-   una riga a `logs/ultimo_aggiornamento.log` con timestamp, esito e numero
-   di record aggiornati.
+7. **Log degli aggiornamenti**: ogni script appende a `logs/ultimo_aggiornamento.log`
+   (la cartella `logs/` è in `.gitignore`).
 
 ---
 
@@ -366,16 +307,14 @@ Quando lavori su questo progetto, tieni sempre presente:
 
 | Componente | Stato |
 |------------|-------|
-| `fetch_data.py` | 🔲 da implementare |
-| `update_classifica.py` | 🔲 da implementare |
-| `build_site.py` | 🔲 da implementare |
-| Sito GitHub Pages | 🔲 da configurare |
-| GitHub Actions workflow | 🔲 da configurare |
-| Task Claude Cowork | 🔲 da configurare |
-
-Aggiorna questa tabella man mano che i componenti vengono completati.
+| `fetch_data.py` (API JSON) | ✅ completato |
+| `update_classifica.py` | ✅ completato |
+| `build_site.py` | ✅ completato |
+| Sito GitHub Pages | ✅ live su fcarbonare.github.io/olimpia-pb-volleycup |
+| GitHub Actions (aggiornamento giornaliero) | ✅ attivo |
+| Hook pre-commit anti-conflitti | ✅ configurato |
 
 ---
 
-*Generato il: aprile 2026 — Aggiornare questo file se cambiano i parametri
+*Aggiornato: aprile 2026 — Aggiornare questo file se cambiano i parametri
 del campionato, la struttura dei dati o l'architettura del progetto.*
