@@ -284,10 +284,10 @@ def build_classifica(classifica: list, ultimo_agg: str) -> str:
         row_cls = ' class="olimpia-row"' if is_olimpia else ""
         badge = ' <span class="badge">★</span>' if is_olimpia else ""
 
-        qs = r.get("quoziente_set", 0)
-        qp = r.get("quoziente_punti", 0)
-        qs_str = "∞" if qs == float("inf") else f"{qs:.3f}"
-        qp_str = "∞" if qp == float("inf") else f"{qp:.3f}"
+        qs = r.get("quoziente_set")
+        qp = r.get("quoziente_punti")
+        qs_str = "∞" if qs is None else f"{qs:.3f}"
+        qp_str = "∞" if qp is None else f"{qp:.3f}"
 
         righe += f"""<tr{row_cls}>
   <td class="pos">{r.get('posizione','')}</td>

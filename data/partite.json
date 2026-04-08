@@ -11,7 +11,9 @@
       "risultato": null,
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32281,
+      "npartita": "BA - L 135"
     },
     {
       "id": "2026-04-12_alvolley_royal_basic_revenant_basic",
@@ -24,7 +26,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32278,
+      "npartita": "BA - L 132"
     },
     {
       "id": "2026-04-12_bresso_4_basic_plesios_basic",
@@ -37,7 +41,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32280,
+      "npartita": "BA - L 134"
     },
     {
       "id": "2026-04-13_cantalupo_basic_pinco_pallino_volley_basic",
@@ -50,7 +56,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32247,
+      "npartita": "BA - L 101"
     },
     {
       "id": "2026-04-15_volley_cup_team_basic_bresso_4_basic",
@@ -63,7 +71,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32249,
+      "npartita": "BA - L 103"
     },
     {
       "id": "2026-04-16_plesios_basic_pm_sport_basic",
@@ -76,7 +86,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32246,
+      "npartita": "BA - L 100"
     },
     {
       "id": "2026-04-19_alvolley_royal_basic_olimpia_pb_basic",
@@ -89,7 +101,9 @@
       "risultato": null,
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32248,
+      "npartita": "BA - L 102"
     },
     {
       "id": "2026-04-21_olimpia_pb_basic_cantalupo_basic",
@@ -102,7 +116,9 @@
       "risultato": null,
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": true,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32252,
+      "npartita": "BA - L 106"
     },
     {
       "id": "2026-04-22_pinco_pallino_volley_basic_plesios_basic",
@@ -115,7 +131,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32253,
+      "npartita": "BA - L 107"
     },
     {
       "id": "2026-04-22_pm_sport_basic_volley_cup_team_basic",
@@ -128,7 +146,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32250,
+      "npartita": "BA - L 104"
     },
     {
       "id": "2026-04-26_bresso_4_basic_revenant_basic",
@@ -141,7 +161,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32251,
+      "npartita": "BA - L 105"
     },
     {
       "id": "2026-04-29_pinco_pallino_volley_basic_volley_cup_team_basic",
@@ -154,7 +176,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32256,
+      "npartita": "BA - L 110"
     },
     {
       "id": "2026-04-30_plesios_basic_cantalupo_basic",
@@ -167,7 +191,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32254,
+      "npartita": "BA - L 108"
     },
     {
       "id": "2026-05-01_revenant_basic_pm_sport_basic",
@@ -180,7 +206,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32257,
+      "npartita": "BA - L 111"
     },
     {
       "id": "2026-05-03_bresso_4_basic_alvolley_royal_basic",
@@ -193,7 +221,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32255,
+      "npartita": "BA - L 109"
     },
     {
       "id": "2026-05-06_pm_sport_basic_alvolley_royal_basic",
@@ -206,7 +236,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32260,
+      "npartita": "BA - L 114"
     },
     {
       "id": "2026-05-06_pinco_pallino_volley_basic_revenant_basic",
@@ -219,7 +251,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32261,
+      "npartita": "BA - L 115"
     },
     {
       "id": "2026-05-07_plesios_basic_olimpia_pb_basic",
@@ -232,7 +266,9 @@
       "risultato": null,
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32258,
+      "npartita": "BA - L 112"
     },
     {
       "id": "2026-05-07_cantalupo_basic_volley_cup_team_basic",
@@ -245,7 +281,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "ivl_id": 32259,
+      "npartita": "BA - L 113"
     },
     {
       "id": "2026-05-12_olimpia_pb_basic_bresso_4_basic",
@@ -258,8 +296,250 @@
       "risultato": null,
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": true,
+      "giocata": false,
+      "ivl_id": 32264,
+      "npartita": "BA - L 118"
+    },
+    {
+      "id": "2026-05-12_pm_sport_basic_cantalupo_basic",
+      "ivl_id": 32279,
+      "npartita": "BA - L 133",
+      "data": "2026-05-12",
+      "ora": "21:30",
+      "squadra_casa": "PM SPORT Basic",
+      "squadra_ospite": "CANTALUPO Basic",
+      "palestra": "PALAZZETTO DELLO SPORT.",
+      "indirizzo": "VIA STELLA POLARE 11/a MEDIGLIA",
+      "risultato": null,
+      "olimpia_pb_gioca": false,
+      "olimpia_pb_casa": false,
+      "giocata": false
+    },
+    {
+      "id": "2026-05-13_volley_cup_team_basic_plesios_basic",
+      "ivl_id": 32263,
+      "npartita": "BA - L 117",
+      "data": "2026-05-13",
+      "ora": "21:30",
+      "squadra_casa": "VOLLEY CUP TEAM Basic",
+      "squadra_ospite": "PLESIOS Basic",
+      "palestra": "PALESTRA VIA DEL SOLE",
+      "indirizzo": "VIA DEL SOLE ASSAGO",
+      "risultato": null,
+      "olimpia_pb_gioca": false,
+      "olimpia_pb_casa": false,
+      "giocata": false
+    },
+    {
+      "id": "2026-05-15_revenant_basic_cantalupo_basic",
+      "ivl_id": 32265,
+      "npartita": "BA - L 119",
+      "data": "2026-05-15",
+      "ora": "21:15",
+      "squadra_casa": "REVENANT Basic",
+      "squadra_ospite": "CANTALUPO Basic",
+      "palestra": "PALESTRA SCUOLA ELEMENTARE SAN PIETRO",
+      "indirizzo": "VIA SAN CARLO 52 SEVESO",
+      "risultato": null,
+      "olimpia_pb_gioca": false,
+      "olimpia_pb_casa": false,
+      "giocata": false
+    },
+    {
+      "id": "2026-05-17_alvolley_royal_basic_pinco_pallino_volley_basic",
+      "ivl_id": 32262,
+      "npartita": "BA - L 116",
+      "data": "2026-05-17",
+      "ora": "21:00",
+      "squadra_casa": "ALVOLLEY ROYAL Basic",
+      "squadra_ospite": "PINCO PALLINO VOLLEY Basic",
+      "palestra": "PALESTRA SC. ELEMENTARE",
+      "indirizzo": "VIA BUOZZI 5 SETTIMO MILANESE",
+      "risultato": null,
+      "olimpia_pb_gioca": false,
+      "olimpia_pb_casa": false,
+      "giocata": false
+    },
+    {
+      "id": "2026-05-18_cantalupo_basic_alvolley_royal_basic",
+      "ivl_id": 32267,
+      "npartita": "BA - L 121",
+      "data": "2026-05-18",
+      "ora": "21:30",
+      "squadra_casa": "CANTALUPO Basic",
+      "squadra_ospite": "ALVOLLEY ROYAL Basic",
+      "palestra": "PALAMANZONI",
+      "indirizzo": "VIA MAMELI",
+      "risultato": null,
+      "olimpia_pb_gioca": false,
+      "olimpia_pb_casa": false,
+      "giocata": false
+    },
+    {
+      "id": "2026-05-20_volley_cup_team_basic_olimpia_pb_basic",
+      "ivl_id": 32268,
+      "npartita": "BA - L 122",
+      "data": "2026-05-20",
+      "ora": "21:30",
+      "squadra_casa": "VOLLEY CUP TEAM Basic",
+      "squadra_ospite": "OLIMPIA PB Basic",
+      "palestra": "PALESTRA VIA DEL SOLE",
+      "indirizzo": "VIA DEL SOLE ASSAGO",
+      "risultato": null,
+      "olimpia_pb_gioca": true,
+      "olimpia_pb_casa": false,
+      "giocata": false
+    },
+    {
+      "id": "2026-05-20_pm_sport_basic_bresso_4_basic",
+      "ivl_id": 32269,
+      "npartita": "BA - L 123",
+      "data": "2026-05-20",
+      "ora": "21:30",
+      "squadra_casa": "PM SPORT Basic",
+      "squadra_ospite": "BRESSO 4 Basic",
+      "palestra": "PALAZZETTO DELLO SPORT.",
+      "indirizzo": "VIA STELLA POLARE 11/a MEDIGLIA",
+      "risultato": null,
+      "olimpia_pb_gioca": false,
+      "olimpia_pb_casa": false,
+      "giocata": false
+    },
+    {
+      "id": "2026-05-21_plesios_basic_revenant_basic",
+      "ivl_id": 32266,
+      "npartita": "BA - L 120",
+      "data": "2026-05-21",
+      "ora": "21:15",
+      "squadra_casa": "PLESIOS Basic",
+      "squadra_ospite": "REVENANT Basic",
+      "palestra": "PALESTRA,",
+      "indirizzo": "VIA FIUME 22 VIMODRONE",
+      "risultato": null,
+      "olimpia_pb_gioca": false,
+      "olimpia_pb_casa": false,
+      "giocata": false
+    },
+    {
+      "id": "2026-05-25_cantalupo_basic_bresso_4_basic",
+      "ivl_id": 32274,
+      "npartita": "BA - L 128",
+      "data": "2026-05-25",
+      "ora": "21:30",
+      "squadra_casa": "CANTALUPO Basic",
+      "squadra_ospite": "BRESSO 4 Basic",
+      "palestra": "PALAMANZONI",
+      "indirizzo": "VIA MAMELI",
+      "risultato": null,
+      "olimpia_pb_gioca": false,
+      "olimpia_pb_casa": false,
+      "giocata": false
+    },
+    {
+      "id": "2026-05-26_olimpia_pb_basic_pm_sport_basic",
+      "ivl_id": 32272,
+      "npartita": "BA - L 126",
+      "data": "2026-05-26",
+      "ora": "21:00",
+      "squadra_casa": "OLIMPIA PB Basic",
+      "squadra_ospite": "PM SPORT Basic",
+      "palestra": "Scuola San Bovio",
+      "indirizzo": "Viale Abruzzi, 9 PESCHIERA BORROMEO",
+      "risultato": null,
+      "olimpia_pb_gioca": true,
+      "olimpia_pb_casa": true,
+      "giocata": false
+    },
+    {
+      "id": "2026-05-29_revenant_basic_volley_cup_team_basic",
+      "ivl_id": 32273,
+      "npartita": "BA - L 127",
+      "data": "2026-05-29",
+      "ora": "21:15",
+      "squadra_casa": "REVENANT Basic",
+      "squadra_ospite": "VOLLEY CUP TEAM Basic",
+      "palestra": "PALESTRA SCUOLA ELEMENTARE SAN PIETRO",
+      "indirizzo": "VIA SAN CARLO 52 SEVESO",
+      "risultato": null,
+      "olimpia_pb_gioca": false,
+      "olimpia_pb_casa": false,
+      "giocata": false
+    },
+    {
+      "id": "2026-05-31_alvolley_royal_basic_plesios_basic",
+      "ivl_id": 32270,
+      "npartita": "BA - L 124",
+      "data": "2026-05-31",
+      "ora": "21:00",
+      "squadra_casa": "ALVOLLEY ROYAL Basic",
+      "squadra_ospite": "PLESIOS Basic",
+      "palestra": "PALESTRA SC. ELEMENTARE",
+      "indirizzo": "VIA BUOZZI 5 SETTIMO MILANESE",
+      "risultato": null,
+      "olimpia_pb_gioca": false,
+      "olimpia_pb_casa": false,
+      "giocata": false
+    },
+    {
+      "id": "2026-05-31_bresso_4_basic_pinco_pallino_volley_basic",
+      "ivl_id": 32271,
+      "npartita": "BA - L 125",
+      "data": "2026-05-31",
+      "ora": "21:30",
+      "squadra_casa": "BRESSO 4 Basic",
+      "squadra_ospite": "PINCO PALLINO VOLLEY Basic",
+      "palestra": "Pala Marconi",
+      "indirizzo": "Via Simone de Gatti, 1 BRESSO",
+      "risultato": null,
+      "olimpia_pb_gioca": false,
+      "olimpia_pb_casa": false,
+      "giocata": false
+    },
+    {
+      "id": "2026-06-03_volley_cup_team_basic_alvolley_royal_basic",
+      "ivl_id": 32275,
+      "npartita": "BA - L 129",
+      "data": "2026-06-03",
+      "ora": "21:30",
+      "squadra_casa": "VOLLEY CUP TEAM Basic",
+      "squadra_ospite": "ALVOLLEY ROYAL Basic",
+      "palestra": "PALESTRA VIA DEL SOLE",
+      "indirizzo": "VIA DEL SOLE ASSAGO",
+      "risultato": null,
+      "olimpia_pb_gioca": false,
+      "olimpia_pb_casa": false,
+      "giocata": false
+    },
+    {
+      "id": "2026-06-03_pinco_pallino_volley_basic_pm_sport_basic",
+      "ivl_id": 32277,
+      "npartita": "BA - L 131",
+      "data": "2026-06-03",
+      "ora": "21:30",
+      "squadra_casa": "PINCO PALLINO VOLLEY Basic",
+      "squadra_ospite": "PM SPORT Basic",
+      "palestra": "Palestra Istituto ALEXIS CARREL",
+      "indirizzo": "Via Inganni 12 MILANO",
+      "risultato": null,
+      "olimpia_pb_gioca": false,
+      "olimpia_pb_casa": false,
+      "giocata": false
+    },
+    {
+      "id": "2026-06-05_revenant_basic_olimpia_pb_basic",
+      "ivl_id": 32276,
+      "npartita": "BA - L 130",
+      "data": "2026-06-05",
+      "ora": "21:15",
+      "squadra_casa": "REVENANT Basic",
+      "squadra_ospite": "OLIMPIA PB Basic",
+      "palestra": "PALESTRA SCUOLA ELEMENTARE SAN PIETRO",
+      "indirizzo": "VIA SAN CARLO 52 SEVESO",
+      "risultato": null,
+      "olimpia_pb_gioca": true,
+      "olimpia_pb_casa": false,
       "giocata": false
     }
   ],
-  "ultimo_aggiornamento": "2026-04-08T11:25:37.740351+00:00"
+  "ultimo_aggiornamento": "2026-04-08T11:56:08.402760+00:00"
 }

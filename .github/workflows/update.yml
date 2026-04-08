@@ -27,9 +27,7 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
 
       - name: Installa dipendenze
-        run: |
-          pip install playwright python-dotenv
-          playwright install chromium --with-deps
+        run: pip install requests python-dotenv
 
       - name: Recupera dati dal sito IVL
         run: python scripts/fetch_data.py
