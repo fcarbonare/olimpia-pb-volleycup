@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "if": "Bash(git commit*)",
+            "command": "git fetch origin main 2>&1 && git rebase --autostash origin/main 2>&1; true",
+            "statusMessage": "Sincronizzazione con remote prima del commit..."
+          }
+        ]
+      }
+    ]
+  }
+}
