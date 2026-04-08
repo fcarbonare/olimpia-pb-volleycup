@@ -223,7 +223,7 @@ def build_calendario(partite: list, ultimo_agg: str) -> str:
         is_olimpia = p.get("olimpia_pb_gioca", False)
         is_casa = p.get("olimpia_pb_casa", False)
         row_cls = "olimpia-row" if is_olimpia else ""
-        badge = '<span class="badge">Olimpia PB</span> ' if is_olimpia else ""
+        badge = ""
 
         casa = p["squadra_casa"]
         ospite = p["squadra_ospite"]
