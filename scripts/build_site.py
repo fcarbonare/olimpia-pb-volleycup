@@ -21,7 +21,7 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).parent.parent
 DATA_DIR = BASE_DIR / os.getenv("DATA_DIR", "data")
-SITE_DIR = BASE_DIR / os.getenv("SITE_DIR", "site")
+SITE_DIR = BASE_DIR / os.getenv("SITE_DIR", "docs")
 LOG_DIR = BASE_DIR / os.getenv("LOG_DIR", "logs")
 SQUADRA_MONITORATA = os.getenv("SQUADRA_MONITORATA", "Olimpia PB")
 

@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(python scripts/build_site.py)",
+      "Bash(pip3 install:*)",
+      "Bash(python3 scripts/build_site.py)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(python3 -c \"import playwright; print\\('ok'\\)\")",
+      "Bash(python3 -m playwright install chromium)",
+      "Bash(python3 scripts/fetch_data.py)",
+      "Bash(python3 -c ':*)",
+      "Bash(gh auth:*)",
+      "Bash(git -C /Users/fcarbonare/claude-projects/olimpia-pb status)",
+      "Bash(git --version)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)",
+      "Bash(ssh -T git@github.com)",
+      "Bash(git remote:*)"
+    ]
+  }
+}

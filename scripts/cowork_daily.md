@@ -12,7 +12,7 @@ Ogni giorno, preferibilmente la mattina (08:00 ora italiana).
 5. Esegui: `python scripts/build_site.py`
 6. Fai commit e push dei file modificati:
    ```
-   git add data/ site/ logs/
+   git add data/ docs/ logs/
    git commit -m "data: aggiornamento automatico $(date '+%Y-%m-%d')"
    git push
    ```
