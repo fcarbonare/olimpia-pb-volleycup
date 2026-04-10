@@ -91,6 +91,21 @@
       "npartita": "BA - L 100"
     },
     {
+      "id": "2026-04-16_alvolley_royal_basic_olimpia_pb_basic",
+      "ivl_id": 32248,
+      "npartita": "BA - L 102",
+      "data": "2026-04-16",
+      "ora": "21:30",
+      "squadra_casa": "ALVOLLEY ROYAL Basic",
+      "squadra_ospite": "OLIMPIA PB Basic",
+      "palestra": "Sc.Me. Paolo Sarpi",
+      "indirizzo": "Via Grandi, 12 SETTIMO MILANESE",
+      "risultato": null,
+      "olimpia_pb_gioca": true,
+      "olimpia_pb_casa": false,
+      "giocata": false
+    },
+    {
       "id": "2026-04-19_alvolley_royal_basic_olimpia_pb_basic",
       "data": "2026-04-19",
       "ora": "21:00",
@@ -541,5 +556,5 @@
       "giocata": false
     }
   ],
-  "ultimo_aggiornamento": "2026-04-09T08:19:34.741239+00:00"
+  "ultimo_aggiornamento": "2026-04-10T08:20:22.472583+00:00"
 }
