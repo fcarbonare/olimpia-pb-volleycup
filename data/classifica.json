@@ -1,5 +1,34 @@
 {
-  "classifica": [],
+  "classifica": [
+    {
+      "squadra": "OLIMPIA PB Basic",
+      "punti": 0,
+      "partite_giocate": 1,
+      "partite_vinte": 1,
+      "partite_perse": 0,
+      "set_vinti": 5,
+      "set_persi": 0,
+      "quoziente_set": Infinity,
+      "punti_vinti": 105,
+      "punti_persi": 70,
+      "quoziente_punti": 1.5,
+      "posizione": 1
+    },
+    {
+      "squadra": "PINCO PALLINO VOLLEY Basic",
+      "punti": 0,
+      "partite_giocate": 1,
+      "partite_vinte": 0,
+      "partite_perse": 1,
+      "set_vinti": 0,
+      "set_persi": 5,
+      "quoziente_set": 0.0,
+      "punti_vinti": 70,
+      "punti_persi": 105,
+      "quoziente_punti": 0.667,
+      "posizione": 2
+    }
+  ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-04-11T07:47:54.920021+00:00"
+  "ultimo_aggiornamento": "2026-04-12T08:01:47.600548+00:00"
 }

@@ -8,10 +8,27 @@
       "squadra_ospite": "OLIMPIA PB Basic",
       "palestra": "Palestra Istituto ALEXIS CARREL",
       "indirizzo": "Via Inganni 12 MILANO",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          14,
+          13,
+          14,
+          16,
+          13
+        ],
+        "set_ospite": [
+          21,
+          21,
+          21,
+          21,
+          21
+        ],
+        "set_vinti_casa": 0,
+        "set_vinti_ospite": 5
+      },
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "ivl_id": 32281,
       "npartita": "BA - L 135"
     },
@@ -556,5 +573,5 @@
       "giocata": false
     }
   ],
-  "ultimo_aggiornamento": "2026-04-11T07:47:53.915757+00:00"
+  "ultimo_aggiornamento": "2026-04-12T08:01:46.446791+00:00"
 }
