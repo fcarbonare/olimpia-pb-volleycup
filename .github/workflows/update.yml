@@ -2,7 +2,7 @@ name: Aggiornamento giornaliero Olimpia PB
 
 on:
   schedule:
-    - cron: '0 7 * * *'   # ogni giorno alle 07:00 UTC (09:00 ora italiana)
+    - cron: '0 7,11,15,19 * * *'   # 4 volte al giorno: 07, 11, 15, 19 UTC (09, 13, 17, 21 ora italiana)
   workflow_dispatch:        # esecuzione manuale dalla UI GitHub
 
 jobs:

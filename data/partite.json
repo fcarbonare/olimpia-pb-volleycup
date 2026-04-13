@@ -30,7 +30,9 @@
       "olimpia_pb_casa": false,
       "giocata": true,
       "ivl_id": 32281,
-      "npartita": "BA - L 135"
+      "npartita": "BA - L 135",
+      "lat": 45.4477134,
+      "lon": 9.1278487
     },
     {
       "id": "2026-04-12_alvolley_royal_basic_revenant_basic",
@@ -62,7 +64,9 @@
       "olimpia_pb_casa": false,
       "giocata": true,
       "ivl_id": 32278,
-      "npartita": "BA - L 132"
+      "npartita": "BA - L 132",
+      "lat": 45.4862308,
+      "lon": 9.055163
     },
     {
       "id": "2026-04-12_bresso_4_basic_plesios_basic",
@@ -94,7 +98,9 @@
       "olimpia_pb_casa": false,
       "giocata": true,
       "ivl_id": 32280,
-      "npartita": "BA - L 134"
+      "npartita": "BA - L 134",
+      "lat": 45.5415512,
+      "lon": 9.188047
     },
     {
       "id": "2026-04-13_cantalupo_basic_pinco_pallino_volley_basic",
@@ -109,7 +115,9 @@
       "olimpia_pb_casa": false,
       "giocata": false,
       "ivl_id": 32247,
-      "npartita": "BA - L 101"
+      "npartita": "BA - L 101",
+      "lat": 41.87194,
+      "lon": 12.56738
     },
     {
       "id": "2026-04-15_volley_cup_team_basic_bresso_4_basic",
@@ -124,7 +132,9 @@
       "olimpia_pb_casa": false,
       "giocata": false,
       "ivl_id": 32249,
-      "npartita": "BA - L 103"
+      "npartita": "BA - L 103",
+      "lat": 45.4048573,
+      "lon": 9.1283882
     },
     {
       "id": "2026-04-16_plesios_basic_pm_sport_basic",
@@ -139,7 +149,9 @@
       "olimpia_pb_casa": false,
       "giocata": false,
       "ivl_id": 32246,
-      "npartita": "BA - L 100"
+      "npartita": "BA - L 100",
+      "lat": 45.5149355,
+      "lon": 9.2798405
     },
     {
       "id": "2026-04-16_alvolley_royal_basic_olimpia_pb_basic",
@@ -154,7 +166,9 @@
       "risultato": null,
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "lat": 45.4862308,
+      "lon": 9.055163
     },
     {
       "id": "2026-04-19_alvolley_royal_basic_olimpia_pb_basic",
@@ -184,7 +198,9 @@
       "olimpia_pb_casa": true,
       "giocata": false,
       "ivl_id": 32252,
-      "npartita": "BA - L 106"
+      "npartita": "BA - L 106",
+      "lat": 45.4560153,
+      "lon": 9.3166758
     },
     {
       "id": "2026-04-22_pinco_pallino_volley_basic_plesios_basic",
@@ -199,7 +215,9 @@
       "olimpia_pb_casa": false,
       "giocata": false,
       "ivl_id": 32253,
-      "npartita": "BA - L 107"
+      "npartita": "BA - L 107",
+      "lat": 45.4477134,
+      "lon": 9.1278487
     },
     {
       "id": "2026-04-22_pm_sport_basic_volley_cup_team_basic",
@@ -214,7 +232,9 @@
       "olimpia_pb_casa": false,
       "giocata": false,
       "ivl_id": 32250,
-      "npartita": "BA - L 104"
+      "npartita": "BA - L 104",
+      "lat": 45.4348072,
+      "lon": 9.3409847
     },
     {
       "id": "2026-04-26_bresso_4_basic_revenant_basic",
@@ -229,7 +249,9 @@
       "olimpia_pb_casa": false,
       "giocata": false,
       "ivl_id": 32251,
-      "npartita": "BA - L 105"
+      "npartita": "BA - L 105",
+      "lat": 45.5415512,
+      "lon": 9.188047
     },
     {
       "id": "2026-04-29_pinco_pallino_volley_basic_volley_cup_team_basic",
@@ -244,7 +266,9 @@
       "olimpia_pb_casa": false,
       "giocata": false,
       "ivl_id": 32256,
-      "npartita": "BA - L 110"
+      "npartita": "BA - L 110",
+      "lat": 45.4477134,
+      "lon": 9.1278487
     },
     {
       "id": "2026-04-30_plesios_basic_cantalupo_basic",
@@ -259,7 +283,9 @@
       "olimpia_pb_casa": false,
       "giocata": false,
       "ivl_id": 32254,
-      "npartita": "BA - L 108"
+      "npartita": "BA - L 108",
+      "lat": 45.5149355,
+      "lon": 9.2798405
     },
     {
       "id": "2026-05-01_revenant_basic_pm_sport_basic",
@@ -274,7 +300,9 @@
       "olimpia_pb_casa": false,
       "giocata": false,
       "ivl_id": 32257,
-      "npartita": "BA - L 111"
+      "npartita": "BA - L 111",
+      "lat": null,
+      "lon": null
     },
     {
       "id": "2026-05-03_bresso_4_basic_alvolley_royal_basic",
@@ -289,7 +317,9 @@
       "olimpia_pb_casa": false,
       "giocata": false,
       "ivl_id": 32255,
-      "npartita": "BA - L 109"
+      "npartita": "BA - L 109",
+      "lat": 45.5415512,
+      "lon": 9.188047
     },
     {
       "id": "2026-05-06_pm_sport_basic_alvolley_royal_basic",
@@ -304,7 +334,9 @@
       "olimpia_pb_casa": false,
       "giocata": false,
       "ivl_id": 32260,
-      "npartita": "BA - L 114"
+      "npartita": "BA - L 114",
+      "lat": 45.4348072,
+      "lon": 9.3409847
     },
     {
       "id": "2026-05-06_pinco_pallino_volley_basic_revenant_basic",
@@ -319,7 +351,9 @@
       "olimpia_pb_casa": false,
       "giocata": false,
       "ivl_id": 32261,
-      "npartita": "BA - L 115"
+      "npartita": "BA - L 115",
+      "lat": 45.4477134,
+      "lon": 9.1278487
     },
     {
       "id": "2026-05-07_plesios_basic_olimpia_pb_basic",
@@ -334,7 +368,9 @@
       "olimpia_pb_casa": false,
       "giocata": false,
       "ivl_id": 32258,
-      "npartita": "BA - L 112"
+      "npartita": "BA - L 112",
+      "lat": 45.5149355,
+      "lon": 9.2798405
     },
     {
       "id": "2026-05-07_cantalupo_basic_volley_cup_team_basic",
@@ -349,7 +385,9 @@
       "olimpia_pb_casa": false,
       "giocata": false,
       "ivl_id": 32259,
-      "npartita": "BA - L 113"
+      "npartita": "BA - L 113",
+      "lat": 41.87194,
+      "lon": 12.56738
     },
     {
       "id": "2026-05-12_olimpia_pb_basic_bresso_4_basic",
@@ -364,7 +402,9 @@
       "olimpia_pb_casa": true,
       "giocata": false,
       "ivl_id": 32264,
-      "npartita": "BA - L 118"
+      "npartita": "BA - L 118",
+      "lat": 45.4560153,
+      "lon": 9.3166758
     },
     {
       "id": "2026-05-12_pm_sport_basic_cantalupo_basic",
@@ -379,7 +419,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "lat": 45.4348072,
+      "lon": 9.3409847
     },
     {
       "id": "2026-05-13_volley_cup_team_basic_plesios_basic",
@@ -394,7 +436,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "lat": 45.4048573,
+      "lon": 9.1283882
     },
     {
       "id": "2026-05-15_revenant_basic_cantalupo_basic",
@@ -409,7 +453,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "lat": null,
+      "lon": null
     },
     {
       "id": "2026-05-17_alvolley_royal_basic_pinco_pallino_volley_basic",
@@ -424,7 +470,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "lat": 45.4842669,
+      "lon": 9.0543319
     },
     {
       "id": "2026-05-18_cantalupo_basic_alvolley_royal_basic",
@@ -439,7 +487,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "lat": 41.87194,
+      "lon": 12.56738
     },
     {
       "id": "2026-05-20_volley_cup_team_basic_olimpia_pb_basic",
@@ -454,7 +504,9 @@
       "risultato": null,
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "lat": 45.4048573,
+      "lon": 9.1283882
     },
     {
       "id": "2026-05-20_pm_sport_basic_bresso_4_basic",
@@ -469,7 +521,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "lat": 45.4348072,
+      "lon": 9.3409847
     },
     {
       "id": "2026-05-21_plesios_basic_revenant_basic",
@@ -484,7 +538,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "lat": 45.5149355,
+      "lon": 9.2798405
     },
     {
       "id": "2026-05-25_cantalupo_basic_bresso_4_basic",
@@ -499,7 +555,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "lat": 41.87194,
+      "lon": 12.56738
     },
     {
       "id": "2026-05-26_olimpia_pb_basic_pm_sport_basic",
@@ -514,7 +572,9 @@
       "risultato": null,
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": true,
-      "giocata": false
+      "giocata": false,
+      "lat": 45.4560153,
+      "lon": 9.3166758
     },
     {
       "id": "2026-05-29_revenant_basic_volley_cup_team_basic",
@@ -529,7 +589,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "lat": null,
+      "lon": null
     },
     {
       "id": "2026-05-31_alvolley_royal_basic_plesios_basic",
@@ -544,7 +606,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "lat": 45.4842669,
+      "lon": 9.0543319
     },
     {
       "id": "2026-05-31_bresso_4_basic_pinco_pallino_volley_basic",
@@ -559,7 +623,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "lat": 45.5415512,
+      "lon": 9.188047
     },
     {
       "id": "2026-06-03_volley_cup_team_basic_alvolley_royal_basic",
@@ -574,7 +640,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "lat": 45.4048573,
+      "lon": 9.1283882
     },
     {
       "id": "2026-06-03_pinco_pallino_volley_basic_pm_sport_basic",
@@ -589,7 +657,9 @@
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "lat": 45.4477134,
+      "lon": 9.1278487
     },
     {
       "id": "2026-06-05_revenant_basic_olimpia_pb_basic",
@@ -604,8 +674,10 @@
       "risultato": null,
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": false,
-      "giocata": false
+      "giocata": false,
+      "lat": null,
+      "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-04-13T08:59:50.485214+00:00"
+  "ultimo_aggiornamento": "2026-04-13T09:08:18.801466+00:00"
 }

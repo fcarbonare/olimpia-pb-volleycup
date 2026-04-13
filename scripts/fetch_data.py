@@ -124,6 +124,8 @@ def parse_partita(r: dict) -> dict:
         "squadra_ospite":   ospite,
         "palestra":         palestra,
         "indirizzo":        indirizzo,
+        "lat":              r.get("palestra1_latitude"),
+        "lon":              r.get("palestra1_longitude"),
         "risultato":        risultato,
         "olimpia_pb_gioca": olimpia_pb_gioca,
         "olimpia_pb_casa":  olimpia_pb_casa,

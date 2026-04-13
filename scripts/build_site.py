@@ -46,6 +46,9 @@ def load_json(path: Path) -> dict:
     return {}
 
 
+GIORNI_IT = ["lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato", "domenica"]
+
+
 def fmt_data(iso_date: str) -> str:
     """Converte 'YYYY-MM-DD' in 'gg/mm/aaaa'."""
     try:
@@ -53,6 +56,26 @@ def fmt_data(iso_date: str) -> str:
         return d.strftime("%d/%m/%Y")
     except ValueError:
         return iso_date
+
+
+def fmt_data_con_giorno(iso_date: str) -> str:
+    """Converte 'YYYY-MM-DD' in 'gg/mm/aaaa<br><small>giorno</small>'."""
+    try:
+        d = datetime.strptime(iso_date, "%Y-%m-%d")
+        giorno = GIORNI_IT[d.weekday()]
+        return f'{d.strftime("%d/%m/%Y")}<br><small class="giorno">{giorno}</small>'
+    except ValueError:
+        return iso_date
+
+
+def fmt_luogo(partita: dict) -> str:
+    """Restituisce indirizzo con link Google Maps basato sul testo dell'indirizzo."""
+    indirizzo = partita.get("indirizzo", "").strip()
+    if not indirizzo:
+        return ""
+    import urllib.parse
+    maps_url = f"https://www.google.com/maps/search/?api=1&query={urllib.parse.quote(indirizzo)}"
+    return f'<a href="{maps_url}" target="_blank" rel="noopener">{indirizzo}</a>'
 
 
 def fmt_ts(iso_ts: Optional[str]) -> str:
@@ -73,7 +96,7 @@ def fmt_risultato(risultato) -> str:
     set_c = risultato.get("set_casa", [])
     set_o = risultato.get("set_ospite", [])
     set_str = ", ".join(f"{a}-{b}" for a, b in zip(set_c, set_o))
-    return f"{sv_c}-{sv_o} ({set_str})"
+    return f'{sv_c}-{sv_o}<br><small class="set-dettaglio">({set_str})</small>'
 
 
 def css_path() -> str:
@@ -233,16 +256,18 @@ def build_calendario(partite: list, ultimo_agg: str) -> str:
         else:
             casa_cls = ospite_cls = ""
 
+        luogo = fmt_luogo(p)
         if p.get("giocata") and p.get("risultato"):
             ris = fmt_risultato(p["risultato"])
             risultato_td = f'<td class="risultato">{ris}</td>'
         elif p["data"] < oggi:
             risultato_td = '<td class="risultato tbd">Risultato non disponibile</td>'
         else:
-            risultato_td = f'<td class="risultato futuro">ore {p.get("ora","--:--")} — {p.get("palestra","")}</td>'
+            luogo_str = f'<br><small class="set-dettaglio">{luogo}</small>' if luogo else ""
+            risultato_td = f'<td class="risultato futuro">ore {p.get("ora","--:--")}{luogo_str}</td>'
 
         righe += f"""<tr class="{row_cls}">
-  <td class="data">{fmt_data(p['data'])}</td>
+  <td class="data">{fmt_data_con_giorno(p['data'])}</td>
   <td class="team{casa_cls}">{badge}{casa}</td>
   <td class="vs">vs</td>
   <td class="team{ospite_cls}">{ospite}</td>

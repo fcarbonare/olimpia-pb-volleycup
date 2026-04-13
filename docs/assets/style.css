@@ -211,10 +211,12 @@ tr.olimpia-row:hover { background: #fbdada; }
 
 /* ===== Calendario table ===== */
 .calendario-table td.data { white-space: nowrap; font-size: .85rem; }
+.calendario-table td.data small.giorno { display: block; color: var(--testo-chiaro); font-size: .75rem; font-style: italic; }
 .calendario-table td.team { text-align: left; }
 .calendario-table td.team.olimpia { color: var(--rosso); font-weight: 700; }
 .calendario-table td.vs { color: var(--testo-chiaro); font-size: .8rem; width: 30px; }
-.calendario-table td.risultato { font-size: .85rem; white-space: nowrap; }
+.calendario-table td.risultato { font-size: .85rem; }
+.calendario-table td.risultato small.set-dettaglio { display: block; font-size: .75rem; color: var(--testo-chiaro); }
 .calendario-table td.risultato.futuro { color: var(--testo-chiaro); font-style: italic; }
 .calendario-table td.risultato.tbd { color: #9ca3af; font-style: italic; }
 
