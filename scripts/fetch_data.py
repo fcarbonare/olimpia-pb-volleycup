@@ -179,25 +179,35 @@ def parse_classifica(rows: list) -> list:
 # ── Merge partite (protezione da regressioni) ─────────────────────────────────
 
 def merge_partite(esistenti: list, nuove: list) -> tuple:
-    mappa = {p["id"]: p for p in esistenti}
+    # Indice per ivl_id (chiave stabile anche in caso di rinvio/spostamento data)
+    mappa_ivl = {p["ivl_id"]: p for p in esistenti if p.get("ivl_id")}
+    # Indice per id generato, per le partite senza ivl_id
+    mappa_id  = {p["id"]: p for p in esistenti if not p.get("ivl_id")}
     nuove_count = aggiornati_count = 0
 
     for nuova in nuove:
-        pid = nuova["id"]
-        if pid not in mappa:
-            mappa[pid] = nuova
-            nuove_count += 1
-        else:
-            old = mappa[pid]
+        ivl_id = nuova.get("ivl_id")
+        if ivl_id and ivl_id in mappa_ivl:
+            old = mappa_ivl[ivl_id]
             if nuova.get("risultato") and not old.get("risultato"):
-                mappa[pid] = {**old, **nuova}
+                mappa_ivl[ivl_id] = {**old, **nuova}
                 aggiornati_count += 1
             elif not nuova.get("risultato") and old.get("risultato"):
                 pass  # mantieni risultato già presente
             else:
-                mappa[pid] = {**old, **nuova}
+                mappa_ivl[ivl_id] = {**old, **nuova}
+        elif nuova["id"] in mappa_id:
+            old = mappa_id[nuova["id"]]
+            mappa_id[nuova["id"]] = {**old, **nuova}
+        else:
+            if ivl_id:
+                mappa_ivl[ivl_id] = nuova
+            else:
+                mappa_id[nuova["id"]] = nuova
+            nuove_count += 1
 
-    ordinate = sorted(mappa.values(), key=lambda p: (p["data"], p.get("ora", "")))
+    tutte = list(mappa_ivl.values()) + list(mappa_id.values())
+    ordinate = sorted(tutte, key=lambda p: (p["data"], p.get("ora", "")))
     return ordinate, nuove_count, aggiornati_count
 
 

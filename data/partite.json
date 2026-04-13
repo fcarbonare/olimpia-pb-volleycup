@@ -155,8 +155,6 @@
     },
     {
       "id": "2026-04-16_alvolley_royal_basic_olimpia_pb_basic",
-      "ivl_id": 32248,
-      "npartita": "BA - L 102",
       "data": "2026-04-16",
       "ora": "21:30",
       "squadra_casa": "ALVOLLEY ROYAL Basic",
@@ -167,23 +165,10 @@
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": false,
       "giocata": false,
+      "ivl_id": 32248,
+      "npartita": "BA - L 102",
       "lat": 45.4862308,
       "lon": 9.055163
-    },
-    {
-      "id": "2026-04-19_alvolley_royal_basic_olimpia_pb_basic",
-      "data": "2026-04-19",
-      "ora": "21:00",
-      "squadra_casa": "ALVOLLEY ROYAL Basic",
-      "squadra_ospite": "OLIMPIA PB Basic",
-      "palestra": "PALESTRA SC. ELEMENTARE",
-      "indirizzo": "VIA BUOZZI 5 SETTIMO MILANESE",
-      "risultato": null,
-      "olimpia_pb_gioca": true,
-      "olimpia_pb_casa": false,
-      "giocata": false,
-      "ivl_id": 32248,
-      "npartita": "BA - L 102"
     },
     {
       "id": "2026-04-21_olimpia_pb_basic_cantalupo_basic",
@@ -679,5 +664,5 @@
       "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-04-13T09:08:18.801466+00:00"
+  "ultimo_aggiornamento": "2026-04-13T09:20:05.610575+00:00"
 }
