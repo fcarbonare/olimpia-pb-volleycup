@@ -2,13 +2,13 @@
   "classifica": [
     {
       "squadra": "OLIMPIA PB Basic",
-      "punti": 5,
+      "punti": 0,
       "partite_giocate": 1,
       "partite_vinte": 1,
       "partite_perse": 0,
       "set_vinti": 5,
       "set_persi": 0,
-      "quoziente_set": null,
+      "quoziente_set": Infinity,
       "punti_vinti": 105,
       "punti_persi": 70,
       "quoziente_punti": 1.5,
@@ -16,7 +16,7 @@
     },
     {
       "squadra": "REVENANT Basic",
-      "punti": 4,
+      "punti": 0,
       "partite_giocate": 1,
       "partite_vinte": 1,
       "partite_perse": 0,
@@ -30,7 +30,7 @@
     },
     {
       "squadra": "BRESSO 4 Basic",
-      "punti": 4,
+      "punti": 0,
       "partite_giocate": 1,
       "partite_vinte": 1,
       "partite_perse": 0,
@@ -44,7 +44,7 @@
     },
     {
       "squadra": "PLESIOS Basic",
-      "punti": 1,
+      "punti": 0,
       "partite_giocate": 1,
       "partite_vinte": 0,
       "partite_perse": 1,
@@ -58,7 +58,7 @@
     },
     {
       "squadra": "ALVOLLEY ROYAL Basic",
-      "punti": 1,
+      "punti": 0,
       "partite_giocate": 1,
       "partite_vinte": 0,
       "partite_perse": 1,
@@ -83,49 +83,8 @@
       "punti_persi": 105,
       "quoziente_punti": 0.667,
       "posizione": 6
-    },
-    {
-      "squadra": "CANTALUPO Basic",
-      "punti": 0,
-      "partite_giocate": 0,
-      "partite_vinte": 0,
-      "partite_perse": 0,
-      "set_vinti": 0,
-      "set_persi": 0,
-      "quoziente_set": null,
-      "punti_vinti": 0,
-      "punti_persi": 0,
-      "quoziente_punti": null,
-      "posizione": 7
-    },
-    {
-      "squadra": "PM SPORT Basic",
-      "punti": 0,
-      "partite_giocate": 0,
-      "partite_vinte": 0,
-      "partite_perse": 0,
-      "set_vinti": 0,
-      "set_persi": 0,
-      "quoziente_set": null,
-      "punti_vinti": 0,
-      "punti_persi": 0,
-      "quoziente_punti": null,
-      "posizione": 8
-    },
-    {
-      "squadra": "VOLLEY CUP TEAM Basic",
-      "punti": 0,
-      "partite_giocate": 0,
-      "partite_vinte": 0,
-      "partite_perse": 0,
-      "set_vinti": 0,
-      "set_persi": 0,
-      "quoziente_set": null,
-      "punti_vinti": 0,
-      "punti_persi": 0,
-      "quoziente_punti": null,
-      "posizione": 9
     }
   ],
-  "ultimo_aggiornamento": "2026-04-13T09:08:19.352294+00:00"
+  "fonte": "calcolata_localmente",
+  "ultimo_aggiornamento": "2026-04-13T12:07:05.348665+00:00"
 }
