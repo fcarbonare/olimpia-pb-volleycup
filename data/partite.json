@@ -40,10 +40,27 @@
       "squadra_ospite": "REVENANT Basic",
       "palestra": "Sc.Me. Paolo Sarpi",
       "indirizzo": "Via Grandi, 12 SETTIMO MILANESE",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          17,
+          21,
+          10,
+          5,
+          9
+        ],
+        "set_ospite": [
+          21,
+          19,
+          21,
+          21,
+          21
+        ],
+        "set_vinti_casa": 1,
+        "set_vinti_ospite": 4
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "ivl_id": 32278,
       "npartita": "BA - L 132"
     },
@@ -55,10 +72,27 @@
       "squadra_ospite": "PLESIOS Basic",
       "palestra": "Pala Marconi",
       "indirizzo": "Via Simone de Gatti, 1 BRESSO",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          21,
+          23,
+          21,
+          12,
+          21
+        ],
+        "set_ospite": [
+          17,
+          21,
+          14,
+          21,
+          14
+        ],
+        "set_vinti_casa": 4,
+        "set_vinti_ospite": 1
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "ivl_id": 32280,
       "npartita": "BA - L 134"
     },
@@ -573,5 +607,5 @@
       "giocata": false
     }
   ],
-  "ultimo_aggiornamento": "2026-04-12T08:01:46.446791+00:00"
+  "ultimo_aggiornamento": "2026-04-13T08:59:50.485214+00:00"
 }
