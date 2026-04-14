@@ -110,10 +110,27 @@
       "squadra_ospite": "PINCO PALLINO VOLLEY Basic",
       "palestra": "PALAMANZONI",
       "indirizzo": "VIA MAMELI",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          23,
+          13,
+          21,
+          22,
+          23
+        ],
+        "set_ospite": [
+          22,
+          21,
+          16,
+          23,
+          22
+        ],
+        "set_vinti_casa": 3,
+        "set_vinti_ospite": 2
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "ivl_id": 32247,
       "npartita": "BA - L 101",
       "lat": 41.87194,
@@ -664,5 +681,5 @@
       "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-04-14T08:27:40.234325+00:00"
+  "ultimo_aggiornamento": "2026-04-14T12:00:22.046064+00:00"
 }
