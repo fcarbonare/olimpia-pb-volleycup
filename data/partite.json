@@ -579,6 +579,23 @@
       "lon": 9.3166758
     },
     {
+      "id": "2026-05-26_alvolley_royal_basic_plesios_basic",
+      "ivl_id": 32270,
+      "npartita": "BA - L 124",
+      "data": "2026-05-26",
+      "ora": "21:30",
+      "squadra_casa": "ALVOLLEY ROYAL Basic",
+      "squadra_ospite": "PLESIOS Basic",
+      "palestra": "PALESTRA SC. ELEMENTARE",
+      "indirizzo": "VIA BUOZZI 5 SETTIMO MILANESE",
+      "risultato": null,
+      "olimpia_pb_gioca": false,
+      "olimpia_pb_casa": false,
+      "giocata": false,
+      "lat": 45.4842669,
+      "lon": 9.0543319
+    },
+    {
       "id": "2026-05-29_revenant_basic_volley_cup_team_basic",
       "ivl_id": 32273,
       "npartita": "BA - L 127",
@@ -594,23 +611,6 @@
       "giocata": false,
       "lat": null,
       "lon": null
-    },
-    {
-      "id": "2026-05-31_alvolley_royal_basic_plesios_basic",
-      "ivl_id": 32270,
-      "npartita": "BA - L 124",
-      "data": "2026-05-31",
-      "ora": "21:00",
-      "squadra_casa": "ALVOLLEY ROYAL Basic",
-      "squadra_ospite": "PLESIOS Basic",
-      "palestra": "PALESTRA SC. ELEMENTARE",
-      "indirizzo": "VIA BUOZZI 5 SETTIMO MILANESE",
-      "risultato": null,
-      "olimpia_pb_gioca": false,
-      "olimpia_pb_casa": false,
-      "giocata": false,
-      "lat": 45.4842669,
-      "lon": 9.0543319
     },
     {
       "id": "2026-05-31_bresso_4_basic_pinco_pallino_volley_basic",
@@ -681,5 +681,5 @@
       "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-04-15T08:47:12.017442+00:00"
+  "ultimo_aggiornamento": "2026-04-15T11:58:12.495895+00:00"
 }
