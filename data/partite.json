@@ -109,7 +109,7 @@
       "squadra_casa": "CANTALUPO Basic",
       "squadra_ospite": "PINCO PALLINO VOLLEY Basic",
       "palestra": "PALAMANZONI",
-      "indirizzo": "VIA MAMELI",
+      "indirizzo": "VIA MAMELI MONZA",
       "risultato": {
         "set_casa": [
           23,
@@ -133,8 +133,8 @@
       "giocata": true,
       "ivl_id": 32247,
       "npartita": "BA - L 101",
-      "lat": 41.87194,
-      "lon": 12.56738
+      "lat": 45.5716733,
+      "lon": 9.312353
     },
     {
       "id": "2026-04-15_volley_cup_team_basic_bresso_4_basic",
@@ -398,15 +398,15 @@
       "squadra_casa": "CANTALUPO Basic",
       "squadra_ospite": "VOLLEY CUP TEAM Basic",
       "palestra": "PALAMANZONI",
-      "indirizzo": "VIA MAMELI",
+      "indirizzo": "VIA MAMELI MONZA",
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
       "giocata": false,
       "ivl_id": 32259,
       "npartita": "BA - L 113",
-      "lat": 41.87194,
-      "lon": 12.56738
+      "lat": 45.5716733,
+      "lon": 9.312353
     },
     {
       "id": "2026-05-12_olimpia_pb_basic_bresso_4_basic",
@@ -502,13 +502,13 @@
       "squadra_casa": "CANTALUPO Basic",
       "squadra_ospite": "ALVOLLEY ROYAL Basic",
       "palestra": "PALAMANZONI",
-      "indirizzo": "VIA MAMELI",
+      "indirizzo": "VIA MAMELI MONZA",
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
       "giocata": false,
-      "lat": 41.87194,
-      "lon": 12.56738
+      "lat": 45.5716733,
+      "lon": 9.312353
     },
     {
       "id": "2026-05-20_volley_cup_team_basic_olimpia_pb_basic",
@@ -570,13 +570,13 @@
       "squadra_casa": "CANTALUPO Basic",
       "squadra_ospite": "BRESSO 4 Basic",
       "palestra": "PALAMANZONI",
-      "indirizzo": "VIA MAMELI",
+      "indirizzo": "VIA MAMELI MONZA",
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
       "giocata": false,
-      "lat": 41.87194,
-      "lon": 12.56738
+      "lat": 45.5716733,
+      "lon": 9.312353
     },
     {
       "id": "2026-05-26_olimpia_pb_basic_pm_sport_basic",
@@ -698,5 +698,5 @@
       "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-04-16T08:47:54.652074+00:00"
+  "ultimo_aggiornamento": "2026-04-16T12:01:04.858690+00:00"
 }
