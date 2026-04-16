@@ -144,10 +144,27 @@
       "squadra_ospite": "BRESSO 4 Basic",
       "palestra": "PALESTRA VIA DEL SOLE",
       "indirizzo": "VIA DEL SOLE ASSAGO",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          18,
+          12,
+          19,
+          16,
+          17
+        ],
+        "set_ospite": [
+          21,
+          21,
+          21,
+          21,
+          21
+        ],
+        "set_vinti_casa": 0,
+        "set_vinti_ospite": 5
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "ivl_id": 32249,
       "npartita": "BA - L 103",
       "lat": 45.4048573,
@@ -681,5 +698,5 @@
       "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-04-15T20:05:56.839777+00:00"
+  "ultimo_aggiornamento": "2026-04-16T08:47:54.652074+00:00"
 }

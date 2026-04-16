@@ -1,6 +1,20 @@
 {
   "classifica": [
     {
+      "squadra": "BRESSO 4 Basic",
+      "punti": 0,
+      "partite_giocate": 2,
+      "partite_vinte": 2,
+      "partite_perse": 0,
+      "set_vinti": 9,
+      "set_persi": 1,
+      "quoziente_set": 9.0,
+      "punti_vinti": 203,
+      "punti_persi": 169,
+      "quoziente_punti": 1.201,
+      "posizione": 1
+    },
+    {
       "squadra": "OLIMPIA PB Basic",
       "punti": 0,
       "partite_giocate": 1,
@@ -12,7 +26,7 @@
       "punti_vinti": 105,
       "punti_persi": 70,
       "quoziente_punti": 1.5,
-      "posizione": 1
+      "posizione": 2
     },
     {
       "squadra": "REVENANT Basic",
@@ -26,20 +40,6 @@
       "punti_vinti": 103,
       "punti_persi": 62,
       "quoziente_punti": 1.661,
-      "posizione": 2
-    },
-    {
-      "squadra": "BRESSO 4 Basic",
-      "punti": 0,
-      "partite_giocate": 1,
-      "partite_vinte": 1,
-      "partite_perse": 0,
-      "set_vinti": 4,
-      "set_persi": 1,
-      "quoziente_set": 4.0,
-      "punti_vinti": 98,
-      "punti_persi": 87,
-      "quoziente_punti": 1.126,
       "posizione": 3
     },
     {
@@ -97,8 +97,22 @@
       "punti_persi": 103,
       "quoziente_punti": 0.602,
       "posizione": 7
+    },
+    {
+      "squadra": "VOLLEY CUP TEAM Basic",
+      "punti": 0,
+      "partite_giocate": 1,
+      "partite_vinte": 0,
+      "partite_perse": 1,
+      "set_vinti": 0,
+      "set_persi": 5,
+      "quoziente_set": 0.0,
+      "punti_vinti": 82,
+      "punti_persi": 105,
+      "quoziente_punti": 0.781,
+      "posizione": 8
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-04-15T20:05:57.779139+00:00"
+  "ultimo_aggiornamento": "2026-04-16T08:47:55.962695+00:00"
 }
