@@ -178,10 +178,27 @@
       "squadra_ospite": "PM SPORT Basic",
       "palestra": "PALESTRA,",
       "indirizzo": "VIA FIUME 22 VIMODRONE",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          21,
+          21,
+          21,
+          21,
+          21
+        ],
+        "set_ospite": [
+          10,
+          6,
+          18,
+          18,
+          6
+        ],
+        "set_vinti_casa": 5,
+        "set_vinti_ospite": 0
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "ivl_id": 32246,
       "npartita": "BA - L 100",
       "lat": 45.5149355,
@@ -195,10 +212,27 @@
       "squadra_ospite": "OLIMPIA PB Basic",
       "palestra": "Sc.Me. Paolo Sarpi",
       "indirizzo": "Via Grandi, 12 SETTIMO MILANESE",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          16,
+          12,
+          13,
+          12,
+          8
+        ],
+        "set_ospite": [
+          21,
+          21,
+          21,
+          21,
+          21
+        ],
+        "set_vinti_casa": 0,
+        "set_vinti_ospite": 5
+      },
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "ivl_id": 32248,
       "npartita": "BA - L 102",
       "lat": 45.4862308,
@@ -698,5 +732,5 @@
       "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-04-17T08:27:55.444596+00:00"
+  "ultimo_aggiornamento": "2026-04-17T11:55:05.430977+00:00"
 }

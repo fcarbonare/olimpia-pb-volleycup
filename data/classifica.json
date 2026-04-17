@@ -1,6 +1,20 @@
 {
   "classifica": [
     {
+      "squadra": "OLIMPIA PB Basic",
+      "punti": 0,
+      "partite_giocate": 2,
+      "partite_vinte": 2,
+      "partite_perse": 0,
+      "set_vinti": 10,
+      "set_persi": 0,
+      "quoziente_set": Infinity,
+      "punti_vinti": 210,
+      "punti_persi": 131,
+      "quoziente_punti": 1.603,
+      "posizione": 1
+    },
+    {
       "squadra": "BRESSO 4 Basic",
       "punti": 0,
       "partite_giocate": 2,
@@ -12,21 +26,21 @@
       "punti_vinti": 203,
       "punti_persi": 169,
       "quoziente_punti": 1.201,
-      "posizione": 1
+      "posizione": 2
     },
     {
-      "squadra": "OLIMPIA PB Basic",
+      "squadra": "PLESIOS Basic",
       "punti": 0,
-      "partite_giocate": 1,
+      "partite_giocate": 2,
       "partite_vinte": 1,
-      "partite_perse": 0,
-      "set_vinti": 5,
-      "set_persi": 0,
-      "quoziente_set": Infinity,
-      "punti_vinti": 105,
-      "punti_persi": 70,
-      "quoziente_punti": 1.5,
-      "posizione": 2
+      "partite_perse": 1,
+      "set_vinti": 6,
+      "set_persi": 4,
+      "quoziente_set": 1.5,
+      "punti_vinti": 192,
+      "punti_persi": 156,
+      "quoziente_punti": 1.231,
+      "posizione": 3
     },
     {
       "squadra": "REVENANT Basic",
@@ -40,7 +54,7 @@
       "punti_vinti": 103,
       "punti_persi": 62,
       "quoziente_punti": 1.661,
-      "posizione": 3
+      "posizione": 4
     },
     {
       "squadra": "CANTALUPO Basic",
@@ -54,7 +68,7 @@
       "punti_vinti": 102,
       "punti_persi": 104,
       "quoziente_punti": 0.981,
-      "posizione": 4
+      "posizione": 5
     },
     {
       "squadra": "PINCO PALLINO VOLLEY Basic",
@@ -68,34 +82,20 @@
       "punti_vinti": 174,
       "punti_persi": 207,
       "quoziente_punti": 0.841,
-      "posizione": 5
-    },
-    {
-      "squadra": "PLESIOS Basic",
-      "punti": 0,
-      "partite_giocate": 1,
-      "partite_vinte": 0,
-      "partite_perse": 1,
-      "set_vinti": 1,
-      "set_persi": 4,
-      "quoziente_set": 0.25,
-      "punti_vinti": 87,
-      "punti_persi": 98,
-      "quoziente_punti": 0.888,
       "posizione": 6
     },
     {
       "squadra": "ALVOLLEY ROYAL Basic",
       "punti": 0,
-      "partite_giocate": 1,
+      "partite_giocate": 2,
       "partite_vinte": 0,
-      "partite_perse": 1,
+      "partite_perse": 2,
       "set_vinti": 1,
-      "set_persi": 4,
-      "quoziente_set": 0.25,
-      "punti_vinti": 62,
-      "punti_persi": 103,
-      "quoziente_punti": 0.602,
+      "set_persi": 9,
+      "quoziente_set": 0.111,
+      "punti_vinti": 123,
+      "punti_persi": 208,
+      "quoziente_punti": 0.591,
       "posizione": 7
     },
     {
@@ -111,8 +111,22 @@
       "punti_persi": 105,
       "quoziente_punti": 0.781,
       "posizione": 8
+    },
+    {
+      "squadra": "PM SPORT Basic",
+      "punti": 0,
+      "partite_giocate": 1,
+      "partite_vinte": 0,
+      "partite_perse": 1,
+      "set_vinti": 0,
+      "set_persi": 5,
+      "quoziente_set": 0.0,
+      "punti_vinti": 58,
+      "punti_persi": 105,
+      "quoziente_punti": 0.552,
+      "posizione": 9
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-04-17T08:27:56.370497+00:00"
+  "ultimo_aggiornamento": "2026-04-17T11:55:06.703080+00:00"
 }
