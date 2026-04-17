@@ -99,42 +99,40 @@ def fmt_risultato(risultato) -> str:
     return f'{sv_c}-{sv_o}<br><small class="set-dettaglio">({set_str})</small>'
 
 
-def css_path() -> str:
-    return "assets/style.css"
-
-
-def nav_html(pagina_attiva: str) -> str:
+def nav_html(pagina_attiva: str, prefix: str = "") -> str:
     pages = [
-        ("index.html", "Home"),
-        ("calendario.html", "Calendario"),
-        ("classifica.html", "Classifica"),
+        (f"{prefix}index.html", "Home"),
+        (f"{prefix}calendario.html", "Calendario"),
+        (f"{prefix}classifica.html", "Classifica"),
     ]
     items = []
     for href, label in pages:
-        cls = ' class="active"' if href == pagina_attiva else ""
+        cls = ' class="active"' if pagina_attiva in href else ""
         items.append(f'<li><a href="{href}"{cls}>{label}</a></li>')
     return "<nav><ul>" + "".join(items) + "</ul></nav>"
 
 
-def page_shell(title: str, body: str, pagina_attiva: str, ultimo_agg: str) -> str:
+def page_shell(title: str, body: str, pagina_attiva: str, ultimo_agg: str, prefix: str = "") -> str:
+    css = f"{prefix}assets/style.css"
+    logo = f"{prefix}assets/logo.png"
     return f"""<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title} — Olimpia PB Volleycup</title>
-  <link rel="stylesheet" href="{css_path()}">
+  <link rel="stylesheet" href="{css}">
 </head>
 <body>
   <header>
     <div class="header-inner">
-      <img src="assets/logo.png" alt="Logo Olimpia PB" class="header-logo">
+      <img src="{logo}" alt="Logo Olimpia PB" class="header-logo">
       <div class="header-text">
         <span class="logo-text">OLIMPIA <span>P.B.</span></span>
         <span class="subtitle">Volleycup Basic — Girone 910</span>
       </div>
     </div>
-    {nav_html(pagina_attiva)}
+    {nav_html(pagina_attiva, prefix)}
   </header>
   <main>
     {body}
@@ -266,7 +264,12 @@ def build_calendario(partite: list, ultimo_agg: str) -> str:
             luogo_str = f'<br><small class="set-dettaglio">{luogo}</small>' if luogo else ""
             risultato_td = f'<td class="risultato futuro">ore {p.get("ora","--:--")}{luogo_str}</td>'
 
-        righe += f"""<tr class="{row_cls}">
+        if is_olimpia:
+            row_extra = f' onclick="window.location.href=\'partite/{p["id"]}.html\'" style="cursor:pointer"'
+        else:
+            row_extra = ""
+
+        righe += f"""<tr class="{row_cls}"{row_extra}>
   <td class="data">{fmt_data_con_giorno(p['data'])}</td>
   <td class="team{casa_cls}">{badge}{casa}</td>
   <td class="vs">vs</td>
@@ -359,6 +362,198 @@ def build_classifica(classifica: list, ultimo_agg: str) -> str:
     return page_shell("Classifica", body, "classifica.html", ultimo_agg)
 
 
+# ── partite individuali ───────────────────────────────────────────────────────
+
+def _storico_avversario(avversario: str, partite: list, escludi_id: str) -> str:
+    """Costruisce la tabella con lo storico delle partite dell'avversario."""
+    giocate = [
+        p for p in partite
+        if p.get("giocata") and p["id"] != escludi_id
+        and (avversario.lower() in p["squadra_casa"].lower()
+             or avversario.lower() in p["squadra_ospite"].lower())
+    ]
+    if not giocate:
+        return '<p class="nota">Nessuna partita giocata dall\'avversario finora.</p>'
+
+    righe = ""
+    for p in giocate:
+        casa_nome = p["squadra_casa"]
+        ospite_nome = p["squadra_ospite"]
+        sv_casa = p["risultato"]["set_vinti_casa"]
+        sv_ospite = p["risultato"]["set_vinti_ospite"]
+        e_casa = avversario.lower() in casa_nome.lower()
+        avv_sv = sv_casa if e_casa else sv_ospite
+        opp_sv = sv_ospite if e_casa else sv_casa
+        esito_cls = "vittoria" if avv_sv > opp_sv else "sconfitta"
+        esito_txt = "V" if avv_sv > opp_sv else "S"
+        set_c = p["risultato"]["set_casa"]
+        set_o = p["risultato"]["set_ospite"]
+        set_str = ", ".join(f"{a}-{b}" for a, b in zip(set_c, set_o))
+        is_olimpia_row = (SQUADRA_MONITORATA.lower() in casa_nome.lower()
+                          or SQUADRA_MONITORATA.lower() in ospite_nome.lower())
+        row_cls = ' class="olimpia-row"' if is_olimpia_row else ""
+        casa_cls = " olimpia" if SQUADRA_MONITORATA.lower() in casa_nome.lower() else ""
+        ospite_cls = " olimpia" if SQUADRA_MONITORATA.lower() in ospite_nome.lower() else ""
+        righe += f"""<tr{row_cls}>
+  <td class="data">{fmt_data(p['data'])}</td>
+  <td class="team-name{casa_cls}">{casa_nome}</td>
+  <td class="vs">vs</td>
+  <td class="team-name{ospite_cls}">{ospite_nome}</td>
+  <td class="storico-score">{sv_casa}-{sv_ospite}</td>
+  <td><small class="set-dettaglio">{set_str}</small></td>
+  <td><span class="esito {esito_cls}">{esito_txt}</span></td>
+</tr>"""
+
+    return f"""<div class="table-scroll">
+  <table class="calendario-table">
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th colspan="3">Partita</th>
+        <th>Set</th>
+        <th>Dettaglio</th>
+        <th>Esito</th>
+      </tr>
+    </thead>
+    <tbody>{righe}</tbody>
+  </table>
+</div>"""
+
+
+def build_partita(partita: dict, partite: list, formazioni: dict, ultimo_agg: str) -> str:
+    pid = partita["id"]
+    casa = partita["squadra_casa"]
+    ospite = partita["squadra_ospite"]
+    is_casa = partita.get("olimpia_pb_casa", False)
+    avversario = ospite if is_casa else casa
+    olimpia_cls = "olimpia" if True else ""
+
+    data_str = fmt_data(partita["data"])
+    ora_str = partita.get("ora", "--:--")
+    palestra = partita.get("palestra", "")
+    luogo = fmt_luogo(partita)
+
+    titolo = f"{casa} vs {ospite}"
+
+    if partita.get("giocata") and partita.get("risultato"):
+        # ── Partita giocata ────────────────────────────────────────────────
+        ris = partita["risultato"]
+        sv_c = ris["set_vinti_casa"]
+        sv_o = ris["set_vinti_ospite"]
+        set_c = ris.get("set_casa", [])
+        set_o = ris.get("set_ospite", [])
+        set_detail = " &nbsp;|&nbsp; ".join(f"<b>{a}</b>-{b}" if a > b else f"{a}-<b>{b}</b>"
+                                            for a, b in zip(set_c, set_o))
+
+        olimpia_vince = (is_casa and sv_c > sv_o) or (not is_casa and sv_o > sv_c)
+        esito_cls = "vittoria" if olimpia_vince else "sconfitta"
+        esito_txt = "VITTORIA" if olimpia_vince else "SCONFITTA"
+
+        foto = formazioni.get(pid, {}).get("foto")
+        if foto:
+            foto_html = f'<img src="{foto}" alt="Foto partita {titolo}" class="foto-partita">'
+        else:
+            foto_html = """<div class="foto-placeholder">
+    <span class="foto-icon">📷</span>
+    <p>Foto della partita non ancora disponibile</p>
+  </div>"""
+
+        formazione = formazioni.get(pid, {}).get("giocatori", [])
+        if formazione:
+            righe_form = "".join(
+                f'<tr><td class="maglia">{g.get("numero","")}</td><td class="team-name">{g.get("nome","")}</td></tr>'
+                for g in sorted(formazione, key=lambda x: x.get("nome", ""))
+            )
+            tabella_form = f"""<div class="table-scroll">
+  <table class="formazione-table">
+    <thead><tr><th>#</th><th>Giocatore</th></tr></thead>
+    <tbody>{righe_form}</tbody>
+  </table>
+</div>"""
+        else:
+            tabella_form = '<p class="nota">Formazione non ancora disponibile.</p>'
+
+        body = f"""
+<section class="card">
+  <a href="../calendario.html" class="back-link">← Torna al calendario</a>
+  <h2>{titolo}</h2>
+  <div class="partita-meta">{data_str}</div>
+  <div class="risultato-hero {esito_cls}">
+    <div class="score-principale">{sv_c} – {sv_o}</div>
+    <div class="esito-label">{esito_txt}</div>
+    <div class="score-set">{set_detail}</div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Foto &amp; Formazione</h2>
+  <div class="foto-formazione-grid">
+    <div class="foto-col">{foto_html}</div>
+    <div class="form-col">
+      <h3 class="form-subtitle">Formazione Olimpia PB</h3>
+      {tabella_form}
+    </div>
+  </div>
+</section>"""
+
+    else:
+        # ── Partita futura ─────────────────────────────────────────────────
+        storico_html = _storico_avversario(avversario, partite, pid)
+        luogo_html = f'<div class="match-venue">📍 {palestra}</div><div class="match-venue">🗺 {luogo}</div>' if luogo else (f'<div class="match-venue">📍 {palestra}</div>' if palestra else "")
+        casa_cls = " olimpia" if is_casa else ""
+        ospite_cls = "" if is_casa else " olimpia"
+
+        body = f"""
+<section class="card">
+  <a href="../calendario.html" class="back-link">← Torna al calendario</a>
+  <h2>Prossima partita</h2>
+  <div class="match-card olimpia-match">
+    <div class="match-date">{data_str} ore {ora_str}</div>
+    <div class="match-teams">
+      <span class="team{casa_cls}">{casa}</span>
+      <span class="vs">vs</span>
+      <span class="team{ospite_cls}">{ospite}</span>
+    </div>
+    {luogo_html}
+  </div>
+</section>
+
+<section class="card">
+  <h2>Storico avversario: {avversario}</h2>
+  {storico_html}
+</section>"""
+
+    return page_shell(titolo, body, "calendario.html", ultimo_agg, prefix="../")
+
+
+def build_partite_pages(partite: list, formazioni: dict, ultimo_agg: str, site_dir: Path) -> int:
+    olimpia_partite = [p for p in partite if p.get("olimpia_pb_gioca")]
+    partite_dir = site_dir / "partite"
+    fotos_dir = partite_dir / "fotos"
+    partite_dir.mkdir(exist_ok=True)
+    fotos_dir.mkdir(exist_ok=True)
+
+    count = 0
+    for p in olimpia_partite:
+        pid = p["id"]
+
+        # Merge: dati manuali da formazioni.json + auto-rilevamento foto per filename
+        form = dict(formazioni.get(pid, {}))
+        if not form.get("foto"):
+            for ext in ("jpg", "jpeg", "png", "webp"):
+                if (fotos_dir / f"{pid}.{ext}").exists():
+                    form["foto"] = f"fotos/{pid}.{ext}"
+                    log(f"  foto auto-rilevata: {pid}.{ext}")
+                    break
+
+        html = build_partita(p, partite, {**formazioni, pid: form}, ultimo_agg)
+        path = partite_dir / f"{pid}.html"
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(html)
+        count += 1
+    return count
+
+
 # ── main ──────────────────────────────────────────────────────────────────────
 
 def main() -> int:
@@ -366,9 +561,11 @@ def main() -> int:
 
     dati_partite = load_json(DATA_DIR / "partite.json")
     dati_classifica = load_json(DATA_DIR / "classifica.json")
+    dati_formazioni = load_json(DATA_DIR / "formazioni.json")
 
     partite = dati_partite.get("partite", [])
     classifica = dati_classifica.get("classifica", [])
+    formazioni = dati_formazioni.get("formazioni", {})
 
     ultimo_agg_ts = dati_partite.get("ultimo_aggiornamento") or dati_classifica.get("ultimo_aggiornamento")
     ultimo_agg = fmt_ts(ultimo_agg_ts)
@@ -376,7 +573,7 @@ def main() -> int:
     SITE_DIR.mkdir(exist_ok=True)
     (SITE_DIR / "assets").mkdir(exist_ok=True)
 
-    # Genera le pagine
+    # Genera le pagine principali
     pages = {
         "index.html": build_index(partite, classifica, ultimo_agg),
         "calendario.html": build_calendario(partite, ultimo_agg),
@@ -389,7 +586,14 @@ def main() -> int:
             f.write(html)
         log(f"Generato: {path}")
 
-    append_log("OK", f"generate {len(pages)} pagine HTML")
+    # Genera le pagine individuali delle partite Olimpia PB
+    n_formazioni = sum(1 for p in partite
+                       if p.get("olimpia_pb_gioca") and formazioni.get(p["id"]))
+    log(f"formazioni.json: dati manuali per {n_formazioni} partite Olimpia PB")
+    n_partite = build_partite_pages(partite, formazioni, ultimo_agg, SITE_DIR)
+    log(f"Generate {n_partite} pagine partita in docs/partite/")
+
+    append_log("OK", f"generate {len(pages)} pagine HTML + {n_partite} pagine partita")
     log("=== build_site.py completato ===")
     return 0
 

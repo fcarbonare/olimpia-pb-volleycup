@@ -269,6 +269,139 @@ footer {
 
 footer a { color: rgba(255,255,255,.7); }
 
+/* ===== Back link ===== */
+.back-link {
+  display: inline-block;
+  font-size: .82rem;
+  color: var(--testo-chiaro);
+  margin-bottom: .75rem;
+  font-weight: 500;
+}
+.back-link:hover { color: var(--rosso); text-decoration: none; }
+
+/* ===== Partita meta ===== */
+.partita-meta {
+  font-size: .82rem;
+  color: var(--testo-chiaro);
+  margin-bottom: .75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+}
+
+/* ===== Risultato hero ===== */
+.risultato-hero {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-radius: 10px;
+  margin-top: .5rem;
+}
+.risultato-hero.vittoria {
+  background: #e8f5e9;
+  border-left: 5px solid #2e7d32;
+}
+.risultato-hero.sconfitta {
+  background: var(--rosso-chiaro);
+  border-left: 5px solid var(--rosso);
+}
+.score-principale {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--nero);
+}
+.esito-label {
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: .4rem 0;
+}
+.vittoria .esito-label { color: #2e7d32; }
+.sconfitta .esito-label { color: var(--rosso); }
+.score-set {
+  font-size: .85rem;
+  color: var(--testo-chiaro);
+  margin-top: .25rem;
+}
+
+/* ===== Foto placeholder ===== */
+.foto-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: 2.5rem 1rem;
+  background: var(--grigio-bg);
+  border-radius: 8px;
+  border: 2px dashed var(--grigio-bordo);
+  color: var(--testo-chiaro);
+  font-size: .9rem;
+}
+.foto-icon { font-size: 2.5rem; }
+
+/* ===== Foto + Formazione affiancate ===== */
+.foto-formazione-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.25rem;
+  align-items: start;
+}
+.foto-col { min-width: 0; }
+.form-col { min-width: 200px; }
+.form-subtitle {
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--testo-chiaro);
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  margin-bottom: .6rem;
+}
+@media (max-width: 600px) {
+  .foto-formazione-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== Foto reale ===== */
+.foto-partita {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;
+  max-height: 480px;
+}
+
+/* ===== Formazione table ===== */
+.formazione-table { max-width: 320px; }
+.formazione-table td.maglia {
+  width: 48px;
+  font-weight: 800;
+  color: var(--rosso);
+  text-align: center;
+}
+
+/* ===== Storico avversario ===== */
+td.storico-score { font-weight: 700; }
+td.team-name.olimpia { color: var(--rosso); font-weight: 700; }
+span.esito {
+  display: inline-block;
+  padding: .15rem .5rem;
+  border-radius: 4px;
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+span.esito.vittoria { background: #e8f5e9; color: #2e7d32; }
+span.esito.sconfitta { background: var(--rosso-chiaro); color: var(--rosso); }
+
+/* ===== Link partita nel calendario ===== */
+a.partita-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+}
+a.partita-link:hover { color: var(--rosso); text-decoration: underline; }
+
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
   .header-logo { width: 40px; height: 40px; }
