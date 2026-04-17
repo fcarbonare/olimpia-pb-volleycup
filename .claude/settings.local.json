@@ -17,7 +17,14 @@
       "Bash(git commit -m ':*)",
       "Bash(git push:*)",
       "Bash(ssh -T git@github.com)",
-      "Bash(git remote:*)"
+      "Bash(git remote:*)",
+      "Bash(git merge:*)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(bash -c 'git pull --rebase origin main 2>&1; true')",
+      "Bash(bash -c 'git fetch origin main 2>&1 && git rebase --autostash origin/main 2>&1; true')",
+      "Bash(git fetch:*)",
+      "Bash(git rebase:*)"
     ]
   }
 }
