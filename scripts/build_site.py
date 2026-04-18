@@ -177,7 +177,9 @@ def build_index(partite: list, classifica: list, ultimo_agg: str) -> str:
       <span class="team{ospite_cls}">{ospite}</span>
     </div>
     <div class="match-venue">📍 {prossima.get('palestra','')}</div>
+    {f'<div class="match-venue">🗺 {fmt_luogo(prossima)}</div>' if prossima.get('indirizzo') else ''}
   </div>
+  <p class="link-more"><a href="partite/{prossima['id']}.html">Dettagli →</a></p>
 </section>"""
     else:
         prossima_html = '<section class="card"><h2>Prossima partita</h2><p>Nessuna partita in programma.</p></section>'
@@ -188,7 +190,8 @@ def build_index(partite: list, classifica: list, ultimo_agg: str) -> str:
         ospite = ultima["squadra_ospite"]
         casa_cls = " olimpia" if ultima.get("olimpia_pb_casa") else ""
         ospite_cls = "" if ultima.get("olimpia_pb_casa") else " olimpia"
-        ris = fmt_risultato(ultima.get("risultato"))
+        r = ultima.get("risultato") or {}
+        ris = f'{r.get("set_vinti_casa", 0)}-{r.get("set_vinti_ospite", 0)}'
         ultima_html = f"""
 <section class="card">
   <h2>Ultima partita</h2>
@@ -200,6 +203,7 @@ def build_index(partite: list, classifica: list, ultimo_agg: str) -> str:
       <span class="team{ospite_cls}">{ospite}</span>
     </div>
   </div>
+  <p class="link-more"><a href="partite/{ultima['id']}.html">Dettagli →</a></p>
 </section>"""
     else:
         ultima_html = '<section class="card"><h2>Ultima partita</h2><p>Nessun risultato disponibile.</p></section>'
