@@ -13,6 +13,18 @@
         {"numero": 4,  "nome": "Rose Francesco"}
       ]
     },
+    "2026-04-21_olimpia_pb_basic_cantalupo_basic": {
+      "giocatori": [
+        {"numero": 9,  "nome": "Carbonare Fred"},
+        {"numero": 8,  "nome": "Dendiu Daniel"},
+        {"numero": 17, "nome": "Garue Francesco"},
+        {"numero": 15, "nome": "Lopes Magda"},
+        {"numero": 26, "nome": "Negro Aurora"},
+        {"numero": 7,  "nome": "Palumbo Angelo"},
+        {"numero": 16, "nome": "Pejrano Valentina (L)"},
+        {"numero": 4,  "nome": "Rose Francesco"}
+      ]
+    },
     "2026-04-16_alvolley_royal_basic_olimpia_pb_basic": {
       "foto": "fotos/2026-04-16_alvolley_royal_basic_olimpia_pb_basic.jpg",
       "giocatori": [
