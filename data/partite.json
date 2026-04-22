@@ -246,10 +246,27 @@
       "squadra_ospite": "CANTALUPO Basic",
       "palestra": "Scuola San Bovio",
       "indirizzo": "Viale Abruzzi, 9 PESCHIERA BORROMEO",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          21,
+          22,
+          21,
+          21,
+          21
+        ],
+        "set_ospite": [
+          10,
+          20,
+          10,
+          15,
+          17
+        ],
+        "set_vinti_casa": 5,
+        "set_vinti_ospite": 0
+      },
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": true,
-      "giocata": false,
+      "giocata": true,
       "ivl_id": 32252,
       "npartita": "BA - L 106",
       "lat": 45.4560153,
@@ -732,5 +749,5 @@
       "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-04-21T20:05:58.892112+00:00"
+  "ultimo_aggiornamento": "2026-04-22T08:50:39.266530+00:00"
 }
