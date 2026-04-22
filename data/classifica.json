@@ -2,13 +2,13 @@
   "classifica": [
     {
       "squadra": "OLIMPIA PB Basic",
-      "punti": 0,
+      "punti": 15,
       "partite_giocate": 3,
       "partite_vinte": 3,
       "partite_perse": 0,
       "set_vinti": 15,
       "set_persi": 0,
-      "quoziente_set": Infinity,
+      "quoziente_set": null,
       "punti_vinti": 316,
       "punti_persi": 203,
       "quoziente_punti": 1.557,
@@ -16,7 +16,7 @@
     },
     {
       "squadra": "BRESSO 4 Basic",
-      "punti": 0,
+      "punti": 9,
       "partite_giocate": 2,
       "partite_vinte": 2,
       "partite_perse": 0,
@@ -30,7 +30,7 @@
     },
     {
       "squadra": "PLESIOS Basic",
-      "punti": 0,
+      "punti": 6,
       "partite_giocate": 2,
       "partite_vinte": 1,
       "partite_perse": 1,
@@ -44,7 +44,7 @@
     },
     {
       "squadra": "REVENANT Basic",
-      "punti": 0,
+      "punti": 4,
       "partite_giocate": 1,
       "partite_vinte": 1,
       "partite_perse": 0,
@@ -58,7 +58,7 @@
     },
     {
       "squadra": "CANTALUPO Basic",
-      "punti": 0,
+      "punti": 3,
       "partite_giocate": 2,
       "partite_vinte": 1,
       "partite_perse": 1,
@@ -72,7 +72,7 @@
     },
     {
       "squadra": "PINCO PALLINO VOLLEY Basic",
-      "punti": 0,
+      "punti": 2,
       "partite_giocate": 2,
       "partite_vinte": 0,
       "partite_perse": 2,
@@ -86,7 +86,7 @@
     },
     {
       "squadra": "ALVOLLEY ROYAL Basic",
-      "punti": 0,
+      "punti": 1,
       "partite_giocate": 2,
       "partite_vinte": 0,
       "partite_perse": 2,
@@ -127,6 +127,5 @@
       "posizione": 9
     }
   ],
-  "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-04-22T16:11:50.999277+00:00"
+  "ultimo_aggiornamento": "2026-04-22T16:13:14.499579+00:00"
 }
