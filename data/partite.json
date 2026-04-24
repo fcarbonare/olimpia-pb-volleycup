@@ -280,10 +280,27 @@
       "squadra_ospite": "PLESIOS Basic",
       "palestra": "Palestra Istituto ALEXIS CARREL",
       "indirizzo": "Via Inganni 12 MILANO",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          12,
+          15,
+          18,
+          18,
+          16
+        ],
+        "set_ospite": [
+          21,
+          21,
+          21,
+          21,
+          21
+        ],
+        "set_vinti_casa": 0,
+        "set_vinti_ospite": 5
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "ivl_id": 32253,
       "npartita": "BA - L 107",
       "lat": 45.4477134,
@@ -297,10 +314,27 @@
       "squadra_ospite": "VOLLEY CUP TEAM Basic",
       "palestra": "PALAZZETTO DELLO SPORT.",
       "indirizzo": "VIA STELLA POLARE 11/a MEDIGLIA",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          21,
+          19,
+          21,
+          15,
+          21
+        ],
+        "set_ospite": [
+          14,
+          21,
+          13,
+          21,
+          19
+        ],
+        "set_vinti_casa": 3,
+        "set_vinti_ospite": 2
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "ivl_id": 32250,
       "npartita": "BA - L 104",
       "lat": 45.4348072,
@@ -749,5 +783,5 @@
       "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-04-24T12:00:42.318383+00:00"
+  "ultimo_aggiornamento": "2026-04-24T16:07:49.898033+00:00"
 }

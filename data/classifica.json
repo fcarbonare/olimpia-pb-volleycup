@@ -15,6 +15,20 @@
       "posizione": 1
     },
     {
+      "squadra": "PLESIOS Basic",
+      "punti": 0,
+      "partite_giocate": 3,
+      "partite_vinte": 2,
+      "partite_perse": 1,
+      "set_vinti": 11,
+      "set_persi": 4,
+      "quoziente_set": 2.75,
+      "punti_vinti": 297,
+      "punti_persi": 235,
+      "quoziente_punti": 1.264,
+      "posizione": 2
+    },
+    {
       "squadra": "BRESSO 4 Basic",
       "punti": 0,
       "partite_giocate": 2,
@@ -26,20 +40,6 @@
       "punti_vinti": 203,
       "punti_persi": 169,
       "quoziente_punti": 1.201,
-      "posizione": 2
-    },
-    {
-      "squadra": "PLESIOS Basic",
-      "punti": 0,
-      "partite_giocate": 2,
-      "partite_vinte": 1,
-      "partite_perse": 1,
-      "set_vinti": 6,
-      "set_persi": 4,
-      "quoziente_set": 1.5,
-      "punti_vinti": 192,
-      "punti_persi": 156,
-      "quoziente_punti": 1.231,
       "posizione": 3
     },
     {
@@ -71,7 +71,21 @@
       "posizione": 5
     },
     {
-      "squadra": "PINCO PALLINO VOLLEY Basic",
+      "squadra": "PM SPORT Basic",
+      "punti": 0,
+      "partite_giocate": 2,
+      "partite_vinte": 1,
+      "partite_perse": 1,
+      "set_vinti": 3,
+      "set_persi": 7,
+      "quoziente_set": 0.429,
+      "punti_vinti": 155,
+      "punti_persi": 193,
+      "quoziente_punti": 0.803,
+      "posizione": 6
+    },
+    {
+      "squadra": "VOLLEY CUP TEAM Basic",
       "punti": 0,
       "partite_giocate": 2,
       "partite_vinte": 0,
@@ -79,10 +93,24 @@
       "set_vinti": 2,
       "set_persi": 8,
       "quoziente_set": 0.25,
-      "punti_vinti": 174,
-      "punti_persi": 207,
-      "quoziente_punti": 0.841,
-      "posizione": 6
+      "punti_vinti": 170,
+      "punti_persi": 202,
+      "quoziente_punti": 0.842,
+      "posizione": 7
+    },
+    {
+      "squadra": "PINCO PALLINO VOLLEY Basic",
+      "punti": 0,
+      "partite_giocate": 3,
+      "partite_vinte": 0,
+      "partite_perse": 3,
+      "set_vinti": 2,
+      "set_persi": 13,
+      "quoziente_set": 0.154,
+      "punti_vinti": 253,
+      "punti_persi": 312,
+      "quoziente_punti": 0.811,
+      "posizione": 8
     },
     {
       "squadra": "ALVOLLEY ROYAL Basic",
@@ -96,37 +124,9 @@
       "punti_vinti": 123,
       "punti_persi": 208,
       "quoziente_punti": 0.591,
-      "posizione": 7
-    },
-    {
-      "squadra": "VOLLEY CUP TEAM Basic",
-      "punti": 0,
-      "partite_giocate": 1,
-      "partite_vinte": 0,
-      "partite_perse": 1,
-      "set_vinti": 0,
-      "set_persi": 5,
-      "quoziente_set": 0.0,
-      "punti_vinti": 82,
-      "punti_persi": 105,
-      "quoziente_punti": 0.781,
-      "posizione": 8
-    },
-    {
-      "squadra": "PM SPORT Basic",
-      "punti": 0,
-      "partite_giocate": 1,
-      "partite_vinte": 0,
-      "partite_perse": 1,
-      "set_vinti": 0,
-      "set_persi": 5,
-      "quoziente_set": 0.0,
-      "punti_vinti": 58,
-      "punti_persi": 105,
-      "quoziente_punti": 0.552,
       "posizione": 9
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-04-24T12:00:43.425095+00:00"
+  "ultimo_aggiornamento": "2026-04-24T16:07:51.170124+00:00"
 }
