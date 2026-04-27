@@ -348,10 +348,27 @@
       "squadra_ospite": "REVENANT Basic",
       "palestra": "Pala Marconi",
       "indirizzo": "Via Simone de Gatti, 1 BRESSO",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          15,
+          21,
+          21,
+          18,
+          13
+        ],
+        "set_ospite": [
+          21,
+          18,
+          17,
+          21,
+          21
+        ],
+        "set_vinti_casa": 2,
+        "set_vinti_ospite": 3
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "ivl_id": 32251,
       "npartita": "BA - L 105",
       "lat": 45.5415512,
@@ -783,5 +800,5 @@
       "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-04-26T19:49:56.101627+00:00"
+  "ultimo_aggiornamento": "2026-04-27T09:23:28.030786+00:00"
 }

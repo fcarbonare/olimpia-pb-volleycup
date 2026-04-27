@@ -31,29 +31,29 @@
     {
       "squadra": "BRESSO 4 Basic",
       "punti": 0,
-      "partite_giocate": 2,
+      "partite_giocate": 3,
       "partite_vinte": 2,
-      "partite_perse": 0,
-      "set_vinti": 9,
-      "set_persi": 1,
-      "quoziente_set": 9.0,
-      "punti_vinti": 203,
-      "punti_persi": 169,
-      "quoziente_punti": 1.201,
+      "partite_perse": 1,
+      "set_vinti": 11,
+      "set_persi": 4,
+      "quoziente_set": 2.75,
+      "punti_vinti": 291,
+      "punti_persi": 267,
+      "quoziente_punti": 1.09,
       "posizione": 3
     },
     {
       "squadra": "REVENANT Basic",
       "punti": 0,
-      "partite_giocate": 1,
-      "partite_vinte": 1,
+      "partite_giocate": 2,
+      "partite_vinte": 2,
       "partite_perse": 0,
-      "set_vinti": 4,
-      "set_persi": 1,
-      "quoziente_set": 4.0,
-      "punti_vinti": 103,
-      "punti_persi": 62,
-      "quoziente_punti": 1.661,
+      "set_vinti": 7,
+      "set_persi": 3,
+      "quoziente_set": 2.333,
+      "punti_vinti": 201,
+      "punti_persi": 150,
+      "quoziente_punti": 1.34,
       "posizione": 4
     },
     {
@@ -128,5 +128,5 @@
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-04-26T19:49:57.172107+00:00"
+  "ultimo_aggiornamento": "2026-04-27T09:23:29.061889+00:00"
 }
