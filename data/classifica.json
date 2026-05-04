@@ -15,6 +15,20 @@
       "posizione": 1
     },
     {
+      "squadra": "BRESSO 4 Basic",
+      "punti": 0,
+      "partite_giocate": 4,
+      "partite_vinte": 3,
+      "partite_perse": 1,
+      "set_vinti": 15,
+      "set_persi": 5,
+      "quoziente_set": 3.0,
+      "punti_vinti": 391,
+      "punti_persi": 353,
+      "quoziente_punti": 1.108,
+      "posizione": 2
+    },
+    {
       "squadra": "PLESIOS Basic",
       "punti": 0,
       "partite_giocate": 3,
@@ -26,20 +40,6 @@
       "punti_vinti": 297,
       "punti_persi": 235,
       "quoziente_punti": 1.264,
-      "posizione": 2
-    },
-    {
-      "squadra": "BRESSO 4 Basic",
-      "punti": 0,
-      "partite_giocate": 3,
-      "partite_vinte": 2,
-      "partite_perse": 1,
-      "set_vinti": 11,
-      "set_persi": 4,
-      "quoziente_set": 2.75,
-      "punti_vinti": 291,
-      "punti_persi": 267,
-      "quoziente_punti": 1.09,
       "posizione": 3
     },
     {
@@ -115,18 +115,18 @@
     {
       "squadra": "ALVOLLEY ROYAL Basic",
       "punti": 0,
-      "partite_giocate": 2,
+      "partite_giocate": 3,
       "partite_vinte": 0,
-      "partite_perse": 2,
-      "set_vinti": 1,
-      "set_persi": 9,
-      "quoziente_set": 0.111,
-      "punti_vinti": 123,
-      "punti_persi": 208,
-      "quoziente_punti": 0.591,
+      "partite_perse": 3,
+      "set_vinti": 2,
+      "set_persi": 13,
+      "quoziente_set": 0.154,
+      "punti_vinti": 209,
+      "punti_persi": 308,
+      "quoziente_punti": 0.679,
       "posizione": 9
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-05-03T19:55:42.785214+00:00"
+  "ultimo_aggiornamento": "2026-05-04T09:24:57.566959+00:00"
 }
