@@ -57,6 +57,20 @@
       "posizione": 4
     },
     {
+      "squadra": "PM SPORT Basic",
+      "punti": 0,
+      "partite_giocate": 3,
+      "partite_vinte": 2,
+      "partite_perse": 1,
+      "set_vinti": 6,
+      "set_persi": 9,
+      "quoziente_set": 0.667,
+      "punti_vinti": 252,
+      "punti_persi": 278,
+      "quoziente_punti": 0.906,
+      "posizione": 5
+    },
+    {
       "squadra": "PINCO PALLINO VOLLEY Basic",
       "punti": 0,
       "partite_giocate": 4,
@@ -68,7 +82,7 @@
       "punti_vinti": 339,
       "punti_persi": 395,
       "quoziente_punti": 0.858,
-      "posizione": 5
+      "posizione": 6
     },
     {
       "squadra": "VOLLEY CUP TEAM Basic",
@@ -82,7 +96,21 @@
       "punti_vinti": 253,
       "punti_persi": 288,
       "quoziente_punti": 0.878,
-      "posizione": 6
+      "posizione": 7
+    },
+    {
+      "squadra": "ALVOLLEY ROYAL Basic",
+      "punti": 0,
+      "partite_giocate": 4,
+      "partite_vinte": 0,
+      "partite_perse": 4,
+      "set_vinti": 4,
+      "set_persi": 16,
+      "quoziente_set": 0.25,
+      "punti_vinti": 294,
+      "punti_persi": 405,
+      "quoziente_punti": 0.726,
+      "posizione": 8
     },
     {
       "squadra": "CANTALUPO Basic",
@@ -96,37 +124,9 @@
       "punti_vinti": 174,
       "punti_persi": 210,
       "quoziente_punti": 0.829,
-      "posizione": 7
-    },
-    {
-      "squadra": "PM SPORT Basic",
-      "punti": 0,
-      "partite_giocate": 2,
-      "partite_vinte": 1,
-      "partite_perse": 1,
-      "set_vinti": 3,
-      "set_persi": 7,
-      "quoziente_set": 0.429,
-      "punti_vinti": 155,
-      "punti_persi": 193,
-      "quoziente_punti": 0.803,
-      "posizione": 8
-    },
-    {
-      "squadra": "ALVOLLEY ROYAL Basic",
-      "punti": 0,
-      "partite_giocate": 3,
-      "partite_vinte": 0,
-      "partite_perse": 3,
-      "set_vinti": 2,
-      "set_persi": 13,
-      "quoziente_set": 0.154,
-      "punti_vinti": 209,
-      "punti_persi": 308,
-      "quoziente_punti": 0.679,
       "posizione": 9
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-05-07T12:59:27.179681+00:00"
+  "ultimo_aggiornamento": "2026-05-07T16:55:57.013855+00:00"
 }

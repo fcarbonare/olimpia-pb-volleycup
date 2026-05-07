@@ -484,10 +484,27 @@
       "squadra_ospite": "ALVOLLEY ROYAL Basic",
       "palestra": "PALAZZETTO DELLO SPORT.",
       "indirizzo": "VIA STELLA POLARE 11/a MEDIGLIA",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          21,
+          18,
+          21,
+          21,
+          16
+        ],
+        "set_ospite": [
+          19,
+          21,
+          10,
+          14,
+          21
+        ],
+        "set_vinti_casa": 3,
+        "set_vinti_ospite": 2
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "ivl_id": 32260,
       "npartita": "BA - L 114",
       "lat": 45.4348072,
@@ -834,5 +851,5 @@
       "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-05-07T12:59:25.989308+00:00"
+  "ultimo_aggiornamento": "2026-05-07T16:55:56.091944+00:00"
 }
