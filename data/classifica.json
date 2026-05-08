@@ -3,15 +3,15 @@
     {
       "squadra": "OLIMPIA PB Basic",
       "punti": 0,
-      "partite_giocate": 3,
-      "partite_vinte": 3,
+      "partite_giocate": 4,
+      "partite_vinte": 4,
       "partite_perse": 0,
-      "set_vinti": 15,
-      "set_persi": 0,
-      "quoziente_set": Infinity,
-      "punti_vinti": 316,
-      "punti_persi": 203,
-      "quoziente_punti": 1.557,
+      "set_vinti": 19,
+      "set_persi": 1,
+      "quoziente_set": 19.0,
+      "punti_vinti": 421,
+      "punti_persi": 293,
+      "quoziente_punti": 1.437,
       "posizione": 1
     },
     {
@@ -31,15 +31,15 @@
     {
       "squadra": "PLESIOS Basic",
       "punti": 0,
-      "partite_giocate": 3,
+      "partite_giocate": 4,
       "partite_vinte": 2,
-      "partite_perse": 1,
-      "set_vinti": 11,
-      "set_persi": 4,
-      "quoziente_set": 2.75,
-      "punti_vinti": 297,
-      "punti_persi": 235,
-      "quoziente_punti": 1.264,
+      "partite_perse": 2,
+      "set_vinti": 12,
+      "set_persi": 8,
+      "quoziente_set": 1.5,
+      "punti_vinti": 387,
+      "punti_persi": 340,
+      "quoziente_punti": 1.138,
       "posizione": 3
     },
     {
@@ -128,5 +128,5 @@
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-05-07T20:18:34.233555+00:00"
+  "ultimo_aggiornamento": "2026-05-08T07:44:16.057439+00:00"
 }

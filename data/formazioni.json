@@ -38,6 +38,18 @@
         {"numero": 16, "nome": "Pejrano Valentina (L)"},
         {"numero": 4,  "nome": "Rose Francesco"}
       ]
+    },
+    "2026-05-07_plesios_basic_olimpia_pb_basic": {
+      "foto": "fotos/2026-05-07_plesios_basic_olimpia_pb_basic.jpg",
+      "giocatori": [
+        {"numero": 9,  "nome": "Carbonare Fred"},
+        {"numero": 8,  "nome": "Dendiu Daniel"},
+        {"numero": 17, "nome": "Garue Francesco"},
+        {"numero": 13, "nome": "Mastrogiuseppe Manuela"},
+        {"numero": 26, "nome": "Negro Aurora"},
+        {"numero": 7,  "nome": "Palumbo Angelo"},
+        {"numero": 16, "nome": "Pejrano Valentina (L)"}
+      ]
     }
   }
 }

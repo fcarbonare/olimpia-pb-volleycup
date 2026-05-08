@@ -6,4 +6,5 @@ __pycache__/
 venv/
 logs/
 .DS_Store
+*.local.json
 .claude/settings.local.json
