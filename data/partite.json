@@ -518,10 +518,27 @@
       "squadra_ospite": "REVENANT Basic",
       "palestra": "Palestra Istituto ALEXIS CARREL",
       "indirizzo": "Via Inganni 12 MILANO",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          18,
+          12,
+          21,
+          13,
+          15
+        ],
+        "set_ospite": [
+          21,
+          21,
+          9,
+          21,
+          21
+        ],
+        "set_vinti_casa": 1,
+        "set_vinti_ospite": 4
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "ivl_id": 32261,
       "npartita": "BA - L 115",
       "lat": 45.4477134,
@@ -868,5 +885,5 @@
       "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-05-08T20:09:02.409845+00:00"
+  "ultimo_aggiornamento": "2026-05-09T08:44:31.959642+00:00"
 }

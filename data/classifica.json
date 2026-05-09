@@ -45,15 +45,15 @@
     {
       "squadra": "REVENANT Basic",
       "punti": 0,
-      "partite_giocate": 2,
-      "partite_vinte": 2,
+      "partite_giocate": 3,
+      "partite_vinte": 3,
       "partite_perse": 0,
-      "set_vinti": 7,
-      "set_persi": 3,
-      "quoziente_set": 2.333,
-      "punti_vinti": 201,
-      "punti_persi": 150,
-      "quoziente_punti": 1.34,
+      "set_vinti": 11,
+      "set_persi": 4,
+      "quoziente_set": 2.75,
+      "punti_vinti": 294,
+      "punti_persi": 229,
+      "quoziente_punti": 1.284,
       "posizione": 4
     },
     {
@@ -73,15 +73,15 @@
     {
       "squadra": "PINCO PALLINO VOLLEY Basic",
       "punti": 0,
-      "partite_giocate": 4,
+      "partite_giocate": 5,
       "partite_vinte": 1,
-      "partite_perse": 3,
-      "set_vinti": 5,
-      "set_persi": 15,
-      "quoziente_set": 0.333,
-      "punti_vinti": 339,
-      "punti_persi": 395,
-      "quoziente_punti": 0.858,
+      "partite_perse": 4,
+      "set_vinti": 6,
+      "set_persi": 19,
+      "quoziente_set": 0.316,
+      "punti_vinti": 418,
+      "punti_persi": 488,
+      "quoziente_punti": 0.857,
       "posizione": 6
     },
     {
@@ -128,5 +128,5 @@
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-05-08T20:09:03.453488+00:00"
+  "ultimo_aggiornamento": "2026-05-09T08:44:33.063142+00:00"
 }
