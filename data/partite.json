@@ -603,10 +603,27 @@
       "squadra_ospite": "BRESSO 4 Basic",
       "palestra": "Scuola San Bovio",
       "indirizzo": "Viale Abruzzi, 9 PESCHIERA BORROMEO",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          21,
+          21,
+          21,
+          21,
+          21
+        ],
+        "set_ospite": [
+          14,
+          14,
+          13,
+          11,
+          9
+        ],
+        "set_vinti_casa": 5,
+        "set_vinti_ospite": 0
+      },
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": true,
-      "giocata": false,
+      "giocata": true,
       "ivl_id": 32264,
       "npartita": "BA - L 118",
       "lat": 45.4560153,
@@ -622,10 +639,27 @@
       "squadra_ospite": "CANTALUPO Basic",
       "palestra": "PALAZZETTO DELLO SPORT.",
       "indirizzo": "VIA STELLA POLARE 11/a MEDIGLIA",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          21,
+          16,
+          21,
+          19,
+          17
+        ],
+        "set_ospite": [
+          14,
+          21,
+          15,
+          21,
+          21
+        ],
+        "set_vinti_casa": 2,
+        "set_vinti_ospite": 3
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "lat": 45.4348072,
       "lon": 9.3409847
     },
@@ -885,5 +919,5 @@
       "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-05-12T20:42:45.730550+00:00"
+  "ultimo_aggiornamento": "2026-05-13T09:47:56.124516+00:00"
 }

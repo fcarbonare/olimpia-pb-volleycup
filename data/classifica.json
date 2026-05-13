@@ -3,29 +3,29 @@
     {
       "squadra": "OLIMPIA PB Basic",
       "punti": 0,
-      "partite_giocate": 4,
-      "partite_vinte": 4,
+      "partite_giocate": 5,
+      "partite_vinte": 5,
       "partite_perse": 0,
-      "set_vinti": 19,
+      "set_vinti": 24,
       "set_persi": 1,
-      "quoziente_set": 19.0,
-      "punti_vinti": 421,
-      "punti_persi": 293,
-      "quoziente_punti": 1.437,
+      "quoziente_set": 24.0,
+      "punti_vinti": 526,
+      "punti_persi": 354,
+      "quoziente_punti": 1.486,
       "posizione": 1
     },
     {
       "squadra": "BRESSO 4 Basic",
       "punti": 0,
-      "partite_giocate": 4,
+      "partite_giocate": 5,
       "partite_vinte": 3,
-      "partite_perse": 1,
+      "partite_perse": 2,
       "set_vinti": 15,
-      "set_persi": 5,
-      "quoziente_set": 3.0,
-      "punti_vinti": 391,
-      "punti_persi": 353,
-      "quoziente_punti": 1.108,
+      "set_persi": 10,
+      "quoziente_set": 1.5,
+      "punti_vinti": 452,
+      "punti_persi": 458,
+      "quoziente_punti": 0.987,
       "posizione": 2
     },
     {
@@ -59,16 +59,30 @@
     {
       "squadra": "PM SPORT Basic",
       "punti": 0,
+      "partite_giocate": 4,
+      "partite_vinte": 2,
+      "partite_perse": 2,
+      "set_vinti": 8,
+      "set_persi": 12,
+      "quoziente_set": 0.667,
+      "punti_vinti": 346,
+      "punti_persi": 370,
+      "quoziente_punti": 0.935,
+      "posizione": 5
+    },
+    {
+      "squadra": "CANTALUPO Basic",
+      "punti": 0,
       "partite_giocate": 3,
       "partite_vinte": 2,
       "partite_perse": 1,
       "set_vinti": 6,
       "set_persi": 9,
       "quoziente_set": 0.667,
-      "punti_vinti": 252,
-      "punti_persi": 278,
-      "quoziente_punti": 0.906,
-      "posizione": 5
+      "punti_vinti": 266,
+      "punti_persi": 304,
+      "quoziente_punti": 0.875,
+      "posizione": 6
     },
     {
       "squadra": "PINCO PALLINO VOLLEY Basic",
@@ -82,7 +96,7 @@
       "punti_vinti": 418,
       "punti_persi": 488,
       "quoziente_punti": 0.857,
-      "posizione": 6
+      "posizione": 7
     },
     {
       "squadra": "VOLLEY CUP TEAM Basic",
@@ -96,7 +110,7 @@
       "punti_vinti": 253,
       "punti_persi": 288,
       "quoziente_punti": 0.878,
-      "posizione": 7
+      "posizione": 8
     },
     {
       "squadra": "ALVOLLEY ROYAL Basic",
@@ -110,23 +124,9 @@
       "punti_vinti": 294,
       "punti_persi": 405,
       "quoziente_punti": 0.726,
-      "posizione": 8
-    },
-    {
-      "squadra": "CANTALUPO Basic",
-      "punti": 0,
-      "partite_giocate": 2,
-      "partite_vinte": 1,
-      "partite_perse": 1,
-      "set_vinti": 3,
-      "set_persi": 7,
-      "quoziente_set": 0.429,
-      "punti_vinti": 174,
-      "punti_persi": 210,
-      "quoziente_punti": 0.829,
       "posizione": 9
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-05-12T20:42:47.184030+00:00"
+  "ultimo_aggiornamento": "2026-05-13T09:47:57.119270+00:00"
 }
