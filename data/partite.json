@@ -673,10 +673,27 @@
       "squadra_ospite": "PLESIOS Basic",
       "palestra": "PALESTRA VIA DEL SOLE",
       "indirizzo": "VIA DEL SOLE ASSAGO",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          8,
+          16,
+          14,
+          11,
+          10
+        ],
+        "set_ospite": [
+          21,
+          21,
+          21,
+          21,
+          21
+        ],
+        "set_vinti_casa": 0,
+        "set_vinti_ospite": 5
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "lat": 45.4048573,
       "lon": 9.1283882
     },
@@ -919,5 +936,5 @@
       "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-05-14T20:38:49.124660+00:00"
+  "ultimo_aggiornamento": "2026-05-15T09:50:02.451177+00:00"
 }

@@ -15,6 +15,20 @@
       "posizione": 1
     },
     {
+      "squadra": "PLESIOS Basic",
+      "punti": 0,
+      "partite_giocate": 5,
+      "partite_vinte": 3,
+      "partite_perse": 2,
+      "set_vinti": 17,
+      "set_persi": 8,
+      "quoziente_set": 2.125,
+      "punti_vinti": 492,
+      "punti_persi": 399,
+      "quoziente_punti": 1.233,
+      "posizione": 2
+    },
+    {
       "squadra": "BRESSO 4 Basic",
       "punti": 0,
       "partite_giocate": 5,
@@ -26,20 +40,6 @@
       "punti_vinti": 452,
       "punti_persi": 458,
       "quoziente_punti": 0.987,
-      "posizione": 2
-    },
-    {
-      "squadra": "PLESIOS Basic",
-      "punti": 0,
-      "partite_giocate": 4,
-      "partite_vinte": 2,
-      "partite_perse": 2,
-      "set_vinti": 12,
-      "set_persi": 8,
-      "quoziente_set": 1.5,
-      "punti_vinti": 387,
-      "punti_persi": 340,
-      "quoziente_punti": 1.138,
       "posizione": 3
     },
     {
@@ -101,15 +101,15 @@
     {
       "squadra": "VOLLEY CUP TEAM Basic",
       "punti": 0,
-      "partite_giocate": 3,
+      "partite_giocate": 4,
       "partite_vinte": 0,
-      "partite_perse": 3,
+      "partite_perse": 4,
       "set_vinti": 4,
-      "set_persi": 11,
-      "quoziente_set": 0.364,
-      "punti_vinti": 253,
-      "punti_persi": 288,
-      "quoziente_punti": 0.878,
+      "set_persi": 16,
+      "quoziente_set": 0.25,
+      "punti_vinti": 312,
+      "punti_persi": 393,
+      "quoziente_punti": 0.794,
       "posizione": 8
     },
     {
@@ -128,5 +128,5 @@
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-05-14T20:38:50.167453+00:00"
+  "ultimo_aggiornamento": "2026-05-15T09:50:03.592361+00:00"
 }
