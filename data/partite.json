@@ -707,10 +707,27 @@
       "squadra_ospite": "CANTALUPO Basic",
       "palestra": "PALESTRA SCUOLA ELEMENTARE SAN PIETRO",
       "indirizzo": "VIA SAN CARLO 52 SEVESO",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          23,
+          21,
+          21,
+          18,
+          21
+        ],
+        "set_ospite": [
+          21,
+          16,
+          14,
+          21,
+          9
+        ],
+        "set_vinti_casa": 4,
+        "set_vinti_ospite": 1
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "lat": null,
       "lon": null
     },
@@ -936,5 +953,5 @@
       "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-05-16T20:03:30.510501+00:00"
+  "ultimo_aggiornamento": "2026-05-17T09:09:01.839002+00:00"
 }
