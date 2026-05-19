@@ -50,6 +50,20 @@
         {"numero": 7,  "nome": "Palumbo Angelo"},
         {"numero": 16, "nome": "Pejrano Valentina (L)"}
       ]
+    },
+    "2026-05-12_olimpia_pb_basic_bresso_4_basic": {
+      "foto": "fotos/2026-05-12_olimpia_pb_basic_bresso_4_basic.jpg",
+      "giocatori": [
+        {"numero": 4,  "nome": "Rose Francesco"},
+        {"numero": 5,  "nome": "Mastrogiuseppe Manuela"},
+        {"numero": 7,  "nome": "Palumbo Angelo"},
+        {"numero": 8,  "nome": "Dendiu Daniel"},
+        {"numero": 9,  "nome": "Carbonare Fred"},
+        {"numero": 15, "nome": "Lopes Magda"},
+        {"numero": 16, "nome": "Pejrano Valentina (L)"},
+        {"numero": 21, "nome": "Mila (L)"},
+        {"numero": 26, "nome": "Negro Aurora"}
+      ]
     }
   }
 }
