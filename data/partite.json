@@ -775,10 +775,27 @@
       "squadra_ospite": "ALVOLLEY ROYAL Basic",
       "palestra": "PALAMANZONI",
       "indirizzo": "VIA MAMELI MONZA",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          21,
+          21,
+          21,
+          21,
+          22
+        ],
+        "set_ospite": [
+          10,
+          12,
+          16,
+          16,
+          23
+        ],
+        "set_vinti_casa": 4,
+        "set_vinti_ospite": 1
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "lat": 45.5716733,
       "lon": 9.312353
     },
@@ -970,5 +987,5 @@
       "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-05-20T13:43:17.325687+00:00"
+  "ultimo_aggiornamento": "2026-05-20T17:55:25.449771+00:00"
 }
