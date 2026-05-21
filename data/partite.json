@@ -826,10 +826,27 @@
       "squadra_ospite": "BRESSO 4 Basic",
       "palestra": "PALAZZETTO DELLO SPORT.",
       "indirizzo": "VIA STELLA POLARE 11/a MEDIGLIA",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          21,
+          21,
+          19,
+          21,
+          21
+        ],
+        "set_ospite": [
+          18,
+          9,
+          21,
+          13,
+          18
+        ],
+        "set_vinti_casa": 4,
+        "set_vinti_ospite": 1
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "lat": 45.4348072,
       "lon": 9.3409847
     },
@@ -987,5 +1004,5 @@
       "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-05-20T21:00:49.418529+00:00"
+  "ultimo_aggiornamento": "2026-05-21T10:41:41.940541+00:00"
 }

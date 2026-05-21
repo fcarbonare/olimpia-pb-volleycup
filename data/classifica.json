@@ -29,6 +29,20 @@
       "posizione": 2
     },
     {
+      "squadra": "BRESSO 4 Basic",
+      "punti": 0,
+      "partite_giocate": 6,
+      "partite_vinte": 3,
+      "partite_perse": 3,
+      "set_vinti": 16,
+      "set_persi": 14,
+      "quoziente_set": 1.143,
+      "punti_vinti": 531,
+      "punti_persi": 561,
+      "quoziente_punti": 0.947,
+      "posizione": 3
+    },
+    {
       "squadra": "REVENANT Basic",
       "punti": 0,
       "partite_giocate": 4,
@@ -40,21 +54,21 @@
       "punti_vinti": 398,
       "punti_persi": 310,
       "quoziente_punti": 1.284,
-      "posizione": 3
+      "posizione": 4
     },
     {
-      "squadra": "BRESSO 4 Basic",
+      "squadra": "PM SPORT Basic",
       "punti": 0,
       "partite_giocate": 5,
       "partite_vinte": 3,
       "partite_perse": 2,
-      "set_vinti": 15,
-      "set_persi": 10,
-      "quoziente_set": 1.5,
-      "punti_vinti": 452,
-      "punti_persi": 458,
-      "quoziente_punti": 0.987,
-      "posizione": 4
+      "set_vinti": 12,
+      "set_persi": 13,
+      "quoziente_set": 0.923,
+      "punti_vinti": 449,
+      "punti_persi": 449,
+      "quoziente_punti": 1.0,
+      "posizione": 5
     },
     {
       "squadra": "CANTALUPO Basic",
@@ -68,20 +82,6 @@
       "punti_vinti": 453,
       "punti_persi": 485,
       "quoziente_punti": 0.934,
-      "posizione": 5
-    },
-    {
-      "squadra": "PM SPORT Basic",
-      "punti": 0,
-      "partite_giocate": 4,
-      "partite_vinte": 2,
-      "partite_perse": 2,
-      "set_vinti": 8,
-      "set_persi": 12,
-      "quoziente_set": 0.667,
-      "punti_vinti": 346,
-      "punti_persi": 370,
-      "quoziente_punti": 0.935,
       "posizione": 6
     },
     {
@@ -128,5 +128,5 @@
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-05-20T21:00:50.438992+00:00"
+  "ultimo_aggiornamento": "2026-05-21T10:41:43.293448+00:00"
 }
