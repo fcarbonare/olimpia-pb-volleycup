@@ -809,10 +809,27 @@
       "squadra_ospite": "OLIMPIA PB Basic",
       "palestra": "PALESTRA VIA DEL SOLE",
       "indirizzo": "VIA DEL SOLE ASSAGO",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          18,
+          7,
+          1,
+          7,
+          21
+        ],
+        "set_ospite": [
+          21,
+          21,
+          21,
+          21,
+          16
+        ],
+        "set_vinti_casa": 1,
+        "set_vinti_ospite": 4
+      },
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "lat": 45.4048573,
       "lon": 9.1283882
     },
@@ -1004,5 +1021,5 @@
       "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-05-21T10:41:41.940541+00:00"
+  "ultimo_aggiornamento": "2026-05-21T14:15:43.192696+00:00"
 }
