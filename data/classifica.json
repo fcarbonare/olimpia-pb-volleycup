@@ -17,16 +17,30 @@
     {
       "squadra": "PLESIOS Basic",
       "punti": 0,
-      "partite_giocate": 5,
-      "partite_vinte": 3,
+      "partite_giocate": 6,
+      "partite_vinte": 4,
       "partite_perse": 2,
+      "set_vinti": 20,
+      "set_persi": 10,
+      "quoziente_set": 2.0,
+      "punti_vinti": 590,
+      "punti_persi": 483,
+      "quoziente_punti": 1.222,
+      "posizione": 2
+    },
+    {
+      "squadra": "REVENANT Basic",
+      "punti": 0,
+      "partite_giocate": 5,
+      "partite_vinte": 4,
+      "partite_perse": 1,
       "set_vinti": 17,
       "set_persi": 8,
       "quoziente_set": 2.125,
-      "punti_vinti": 492,
-      "punti_persi": 399,
-      "quoziente_punti": 1.233,
-      "posizione": 2
+      "punti_vinti": 482,
+      "punti_persi": 408,
+      "quoziente_punti": 1.181,
+      "posizione": 3
     },
     {
       "squadra": "BRESSO 4 Basic",
@@ -40,20 +54,6 @@
       "punti_vinti": 531,
       "punti_persi": 561,
       "quoziente_punti": 0.947,
-      "posizione": 3
-    },
-    {
-      "squadra": "REVENANT Basic",
-      "punti": 0,
-      "partite_giocate": 4,
-      "partite_vinte": 4,
-      "partite_perse": 0,
-      "set_vinti": 15,
-      "set_persi": 5,
-      "quoziente_set": 3.0,
-      "punti_vinti": 398,
-      "punti_persi": 310,
-      "quoziente_punti": 1.284,
       "posizione": 4
     },
     {
@@ -128,5 +128,5 @@
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-05-21T20:52:33.584118+00:00"
+  "ultimo_aggiornamento": "2026-05-22T10:26:02.348051+00:00"
 }

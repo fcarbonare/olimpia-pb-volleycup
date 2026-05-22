@@ -877,10 +877,27 @@
       "squadra_ospite": "REVENANT Basic",
       "palestra": "PALESTRA,",
       "indirizzo": "VIA FIUME 22 VIMODRONE",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          13,
+          21,
+          21,
+          21,
+          22
+        ],
+        "set_ospite": [
+          21,
+          12,
+          15,
+          13,
+          23
+        ],
+        "set_vinti_casa": 3,
+        "set_vinti_ospite": 2
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "lat": 45.5149355,
       "lon": 9.2798405
     },
@@ -1021,5 +1038,5 @@
       "lon": null
     }
   ],
-  "ultimo_aggiornamento": "2026-05-21T20:52:32.508460+00:00"
+  "ultimo_aggiornamento": "2026-05-22T10:26:00.823957+00:00"
 }
