@@ -273,13 +273,29 @@ def build_calendario(partite: list, ultimo_agg: str) -> str:
         else:
             row_extra = ""
 
+        data_html = fmt_data_con_giorno(p['data'])
+        if p.get("rinviata"):
+            data_orig = fmt_data(p.get("data_originale", "")) if p.get("data_originale") else ""
+            tooltip = f"Rinviata dal {data_orig}" if data_orig else "Partita rinviata"
+            data_html = data_html.replace(
+                '<br>',
+                f'<span class="rinviata-asterisk" title="{tooltip}">*</span><br>',
+                1,
+            )
+
         righe += f"""<tr class="{row_cls}"{row_extra}>
-  <td class="data">{fmt_data_con_giorno(p['data'])}</td>
+  <td class="data">{data_html}</td>
   <td class="team{casa_cls}">{badge}{casa}</td>
   <td class="vs">vs</td>
   <td class="team{ospite_cls}">{ospite}</td>
   {risultato_td}
 </tr>"""
+
+    has_rinviate = any(p.get("rinviata") for p in partite)
+    nota_rinviate = (
+        '<p class="nota"><span class="rinviata-asterisk">*</span> Partita rinviata rispetto alla data originale.</p>'
+        if has_rinviate else ""
+    )
 
     body = f"""
 <section class="card">
@@ -298,6 +314,7 @@ def build_calendario(partite: list, ultimo_agg: str) -> str:
       <tbody>{righe}</tbody>
     </table>
   </div>
+  {nota_rinviate}
 </section>"""
 
     return page_shell("Calendario", body, "calendario.html", ultimo_agg)

@@ -75,9 +75,18 @@ def save_json(path: Path, data: dict) -> None:
 # ── Parsing partite ───────────────────────────────────────────────────────────
 
 def parse_partita(r: dict) -> dict:
-    """Converte una riga dell'API PartiteData nel formato interno."""
-    # Data e ora
-    data_orario = r.get("data_orario", "") or ""
+    """Converte una riga dell'API PartiteData nel formato interno.
+
+    Se la partita è stata rinviata (campo `data_orario_rinvio` valorizzato),
+    si usa la nuova data/orario e — se presente — anche la nuova palestra
+    (`palestrarinvio_*`) al posto di quella originale.
+    """
+    # Data e ora: preferisci il rinvio se presente
+    data_orario_orig   = r.get("data_orario", "") or ""
+    data_orario_rinvio = r.get("data_orario_rinvio") or ""
+    rinviata = bool(data_orario_rinvio)
+    data_orario = data_orario_rinvio if rinviata else data_orario_orig
+
     try:
         dt = datetime.strptime(data_orario, "%Y-%m-%d %H:%M:%S")
         data_iso = dt.strftime("%Y-%m-%d")
@@ -88,8 +97,20 @@ def parse_partita(r: dict) -> dict:
 
     casa    = (r.get("squadra_casa_name")    or "").strip()
     ospite  = (r.get("squadra_ospite_name")  or "").strip()
-    palestra = (r.get("palestra1_name")      or r.get("Palestra") or "").strip()
-    indirizzo = (r.get("Palestra_indirizzo") or "").strip()
+
+    # Palestra: se la partita è rinviata e c'è una palestra di rinvio, usala
+    palestra_rinvio   = (r.get("palestrarinvio_name")      or "").strip()
+    indirizzo_rinvio  = (r.get("palestrarinvio_indirizzo") or "").strip()
+    if rinviata and palestra_rinvio:
+        palestra  = palestra_rinvio
+        indirizzo = indirizzo_rinvio
+        lat = r.get("palestrarinvio_latitude")
+        lon = r.get("palestrarinvio_longitude")
+    else:
+        palestra  = (r.get("palestra1_name")      or r.get("Palestra") or "").strip()
+        indirizzo = (r.get("Palestra_indirizzo") or "").strip()
+        lat = r.get("palestra1_latitude")
+        lon = r.get("palestra1_longitude")
 
     # Risultato — set_vinti_casa/ospite + punteggi set singoli
     sv_casa   = r.get("ris_set_casa")
@@ -124,12 +145,14 @@ def parse_partita(r: dict) -> dict:
         "squadra_ospite":   ospite,
         "palestra":         palestra,
         "indirizzo":        indirizzo,
-        "lat":              r.get("palestra1_latitude"),
-        "lon":              r.get("palestra1_longitude"),
+        "lat":              lat,
+        "lon":              lon,
         "risultato":        risultato,
         "olimpia_pb_gioca": olimpia_pb_gioca,
         "olimpia_pb_casa":  olimpia_pb_casa,
         "giocata":          giocata,
+        "rinviata":         rinviata,
+        "data_originale":   data_orario_orig[:10] if rinviata else None,
     }
 
 

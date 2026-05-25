@@ -239,6 +239,13 @@ tr.olimpia-row:hover { background: #fbdada; }
 /* ===== Classifica table ===== */
 .classifica-table td.pos { font-weight: 800; width: 36px; }
 
+.rinviata-asterisk {
+  color: var(--rosso, #c00);
+  font-weight: 800;
+  margin-left: 2px;
+  cursor: help;
+}
+
 /* ===== Misc ===== */
 .nota {
   font-size: .8rem;
