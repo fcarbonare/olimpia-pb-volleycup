@@ -977,25 +977,6 @@
       "data_originale": "2026-05-01"
     },
     {
-      "id": "2026-05-31_bresso_4_basic_pinco_pallino_volley_basic",
-      "ivl_id": 32271,
-      "npartita": "BA - L 125",
-      "data": "2026-05-31",
-      "ora": "21:30",
-      "squadra_casa": "BRESSO 4 Basic",
-      "squadra_ospite": "PINCO PALLINO VOLLEY Basic",
-      "palestra": "Pala Marconi",
-      "indirizzo": "Via Simone de Gatti, 1 BRESSO",
-      "risultato": null,
-      "olimpia_pb_gioca": false,
-      "olimpia_pb_casa": false,
-      "giocata": false,
-      "lat": 45.5415512,
-      "lon": 9.188047,
-      "rinviata": false,
-      "data_originale": null
-    },
-    {
       "id": "2026-06-03_volley_cup_team_basic_alvolley_royal_basic",
       "ivl_id": 32275,
       "npartita": "BA - L 129",
@@ -1051,6 +1032,25 @@
       "lon": null,
       "rinviata": false,
       "data_originale": null
+    },
+    {
+      "id": "2026-06-07_bresso_4_basic_pinco_pallino_volley_basic",
+      "ivl_id": 32271,
+      "npartita": "BA - L 125",
+      "data": "2026-06-07",
+      "ora": "21:30",
+      "squadra_casa": "BRESSO 4 Basic",
+      "squadra_ospite": "PINCO PALLINO VOLLEY Basic",
+      "palestra": "Pala Marconi",
+      "indirizzo": "Via Simone de Gatti, 1 BRESSO",
+      "risultato": null,
+      "olimpia_pb_gioca": false,
+      "olimpia_pb_casa": false,
+      "giocata": false,
+      "lat": 45.5415512,
+      "lon": 9.188047,
+      "rinviata": true,
+      "data_originale": "2026-05-31"
     },
     {
       "id": "2026-06-08_cantalupo_basic_volley_cup_team_basic",
@@ -1110,5 +1110,5 @@
       "data_originale": "2026-06-03"
     }
   ],
-  "ultimo_aggiornamento": "2026-05-26T13:55:37.556073+00:00"
+  "ultimo_aggiornamento": "2026-05-26T17:57:03.486572+00:00"
 }
