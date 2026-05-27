@@ -910,10 +910,27 @@
       "squadra_ospite": "BRESSO 4 Basic",
       "palestra": "PALAMANZONI",
       "indirizzo": "VIA MAMELI MONZA",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          21,
+          21,
+          21,
+          21,
+          21
+        ],
+        "set_ospite": [
+          8,
+          15,
+          19,
+          14,
+          16
+        ],
+        "set_vinti_casa": 5,
+        "set_vinti_ospite": 0
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "lat": 45.5716733,
       "lon": 9.312353,
       "rinviata": false,
@@ -929,10 +946,27 @@
       "squadra_ospite": "PM SPORT Basic",
       "palestra": "Scuola San Bovio",
       "indirizzo": "Viale Abruzzi, 9 PESCHIERA BORROMEO",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          21,
+          10,
+          14,
+          12,
+          20
+        ],
+        "set_ospite": [
+          23,
+          21,
+          21,
+          21,
+          22
+        ],
+        "set_vinti_casa": 0,
+        "set_vinti_ospite": 5
+      },
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": true,
-      "giocata": false,
+      "giocata": true,
       "lat": 45.4560153,
       "lon": 9.3166758,
       "rinviata": false,
@@ -948,10 +982,27 @@
       "squadra_ospite": "PLESIOS Basic",
       "palestra": "PALESTRA SC. ELEMENTARE",
       "indirizzo": "VIA BUOZZI 5 SETTIMO MILANESE",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          15,
+          16,
+          17,
+          21,
+          16
+        ],
+        "set_ospite": [
+          21,
+          21,
+          21,
+          12,
+          21
+        ],
+        "set_vinti_casa": 1,
+        "set_vinti_ospite": 4
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "lat": 45.4842669,
       "lon": 9.0543319,
       "rinviata": false,
@@ -1110,5 +1161,5 @@
       "data_originale": "2026-06-03"
     }
   ],
-  "ultimo_aggiornamento": "2026-05-26T20:57:05.049134+00:00"
+  "ultimo_aggiornamento": "2026-05-27T10:57:50.489353+00:00"
 }
