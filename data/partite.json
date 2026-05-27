@@ -948,21 +948,21 @@
       "indirizzo": "Viale Abruzzi, 9 PESCHIERA BORROMEO",
       "risultato": {
         "set_casa": [
-          21,
-          10,
-          14,
-          12,
-          20
-        ],
-        "set_ospite": [
           23,
           21,
           21,
           21,
           22
         ],
-        "set_vinti_casa": 0,
-        "set_vinti_ospite": 5
+        "set_ospite": [
+          21,
+          10,
+          14,
+          12,
+          20
+        ],
+        "set_vinti_casa": 5,
+        "set_vinti_ospite": 0
       },
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": true,
@@ -1161,5 +1161,5 @@
       "data_originale": "2026-06-03"
     }
   ],
-  "ultimo_aggiornamento": "2026-05-27T14:31:51.098896+00:00"
+  "ultimo_aggiornamento": "2026-05-27T18:01:24.568824+00:00"
 }
