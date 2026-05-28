@@ -77,6 +77,21 @@
         {"numero": 21, "nome": "Mila (L)"},
         {"numero": 26, "nome": "Negro Aurora"}
       ]
+    },
+    "2026-05-26_olimpia_pb_basic_pm_sport_basic": {
+      "foto": "fotos/2026-05-26_olimpia_pb_basic_pm_sport_basic.jpg",
+      "giocatori": [
+        {"numero": 4,  "nome": "Rose Francesco"},
+        {"numero": 7,  "nome": "Palumbo Angelo"},
+        {"numero": 8,  "nome": "Dendiu Daniel"},
+        {"numero": 9,  "nome": "Carbonare Fred"},
+        {"numero": 13, "nome": "Mastrogiuseppe Manuela"},
+        {"numero": 15, "nome": "Lopes Magda"},
+        {"numero": 16, "nome": "Pejrano Valentina"},
+        {"numero": 17, "nome": "Garue Francesco"},
+        {"numero": 21, "nome": "Mila (L)"},
+        {"numero": 26, "nome": "Negro Aurora"}
+      ]
     }
   }
 }
