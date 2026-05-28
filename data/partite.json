@@ -1083,25 +1083,6 @@
       "data_originale": "2026-04-30"
     },
     {
-      "id": "2026-06-05_revenant_basic_olimpia_pb_basic",
-      "ivl_id": 32276,
-      "npartita": "BA - L 130",
-      "data": "2026-06-05",
-      "ora": "21:15",
-      "squadra_casa": "REVENANT Basic",
-      "squadra_ospite": "OLIMPIA PB Basic",
-      "palestra": "PALESTRA SCUOLA ELEMENTARE SAN PIETRO",
-      "indirizzo": "VIA SAN CARLO 52 SEVESO",
-      "risultato": null,
-      "olimpia_pb_gioca": true,
-      "olimpia_pb_casa": false,
-      "giocata": false,
-      "lat": null,
-      "lon": null,
-      "rinviata": false,
-      "data_originale": null
-    },
-    {
       "id": "2026-06-07_bresso_4_basic_pinco_pallino_volley_basic",
       "ivl_id": 32271,
       "npartita": "BA - L 125",
@@ -1176,7 +1157,26 @@
       "lon": null,
       "rinviata": true,
       "data_originale": "2026-06-03"
+    },
+    {
+      "id": "2026-06-12_revenant_basic_olimpia_pb_basic",
+      "ivl_id": 32276,
+      "npartita": "BA - L 130",
+      "data": "2026-06-12",
+      "ora": "21:15",
+      "squadra_casa": "REVENANT Basic",
+      "squadra_ospite": "OLIMPIA PB Basic",
+      "palestra": "PALESTRA SCUOLA ELEMENTARE SAN PIETRO",
+      "indirizzo": "VIA SAN CARLO 52 SEVESO",
+      "risultato": null,
+      "olimpia_pb_gioca": true,
+      "olimpia_pb_casa": false,
+      "giocata": false,
+      "lat": null,
+      "lon": null,
+      "rinviata": true,
+      "data_originale": "2026-06-05"
     }
   ],
-  "ultimo_aggiornamento": "2026-05-28T10:58:56.354457+00:00"
+  "ultimo_aggiornamento": "2026-05-28T14:43:10.777709+00:00"
 }
