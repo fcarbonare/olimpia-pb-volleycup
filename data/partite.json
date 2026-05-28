@@ -1016,10 +1016,27 @@
       "squadra_ospite": "PM SPORT Basic",
       "palestra": "PALESTRA SCUOLA ELEMENTARE SAN PIETRO",
       "indirizzo": "VIA SAN CARLO 52 SEVESO",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          15,
+          21,
+          21,
+          21,
+          17
+        ],
+        "set_ospite": [
+          21,
+          12,
+          17,
+          18,
+          21
+        ],
+        "set_vinti_casa": 3,
+        "set_vinti_ospite": 2
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "ivl_id": 32257,
       "npartita": "BA - L 111",
       "lat": null,
@@ -1161,5 +1178,5 @@
       "data_originale": "2026-06-03"
     }
   ],
-  "ultimo_aggiornamento": "2026-05-27T21:03:08.382764+00:00"
+  "ultimo_aggiornamento": "2026-05-28T10:58:56.354457+00:00"
 }
