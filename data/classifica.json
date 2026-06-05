@@ -17,15 +17,15 @@
     {
       "squadra": "PLESIOS Basic",
       "punti": 0,
-      "partite_giocate": 7,
-      "partite_vinte": 5,
+      "partite_giocate": 8,
+      "partite_vinte": 6,
       "partite_perse": 2,
-      "set_vinti": 24,
-      "set_persi": 11,
-      "quoziente_set": 2.182,
-      "punti_vinti": 686,
-      "punti_persi": 568,
-      "quoziente_punti": 1.208,
+      "set_vinti": 28,
+      "set_persi": 12,
+      "quoziente_set": 2.333,
+      "punti_vinti": 787,
+      "punti_persi": 656,
+      "quoziente_punti": 1.2,
       "posizione": 2
     },
     {
@@ -45,15 +45,15 @@
     {
       "squadra": "CANTALUPO Basic",
       "punti": 0,
-      "partite_giocate": 6,
+      "partite_giocate": 7,
       "partite_vinte": 4,
-      "partite_perse": 2,
-      "set_vinti": 16,
-      "set_persi": 14,
-      "quoziente_set": 1.143,
-      "punti_vinti": 558,
-      "punti_persi": 557,
-      "quoziente_punti": 1.002,
+      "partite_perse": 3,
+      "set_vinti": 17,
+      "set_persi": 18,
+      "quoziente_set": 0.944,
+      "punti_vinti": 646,
+      "punti_persi": 658,
+      "quoziente_punti": 0.982,
       "posizione": 4
     },
     {
@@ -128,5 +128,5 @@
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-06-04T21:00:14.630197+00:00"
+  "ultimo_aggiornamento": "2026-06-05T10:51:05.217332+00:00"
 }
