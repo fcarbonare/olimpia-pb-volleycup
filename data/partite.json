@@ -1183,8 +1183,8 @@
       "ora": "21:15",
       "squadra_casa": "REVENANT Basic",
       "squadra_ospite": "OLIMPIA PB Basic",
-      "palestra": "PALESTRA SCUOLA ELEMENTARE SAN PIETRO",
-      "indirizzo": "VIA SAN CARLO 52 SEVESO",
+      "palestra": "Scuola Munari",
+      "indirizzo": "Via monte bianco 7",
       "risultato": null,
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": false,
@@ -1195,5 +1195,5 @@
       "data_originale": "2026-06-05"
     }
   ],
-  "ultimo_aggiornamento": "2026-06-07T16:21:10.541948+00:00"
+  "ultimo_aggiornamento": "2026-06-07T20:16:31.496669+00:00"
 }
