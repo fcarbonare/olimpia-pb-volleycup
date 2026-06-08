@@ -1054,10 +1054,27 @@
       "squadra_ospite": "ALVOLLEY ROYAL Basic",
       "palestra": "PALESTRA VIA DEL SOLE",
       "indirizzo": "VIA DEL SOLE ASSAGO",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          21,
+          7,
+          21,
+          21,
+          21
+        ],
+        "set_ospite": [
+          18,
+          21,
+          18,
+          16,
+          18
+        ],
+        "set_vinti_casa": 4,
+        "set_vinti_ospite": 1
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "lat": 45.4048573,
       "lon": 9.1283882,
       "rinviata": false,
@@ -1195,5 +1212,5 @@
       "data_originale": "2026-06-05"
     }
   ],
-  "ultimo_aggiornamento": "2026-06-08T12:01:27.744272+00:00"
+  "ultimo_aggiornamento": "2026-06-08T17:58:58.707608+00:00"
 }

@@ -87,16 +87,30 @@
     {
       "squadra": "ALVOLLEY ROYAL Basic",
       "punti": 0,
-      "partite_giocate": 7,
+      "partite_giocate": 8,
       "partite_vinte": 1,
-      "partite_perse": 6,
-      "set_vinti": 9,
-      "set_persi": 26,
-      "quoziente_set": 0.346,
-      "punti_vinti": 549,
-      "punti_persi": 689,
-      "quoziente_punti": 0.797,
+      "partite_perse": 7,
+      "set_vinti": 10,
+      "set_persi": 30,
+      "quoziente_set": 0.333,
+      "punti_vinti": 640,
+      "punti_persi": 780,
+      "quoziente_punti": 0.821,
       "posizione": 7
+    },
+    {
+      "squadra": "VOLLEY CUP TEAM Basic",
+      "punti": 0,
+      "partite_giocate": 6,
+      "partite_vinte": 1,
+      "partite_perse": 5,
+      "set_vinti": 9,
+      "set_persi": 21,
+      "quoziente_set": 0.429,
+      "punti_vinti": 457,
+      "punti_persi": 584,
+      "quoziente_punti": 0.783,
+      "posizione": 8
     },
     {
       "squadra": "PINCO PALLINO VOLLEY Basic",
@@ -110,23 +124,9 @@
       "punti_vinti": 500,
       "punti_persi": 581,
       "quoziente_punti": 0.861,
-      "posizione": 8
-    },
-    {
-      "squadra": "VOLLEY CUP TEAM Basic",
-      "punti": 0,
-      "partite_giocate": 5,
-      "partite_vinte": 0,
-      "partite_perse": 5,
-      "set_vinti": 5,
-      "set_persi": 20,
-      "quoziente_set": 0.25,
-      "punti_vinti": 366,
-      "punti_persi": 493,
-      "quoziente_punti": 0.742,
       "posizione": 9
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-06-08T12:01:28.998657+00:00"
+  "ultimo_aggiornamento": "2026-06-08T17:58:59.878780+00:00"
 }
