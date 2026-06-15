@@ -1164,10 +1164,27 @@
       "squadra_ospite": "VOLLEY CUP TEAM Basic",
       "palestra": "PALESTRA SCUOLA ELEMENTARE SAN PIETRO",
       "indirizzo": "VIA SAN CARLO 52 SEVESO",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          21,
+          21,
+          21,
+          21,
+          21
+        ],
+        "set_ospite": [
+          15,
+          14,
+          14,
+          17,
+          14
+        ],
+        "set_vinti_casa": 5,
+        "set_vinti_ospite": 0
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "lat": null,
       "lon": null,
       "rinviata": true,
@@ -1183,10 +1200,27 @@
       "squadra_ospite": "PM SPORT Basic",
       "palestra": "TENSOSTRUTTURA MURIALDO",
       "indirizzo": "VIA INGANNI 16",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          12,
+          18,
+          21,
+          21,
+          21
+        ],
+        "set_ospite": [
+          21,
+          21,
+          17,
+          18,
+          16
+        ],
+        "set_vinti_casa": 3,
+        "set_vinti_ospite": 2
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "lat": null,
       "lon": null,
       "rinviata": true,
@@ -1202,15 +1236,32 @@
       "squadra_ospite": "OLIMPIA PB Basic",
       "palestra": "Scuola Munari",
       "indirizzo": "Via monte bianco 7",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          21,
+          23,
+          21,
+          22,
+          21
+        ],
+        "set_ospite": [
+          12,
+          22,
+          19,
+          23,
+          18
+        ],
+        "set_vinti_casa": 4,
+        "set_vinti_ospite": 1
+      },
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "lat": null,
       "lon": null,
       "rinviata": true,
       "data_originale": "2026-06-05"
     }
   ],
-  "ultimo_aggiornamento": "2026-06-14T20:21:48.074391+00:00"
+  "ultimo_aggiornamento": "2026-06-15T11:36:12.008991+00:00"
 }
