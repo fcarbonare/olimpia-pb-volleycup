@@ -43,6 +43,20 @@
       "posizione": 3
     },
     {
+      "squadra": "BRESSO 4 Basic",
+      "punti": 0,
+      "partite_giocate": 8,
+      "partite_vinte": 3,
+      "partite_perse": 5,
+      "set_vinti": 18,
+      "set_persi": 22,
+      "quoziente_set": 0.818,
+      "punti_vinti": 699,
+      "punti_persi": 762,
+      "quoziente_punti": 0.917,
+      "posizione": 4
+    },
+    {
       "squadra": "CANTALUPO Basic",
       "punti": 0,
       "partite_giocate": 7,
@@ -54,20 +68,6 @@
       "punti_vinti": 646,
       "punti_persi": 658,
       "quoziente_punti": 0.982,
-      "posizione": 4
-    },
-    {
-      "squadra": "BRESSO 4 Basic",
-      "punti": 0,
-      "partite_giocate": 7,
-      "partite_vinte": 3,
-      "partite_perse": 4,
-      "set_vinti": 16,
-      "set_persi": 19,
-      "quoziente_set": 0.842,
-      "punti_vinti": 603,
-      "punti_persi": 666,
-      "quoziente_punti": 0.905,
       "posizione": 5
     },
     {
@@ -87,15 +87,15 @@
     {
       "squadra": "PINCO PALLINO VOLLEY Basic",
       "punti": 0,
-      "partite_giocate": 7,
-      "partite_vinte": 2,
+      "partite_giocate": 8,
+      "partite_vinte": 3,
       "partite_perse": 5,
-      "set_vinti": 11,
-      "set_persi": 24,
-      "quoziente_set": 0.458,
-      "punti_vinti": 593,
-      "punti_persi": 674,
-      "quoziente_punti": 0.88,
+      "set_vinti": 14,
+      "set_persi": 26,
+      "quoziente_set": 0.538,
+      "punti_vinti": 689,
+      "punti_persi": 770,
+      "quoziente_punti": 0.895,
       "posizione": 7
     },
     {
@@ -128,5 +128,5 @@
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-06-15T13:20:09.438542+00:00"
+  "ultimo_aggiornamento": "2026-06-15T19:05:41.275110+00:00"
 }

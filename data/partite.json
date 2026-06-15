@@ -1126,10 +1126,27 @@
       "squadra_ospite": "PINCO PALLINO VOLLEY Basic",
       "palestra": "Pala Marconi",
       "indirizzo": "Via Simone de Gatti, 1 BRESSO",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          19,
+          22,
+          16,
+          18,
+          21
+        ],
+        "set_ospite": [
+          21,
+          20,
+          21,
+          21,
+          13
+        ],
+        "set_vinti_casa": 2,
+        "set_vinti_ospite": 3
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "lat": 45.5415512,
       "lon": 9.188047,
       "rinviata": true,
@@ -1263,5 +1280,5 @@
       "data_originale": "2026-06-05"
     }
   ],
-  "ultimo_aggiornamento": "2026-06-15T13:20:08.583142+00:00"
+  "ultimo_aggiornamento": "2026-06-15T19:05:40.375509+00:00"
 }
