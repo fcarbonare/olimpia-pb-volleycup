@@ -1160,10 +1160,27 @@
       "squadra_ospite": "VOLLEY CUP TEAM Basic",
       "palestra": "PALAMANZONI",
       "indirizzo": "VIA MAMELI MONZA",
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          21,
+          21,
+          21,
+          21,
+          23
+        ],
+        "set_ospite": [
+          14,
+          14,
+          13,
+          17,
+          21
+        ],
+        "set_vinti_casa": 5,
+        "set_vinti_ospite": 0
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "ivl_id": 32259,
       "npartita": "BA - L 113",
       "lat": 45.5716733,
@@ -1280,5 +1297,5 @@
       "data_originale": "2026-06-05"
     }
   ],
-  "ultimo_aggiornamento": "2026-06-15T19:05:40.375509+00:00"
+  "ultimo_aggiornamento": "2026-06-16T12:13:53.583324+00:00"
 }

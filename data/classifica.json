@@ -43,6 +43,20 @@
       "posizione": 3
     },
     {
+      "squadra": "CANTALUPO Basic",
+      "punti": 0,
+      "partite_giocate": 8,
+      "partite_vinte": 5,
+      "partite_perse": 3,
+      "set_vinti": 22,
+      "set_persi": 18,
+      "quoziente_set": 1.222,
+      "punti_vinti": 753,
+      "punti_persi": 737,
+      "quoziente_punti": 1.022,
+      "posizione": 4
+    },
+    {
       "squadra": "BRESSO 4 Basic",
       "punti": 0,
       "partite_giocate": 8,
@@ -54,20 +68,6 @@
       "punti_vinti": 699,
       "punti_persi": 762,
       "quoziente_punti": 0.917,
-      "posizione": 4
-    },
-    {
-      "squadra": "CANTALUPO Basic",
-      "punti": 0,
-      "partite_giocate": 7,
-      "partite_vinte": 4,
-      "partite_perse": 3,
-      "set_vinti": 17,
-      "set_persi": 18,
-      "quoziente_set": 0.944,
-      "punti_vinti": 646,
-      "punti_persi": 658,
-      "quoziente_punti": 0.982,
       "posizione": 5
     },
     {
@@ -115,18 +115,18 @@
     {
       "squadra": "VOLLEY CUP TEAM Basic",
       "punti": 0,
-      "partite_giocate": 7,
+      "partite_giocate": 8,
       "partite_vinte": 1,
-      "partite_perse": 6,
+      "partite_perse": 7,
       "set_vinti": 9,
-      "set_persi": 26,
-      "quoziente_set": 0.346,
-      "punti_vinti": 531,
-      "punti_persi": 689,
-      "quoziente_punti": 0.771,
+      "set_persi": 31,
+      "quoziente_set": 0.29,
+      "punti_vinti": 610,
+      "punti_persi": 796,
+      "quoziente_punti": 0.766,
       "posizione": 9
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-06-15T19:05:41.275110+00:00"
+  "ultimo_aggiornamento": "2026-06-16T12:13:54.743466+00:00"
 }
