@@ -148,65 +148,18 @@ def page_shell(title: str, body: str, pagina_attiva: str, ultimo_agg: str, prefi
 # ── index.html ────────────────────────────────────────────────────────────────
 
 def build_index(partite: list, classifica: list, ultimo_agg: str) -> str:
-    oggi = date.today().isoformat()
-
-    olimpia_partite = [p for p in partite if p.get("olimpia_pb_gioca")]
-    prossima = next(
-        (p for p in olimpia_partite if not p.get("giocata") and p["data"] >= oggi),
-        None,
-    )
-    ultima = next(
-        (p for p in reversed(olimpia_partite) if p.get("giocata")),
-        None,
-    )
-
-    # Prossima partita
-    if prossima:
-        casa = prossima["squadra_casa"]
-        ospite = prossima["squadra_ospite"]
-        casa_cls = " olimpia" if prossima.get("olimpia_pb_casa") else ""
-        ospite_cls = "" if prossima.get("olimpia_pb_casa") else " olimpia"
-        prossima_html = f"""
-<section class="card">
-  <h2>Prossima partita</h2>
-  <div class="match-card olimpia-match">
-    <div class="match-date">{fmt_data(prossima['data'])} ore {prossima.get('ora','--:--')}</div>
-    <div class="match-teams">
-      <span class="team{casa_cls}">{casa}</span>
-      <span class="vs">vs</span>
-      <span class="team{ospite_cls}">{ospite}</span>
-    </div>
-    <div class="match-venue">📍 {prossima.get('palestra','')}</div>
-    {f'<div class="match-venue">🗺 {fmt_luogo(prossima)}</div>' if prossima.get('indirizzo') else ''}
-  </div>
-  <p class="link-more"><a href="partite/{prossima['id']}.html">Dettagli →</a></p>
-</section>"""
-    else:
-        prossima_html = '<section class="card"><h2>Prossima partita</h2><p>Nessuna partita in programma.</p></section>'
-
-    # Ultima partita
-    if ultima:
-        casa = ultima["squadra_casa"]
-        ospite = ultima["squadra_ospite"]
-        casa_cls = " olimpia" if ultima.get("olimpia_pb_casa") else ""
-        ospite_cls = "" if ultima.get("olimpia_pb_casa") else " olimpia"
-        r = ultima.get("risultato") or {}
-        ris = f'{r.get("set_vinti_casa", 0)}-{r.get("set_vinti_ospite", 0)}'
-        ultima_html = f"""
-<section class="card">
-  <h2>Ultima partita</h2>
-  <div class="match-card olimpia-match">
-    <div class="match-date">{fmt_data(ultima['data'])}</div>
-    <div class="match-teams">
-      <span class="team{casa_cls}">{casa}</span>
-      <span class="vs">{ris}</span>
-      <span class="team{ospite_cls}">{ospite}</span>
+    # Banner campioni
+    campioni_html = """
+<section class="card campioni-card">
+  <div class="campioni-banner">
+    <div class="campioni-trofeo">🏆</div>
+    <div class="campioni-testo">
+      <div class="campioni-titolo">CAMPIONI!</div>
+      <div class="campioni-sottotitolo">Volleycup Basic — Girone 910</div>
+      <div class="campioni-stagione">Stagione 2025‑26</div>
     </div>
   </div>
-  <p class="link-more"><a href="partite/{ultima['id']}.html">Dettagli →</a></p>
 </section>"""
-    else:
-        ultima_html = '<section class="card"><h2>Ultima partita</h2><p>Nessun risultato disponibile.</p></section>'
 
     # Classifica top-5
     top5 = classifica[:5]
@@ -223,7 +176,7 @@ def build_index(partite: list, classifica: list, ultimo_agg: str) -> str:
 
     classifica_html = f"""
 <section class="card">
-  <h2>Classifica (top 5)</h2>
+  <h2>Classifica finale (top 5)</h2>
   <table>
     <thead><tr><th>#</th><th>Squadra</th><th>SV</th><th>SP</th><th>G</th></tr></thead>
     <tbody>{righe}</tbody>
@@ -231,7 +184,7 @@ def build_index(partite: list, classifica: list, ultimo_agg: str) -> str:
   <p class="link-more"><a href="classifica.html">Classifica completa →</a></p>
 </section>"""
 
-    body = prossima_html + ultima_html + classifica_html
+    body = campioni_html + classifica_html
     return page_shell("Home", body, "index.html", ultimo_agg)
 
 

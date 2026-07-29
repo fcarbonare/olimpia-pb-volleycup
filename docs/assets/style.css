@@ -409,6 +409,44 @@ a.partita-link {
 }
 a.partita-link:hover { color: var(--rosso); text-decoration: underline; }
 
+/* ===== Banner Campioni ===== */
+.campioni-card {
+  background: linear-gradient(135deg, var(--rosso-scuro) 0%, var(--rosso) 60%, #e63030 100%);
+  color: var(--bianco);
+  border: none;
+  text-align: center;
+}
+.campioni-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: .5rem 0;
+}
+.campioni-trofeo {
+  font-size: 4rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.35));
+}
+.campioni-titolo {
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 6px rgba(0,0,0,.3);
+}
+.campioni-sottotitolo {
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: .9;
+  margin-top: .2rem;
+}
+.campioni-stagione {
+  font-size: .85rem;
+  opacity: .75;
+  margin-top: .15rem;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
   .header-logo { width: 40px; height: 40px; }
