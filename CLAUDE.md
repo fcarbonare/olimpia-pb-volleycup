@@ -8,8 +8,9 @@ in tutti i repository e script di questo progetto.
 ## Panoramica del progetto
 
 Raccogliere, aggiornare e pubblicare i **risultati e il calendario** della squadra
-**Olimpia PB Basic** (categoria Mista) nel campionato **Volleycup Basic — Girone L (910)**,
-organizzato da US ACLI Milano (territorio 3, campionato 342, stagione 2025-26).
+**Olimpia PB Basic** (categoria Mista) nel campionato **Volleycup Basic — Girone D (1078)**,
+organizzato da US ACLI Milano (territorio 3, campionato 389, stagione 2026-27).
+La stagione 2025-26 (girone 910, campionato 342) è **archiviata**: dati in `data/archivio/2025-26/`, pagine in `docs/2025-26/`, non più sincronizzata con IVL.
 
 ### Obiettivi principali
 
@@ -36,7 +37,8 @@ organizzato da US ACLI Milano (territorio 3, campionato 342, stagione 2025-26).
 olimpia-pb-volleycup/
 ├── CLAUDE.md                  ← questo file
 ├── data/
-│   ├── partite.json           ← tutte le partite con risultati (fonte di verità)
+│   ├── archivio/2025-26/      ← copia locale congelata della stagione 2025-26 (partite, classifica, formazioni, squadre)
+│   ├── partite.json           ← stagione corrente: tutte le partite con risultati (fonte di verità)
 │   ├── classifica.json        ← classifica aggiornata
 │   └── squadre.json           ← elenco squadre del girone
 ├── scripts/
@@ -45,6 +47,8 @@ olimpia-pb-volleycup/
 │   └── build_site.py          ← genera i file HTML statici per GitHub Pages
 ├── docs/                      ← output GitHub Pages (pubblicato da /docs su main)
 │   ├── index.html             ← homepage (classifica top 5 + prossima/ultima partita)
+│   ├── 2025-26/               ← sito archiviato (home con banner campioni, calendario, classifica, partite con foto)
+│   ├── partite/               ← pagine delle singole partite (stagione corrente, senza foto)
 │   ├── calendario.html        ← tutte le partite del girone
 │   ├── classifica.html        ← classifica completa del girone
 │   └── assets/
@@ -70,11 +74,11 @@ Il sito IVL espone endpoint JSON che si chiamano direttamente con `requests` —
 
 ```
 GET https://ivl.usacli.it/PartiteData
-  ?girone_id=910
+  ?girone_id=1078
   &territorio_id=3
-  &campionato_id=342
-  &inizio_stagione=2025-09-01T00:00:00.000Z
-  &fine_stagione=2026-08-31T00:00:00.000Z
+  &campionato_id=389
+  &inizio_stagione=2026-09-01T00:00:00.000Z
+  &fine_stagione=2027-08-31T00:00:00.000Z
   &societa_id=null
   &squadra_id=null
   &pubblicato=1
@@ -101,10 +105,10 @@ Campi rilevanti per riga:
 ### Classifica
 
 ```
-GET https://ivl.usacli.it/Classifica/910
+GET https://ivl.usacli.it/Classifica/1078
   ?_a=
-  &inizio_stagione=2025-09-01T00:00:00.000Z
-  &fine_stagione=2026-08-31T00:00:00.000Z
+  &inizio_stagione=2026-09-01T00:00:00.000Z
+  &fine_stagione=2027-08-31T00:00:00.000Z
 ```
 
 Risposta: array di oggetti squadra.
@@ -160,7 +164,7 @@ Risposta: array di oggetti squadra.
 
 **Comportamento**:
 1. `GET /PartiteData` con `limit=500` — recupera tutte le partite in una chiamata.
-2. `GET /Classifica/910` — recupera la classifica ufficiale IVL.
+2. `GET /Classifica/1078` — recupera la classifica ufficiale IVL.
 3. Fa merge delle partite nuove con quelle esistenti (protezione da regressioni: non sovrascrive risultati già presenti se il nuovo fetch li restituisce vuoti).
 4. Aggiorna `data/partite.json` e `data/classifica.json`.
 5. Appende una riga a `logs/ultimo_aggiornamento.log`.
@@ -194,9 +198,11 @@ python3 scripts/update_classifica.py
 
 **Scopo**: Genera i file HTML statici nella cartella `docs/`.
 
+Le stagioni sono configurate in `build_site.py` (`CORRENTE` e lista `ARCHIVIO`, dataclass `Stagione`). Per archiviare la stagione 2026-27 a fine anno: copiare `data/*.json` in `data/archivio/2026-27/`, spostare `docs/partite` in `docs/2026-27/partite`, aggiungere una voce a `ARCHIVIO`, poi azzerare `data/` e cambiare gli ID in `fetch_data.py`/`.env.example`/`CORRENTE`. Le foto delle singole partite sono abilitate solo per le stagioni con `foto_partite=True` (archivio 2025-26); la stagione corrente mostra solo la formazione. Il link "IVL USACLI" nel footer punta al `CalendarioView` del girone della stagione.
+
 | File | Contenuto |
 |------|-----------|
-| `index.html` | Classifica top 5 + prossima partita Olimpia PB + ultima con risultato |
+| `index.html` | Classifica top 5 + prossima partita Olimpia PB + ultima con risultato (archivio: banner campioni) |
 | `calendario.html` | Tutte le partite del girone ordinate per data |
 | `classifica.html` | Classifica completa con tutti i dettagli |
 
@@ -260,11 +266,11 @@ Previene conflitti con i commit automatici di GitHub Actions sincronizzando il b
 
 ```ini
 # Parametri IVL
-IVL_GIRONE_ID=910
+IVL_GIRONE_ID=1078
 IVL_TERRITORIO_ID=3
-IVL_CAMPIONATO_ID=342
-IVL_STAGIONE_INIZIO=2025-09-01T00:00:00.000Z
-IVL_STAGIONE_FINE=2026-08-31T00:00:00.000Z
+IVL_CAMPIONATO_ID=389
+IVL_STAGIONE_INIZIO=2026-09-01T00:00:00.000Z
+IVL_STAGIONE_FINE=2027-08-31T00:00:00.000Z
 
 # Squadra da monitorare
 SQUADRA_MONITORATA=Olimpia PB Basic
@@ -282,7 +288,7 @@ LOG_DIR=logs
 1. **La classifica si basa sui set, non sulle vittorie**: ogni partita ha sempre 5 set,
    la posizione dipende dal totale dei set vinti durante la stagione.
 
-2. **Usare sempre le API JSON IVL**: `GET /PartiteData` e `GET /Classifica/910`
+2. **Usare sempre le API JSON IVL**: `GET /PartiteData` e `GET /Classifica/1078`
    con `requests`. Non usare Playwright o scraping HTML — gli endpoint JSON
    restituiscono dati strutturati completi.
 

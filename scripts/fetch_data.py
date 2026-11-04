@@ -4,7 +4,7 @@ fetch_data.py — Recupera calendario e classifica dal sito IVL USACLI via API J
 
 Endpoint:
   Partite:   GET https://ivl.usacli.it/PartiteData?...
-  Classifica: GET https://ivl.usacli.it/Classifica/910?...
+  Classifica: GET https://ivl.usacli.it/Classifica/1078?...
 """
 
 import json
@@ -19,11 +19,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Parametri campionato
-GIRONE_ID       = os.getenv("IVL_GIRONE_ID", "910")
+GIRONE_ID       = os.getenv("IVL_GIRONE_ID", "1078")
 TERRITORIO_ID   = os.getenv("IVL_TERRITORIO_ID", "3")
-CAMPIONATO_ID   = os.getenv("IVL_CAMPIONATO_ID", "342")
-STAGIONE_INIZIO = os.getenv("IVL_STAGIONE_INIZIO", "2025-09-01T00:00:00.000Z")
-STAGIONE_FINE   = os.getenv("IVL_STAGIONE_FINE",   "2026-08-31T00:00:00.000Z")
+CAMPIONATO_ID   = os.getenv("IVL_CAMPIONATO_ID", "389")
+STAGIONE_INIZIO = os.getenv("IVL_STAGIONE_INIZIO", "2026-09-01T00:00:00.000Z")
+STAGIONE_FINE   = os.getenv("IVL_STAGIONE_FINE",   "2027-08-31T00:00:00.000Z")
 SQUADRA_MONITORATA = os.getenv("SQUADRA_MONITORATA", "Olimpia PB")
 
 BASE_DIR = Path(__file__).parent.parent
