@@ -457,3 +457,18 @@ a.partita-link:hover { color: var(--rosso); text-decoration: underline; }
   .classifica-table th:nth-child(n+10),
   .classifica-table td:nth-child(n+10) { display: none; }
 }
+
+/* ===== Storico stagioni avversario ===== */
+tr.storico-finale { background: var(--rosso-chiaro); }
+.tag-finale {
+  display: inline-block;
+  background: var(--rosso);
+  color: var(--bianco);
+  font-size: .62rem;
+  font-weight: 800;
+  padding: .05rem .35rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  margin-left: .25rem;
+}

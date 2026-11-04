@@ -39,6 +39,7 @@ class Stagione:
     archivio: bool = False    # stagione conclusa, non più sincronizzata con IVL
     campioni: bool = False    # banner "campioni" in homepage
     foto_partite: bool = False  # foto nelle pagine delle singole partite
+    storico_stagioni: bool = False  # posizioni finali dell'avversario nelle stagioni passate
 
     @property
     def ivl_url(self) -> str:
@@ -48,7 +49,7 @@ class Stagione:
 
 CORRENTE = Stagione(
     anno="2026‑27", girone_label="Girone D", girone_id=1078, campionato_id=389,
-    data_dir=DATA_DIR, out_dir=SITE_DIR,
+    data_dir=DATA_DIR, out_dir=SITE_DIR, storico_stagioni=True,
 )
 ARCHIVIO = [
     Stagione(
@@ -494,7 +495,46 @@ def _storico_avversario(avversario: str, partite: list, escludi_id: str) -> str:
 </div>"""
 
 
-def build_partita(partita: dict, partite: list, formazioni: dict, ultimo_agg: str, cfg: Stagione) -> str:
+def _storico_stagioni(avversario: str, storico: dict) -> str:
+    """Tabella con le posizioni in classifica dell'avversario nelle stagioni passate."""
+    voci = storico.get("squadre", {}).get(avversario, [])
+    if not voci:
+        return '<p class="nota">Nessuna classifica trovata nelle stagioni passate (campionati misti, Lombardia MI+MB).</p>'
+
+    # L'ultima fase di ogni stagione (per data di fine) è la classifica finale
+    ultima_fase = {}
+    for v in voci:
+        if v["stagione"] not in ultima_fase or v["data_fine"] > ultima_fase[v["stagione"]]["data_fine"]:
+            ultima_fase[v["stagione"]] = v
+
+    righe = ""
+    for v in sorted(voci, key=lambda v: (v["stagione"], v["data_fine"]), reverse=True):
+        finale = ultima_fase[v["stagione"]] is v
+        cls = ' class="storico-finale"' if finale else ""
+        etichetta = ' <span class="tag-finale">finale</span>' if finale else ""
+        righe += f"""<tr{cls}>
+  <td>{v['stagione'].replace('-', '‑')}</td>
+  <td class="team-name">{v['campionato']}<br><small class="set-dettaglio">{v['girone']}</small></td>
+  <td>{v['posizione']}° su {v['squadre']}{etichetta}</td>
+  <td>{v['punti']}</td>
+  <td>{v['giocate']}</td>
+  <td>{v['set_vinti']}-{v['set_persi']}</td>
+</tr>"""
+
+    return f"""<h3 class="form-subtitle" style="margin-top:1.25rem">Classifiche delle stagioni passate</h3>
+<div class="table-scroll">
+  <table class="calendario-table">
+    <thead>
+      <tr><th>Stagione</th><th>Campionato / girone</th><th>Posizione</th><th>Pt</th><th>G</th><th>Set (V-P)</th></tr>
+    </thead>
+    <tbody>{righe}</tbody>
+  </table>
+</div>
+<p class="nota">Le righe evidenziate sono la classifica finale della stagione (ultima fase giocata). Fonte: archivio classifiche IVL, campionati misti.</p>"""
+
+
+def build_partita(partita: dict, partite: list, formazioni: dict, ultimo_agg: str, cfg: Stagione,
+                  storico: Optional[dict] = None) -> str:
     pid = partita["id"]
     casa = partita["squadra_casa"]
     ospite = partita["squadra_ospite"]
@@ -566,6 +606,15 @@ def build_partita(partita: dict, partite: list, formazioni: dict, ultimo_agg: st
   {tabella_form}
 </section>"""
 
+        sezione_storico = ""
+        if cfg.storico_stagioni and storico is not None:
+            sezione_storico = f"""
+
+<section class="card">
+  <h2>Storico avversario: {avversario}</h2>
+  {_storico_stagioni(avversario, storico)}
+</section>"""
+
         body = f"""
 <section class="card">
   <a href="../calendario.html" class="back-link">← Torna al calendario</a>
@@ -578,10 +627,12 @@ def build_partita(partita: dict, partite: list, formazioni: dict, ultimo_agg: st
   </div>
 </section>
 
-{sezione_formazione}"""
+{sezione_formazione}{sezione_storico}"""
     else:
         # ── Partita futura ─────────────────────────────────────────────────
         storico_html = _storico_avversario(avversario, partite, pid)
+        if cfg.storico_stagioni and storico is not None:
+            storico_html += _storico_stagioni(avversario, storico)
         luogo_html = f'<div class="match-venue">📍 {palestra}</div><div class="match-venue">🗺 {luogo}</div>' if luogo else (f'<div class="match-venue">📍 {palestra}</div>' if palestra else "")
         casa_cls = " olimpia" if is_casa else ""
         ospite_cls = "" if is_casa else " olimpia"
@@ -609,7 +660,8 @@ def build_partita(partita: dict, partite: list, formazioni: dict, ultimo_agg: st
     return page_shell(titolo, body, "calendario", ultimo_agg, cfg, depth=1)
 
 
-def build_partite_pages(partite: list, formazioni: dict, ultimo_agg: str, cfg: Stagione) -> int:
+def build_partite_pages(partite: list, formazioni: dict, ultimo_agg: str, cfg: Stagione,
+                        storico: Optional[dict] = None) -> int:
     olimpia_partite = [p for p in partite if p.get("olimpia_pb_gioca")]
     partite_dir = cfg.out_dir / "partite"
     fotos_dir = partite_dir / "fotos"
@@ -628,7 +680,7 @@ def build_partite_pages(partite: list, formazioni: dict, ultimo_agg: str, cfg: S
                     log(f"  foto auto-rilevata: {pid}.{ext}")
                     break
 
-        html = build_partita(p, partite, {**formazioni, pid: form}, ultimo_agg, cfg)
+        html = build_partita(p, partite, {**formazioni, pid: form}, ultimo_agg, cfg, storico)
         path = partite_dir / f"{pid}.html"
         with open(path, "w", encoding="utf-8") as f:
             f.write(html)
@@ -661,7 +713,8 @@ def build_stagione(cfg: Stagione) -> tuple:
             f.write(html)
         log(f"Generato: {path}")
 
-    n_partite = build_partite_pages(partite, formazioni, ultimo_agg, cfg)
+    storico = load_json(cfg.data_dir / "storico_avversari.json") if cfg.storico_stagioni else None
+    n_partite = build_partite_pages(partite, formazioni, ultimo_agg, cfg, storico)
     log(f"[{cfg.anno}] generate {n_partite} pagine partita in {cfg.out_dir / 'partite'}")
     return len(pages), n_partite
 

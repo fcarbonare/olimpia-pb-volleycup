@@ -194,6 +194,10 @@ python3 scripts/update_classifica.py
 
 ---
 
+### `scripts/fetch_storico.py`
+
+**Scopo**: Salva in `data/storico_avversari.json` le posizioni in classifica (tutte le fasi, campionati misti) delle squadre avversarie nelle stagioni 2022-23…2025-26, da `GET /ClassificheArchivioData?anno=YY&territorio_id=3` (stesso endpoint della pagina IVL "Storico → Classifica"). Non è nel workflow giornaliero: rieseguire a mano a inizio stagione o se cambiano gli avversari (`/usr/bin/python3 scripts/fetch_storico.py`, poi `build_site.py`). `anno=21` (2021-22) restituisce 0 gironi. Mostrato in ogni pagina partita sotto "Storico avversario" (l'ultima fase di ogni stagione è marcata "finale").
+
 ### `scripts/build_site.py`
 
 **Scopo**: Genera i file HTML statici nella cartella `docs/`.
