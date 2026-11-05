@@ -1,32 +1,60 @@
 {
   "classifica": [
     {
-      "squadra": "ALTA IN BRANDA 007 Basic",
+      "squadra": "PLESIOS Basic",
       "punti": 0,
-      "partite_giocate": 1,
-      "partite_vinte": 1,
+      "partite_giocate": 2,
+      "partite_vinte": 2,
       "partite_perse": 0,
-      "set_vinti": 5,
-      "set_persi": 0,
-      "quoziente_set": Infinity,
-      "punti_vinti": 105,
-      "punti_persi": 58,
-      "quoziente_punti": 1.81,
+      "set_vinti": 8,
+      "set_persi": 2,
+      "quoziente_set": 4.0,
+      "punti_vinti": 204,
+      "punti_persi": 141,
+      "quoziente_punti": 1.447,
       "posizione": 1
     },
     {
-      "squadra": "PLESIOS Basic",
+      "squadra": "ALTA IN BRANDA 007 Basic",
+      "punti": 0,
+      "partite_giocate": 2,
+      "partite_vinte": 2,
+      "partite_perse": 0,
+      "set_vinti": 8,
+      "set_persi": 2,
+      "quoziente_set": 4.0,
+      "punti_vinti": 196,
+      "punti_persi": 145,
+      "quoziente_punti": 1.352,
+      "posizione": 2
+    },
+    {
+      "squadra": "GOCCE DI CICLONE Basic",
       "punti": 0,
       "partite_giocate": 1,
-      "partite_vinte": 1,
-      "partite_perse": 0,
-      "set_vinti": 4,
-      "set_persi": 1,
-      "quoziente_set": 4.0,
-      "punti_vinti": 102,
-      "punti_persi": 63,
-      "quoziente_punti": 1.619,
-      "posizione": 2
+      "partite_vinte": 0,
+      "partite_perse": 1,
+      "set_vinti": 2,
+      "set_persi": 3,
+      "quoziente_set": 0.667,
+      "punti_vinti": 87,
+      "punti_persi": 91,
+      "quoziente_punti": 0.956,
+      "posizione": 3
+    },
+    {
+      "squadra": "PM SPORT Basic",
+      "punti": 0,
+      "partite_giocate": 1,
+      "partite_vinte": 0,
+      "partite_perse": 1,
+      "set_vinti": 1,
+      "set_persi": 4,
+      "quoziente_set": 0.25,
+      "punti_vinti": 78,
+      "punti_persi": 102,
+      "quoziente_punti": 0.765,
+      "posizione": 4
     },
     {
       "squadra": "ASDO MaaR Basic",
@@ -40,7 +68,7 @@
       "punti_vinti": 63,
       "punti_persi": 102,
       "quoziente_punti": 0.618,
-      "posizione": 3
+      "posizione": 5
     },
     {
       "squadra": "OLIMPIA PB Basic",
@@ -54,9 +82,9 @@
       "punti_vinti": 58,
       "punti_persi": 105,
       "quoziente_punti": 0.552,
-      "posizione": 4
+      "posizione": 6
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-11-05T15:16:20.072077+00:00"
+  "ultimo_aggiornamento": "2026-11-05T23:58:34.179437+00:00"
 }

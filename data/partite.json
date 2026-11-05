@@ -84,10 +84,27 @@
       "indirizzo": "VIA LEONARDO DA VINCI snc SESTO SAN GIOVANNI",
       "lat": 45.541093000000004,
       "lon": 9.2299508,
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          21,
+          21,
+          17,
+          11,
+          17
+        ],
+        "set_ospite": [
+          15,
+          13,
+          21,
+          21,
+          21
+        ],
+        "set_vinti_casa": 2,
+        "set_vinti_ospite": 3
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "rinviata": false,
       "data_originale": null
     },
@@ -103,10 +120,27 @@
       "indirizzo": "VIA STELLA POLARE 11/a MEDIGLIA",
       "lat": 45.4348072,
       "lon": 9.3409847,
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          9,
+          21,
+          16,
+          16,
+          16
+        ],
+        "set_ospite": [
+          21,
+          18,
+          21,
+          21,
+          21
+        ],
+        "set_vinti_casa": 1,
+        "set_vinti_ospite": 4
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "rinviata": false,
       "data_originale": null
     },
@@ -833,5 +867,5 @@
       "data_originale": null
     }
   ],
-  "ultimo_aggiornamento": "2026-11-05T15:16:18.797631+00:00"
+  "ultimo_aggiornamento": "2026-11-05T23:58:32.994692+00:00"
 }
