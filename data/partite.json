@@ -164,25 +164,6 @@
       "data_originale": null
     },
     {
-      "id": "2026-11-11_gocce_di_ciclone_basic_plesios_basic",
-      "ivl_id": 34195,
-      "npartita": "BAS-GIR.D07",
-      "data": "2026-11-11",
-      "ora": "21:15",
-      "squadra_casa": "GOCCE DI CICLONE Basic",
-      "squadra_ospite": "PLESIOS Basic",
-      "palestra": "PALESTRA BREDA PICCOLA",
-      "indirizzo": "VIA LEONARDO DA VINCI snc SESTO SAN GIOVANNI",
-      "lat": 45.541093000000004,
-      "lon": 9.2299508,
-      "risultato": null,
-      "olimpia_pb_gioca": false,
-      "olimpia_pb_casa": false,
-      "giocata": false,
-      "rinviata": false,
-      "data_originale": null
-    },
-    {
       "id": "2026-11-12_free_ball_free_beer_basic_olimpia_pb_basic",
       "ivl_id": 34194,
       "npartita": "BAS-GIR.D06",
@@ -865,7 +846,26 @@
       "giocata": false,
       "rinviata": false,
       "data_originale": null
+    },
+    {
+      "id": "2027-02-24_gocce_di_ciclone_basic_plesios_basic",
+      "ivl_id": 34195,
+      "npartita": "BAS-GIR.D07",
+      "data": "2027-02-24",
+      "ora": "21:15",
+      "squadra_casa": "GOCCE DI CICLONE Basic",
+      "squadra_ospite": "PLESIOS Basic",
+      "palestra": "PALESTRA. COMUNALE.",
+      "indirizzo": "VIA PIAVE 62",
+      "lat": 45.5201299,
+      "lon": 9.2843638,
+      "risultato": null,
+      "olimpia_pb_gioca": false,
+      "olimpia_pb_casa": false,
+      "giocata": false,
+      "rinviata": true,
+      "data_originale": "2026-11-11"
     }
   ],
-  "ultimo_aggiornamento": "2026-11-10T15:28:34.159638+00:00"
+  "ultimo_aggiornamento": "2026-11-10T23:56:42.387580+00:00"
 }
