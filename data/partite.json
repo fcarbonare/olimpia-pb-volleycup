@@ -468,25 +468,6 @@
       "data_originale": null
     },
     {
-      "id": "2026-12-20_asdo_maar_basic_plesios_basic",
-      "ivl_id": 34209,
-      "npartita": "BAS-GIR.D21",
-      "data": "2026-12-20",
-      "ora": "21:00",
-      "squadra_casa": "ASDO MaaR Basic",
-      "squadra_ospite": "PLESIOS Basic",
-      "palestra": "Tensostruttura Oratorio Don Bosco",
-      "indirizzo": "Via Papa Pio XI, 36 CARUGATE",
-      "lat": 45.5538216,
-      "lon": 9.3359777,
-      "risultato": null,
-      "olimpia_pb_gioca": false,
-      "olimpia_pb_casa": false,
-      "giocata": false,
-      "rinviata": false,
-      "data_originale": null
-    },
-    {
       "id": "2027-01-10_asdo_maar_basic_olimpia_pb_basic",
       "ivl_id": 34205,
       "npartita": "BAS-GIR.D17",
@@ -791,6 +772,25 @@
       "data_originale": null
     },
     {
+      "id": "2027-02-14_asdo_maar_basic_plesios_basic",
+      "ivl_id": 34209,
+      "npartita": "BAS-GIR.D21",
+      "data": "2027-02-14",
+      "ora": "21:00",
+      "squadra_casa": "ASDO MaaR Basic",
+      "squadra_ospite": "PLESIOS Basic",
+      "palestra": "Tensostruttura Oratorio Don Bosco",
+      "indirizzo": "Via Papa Pio XI, 36 CARUGATE",
+      "lat": 45.5538216,
+      "lon": 9.3359777,
+      "risultato": null,
+      "olimpia_pb_gioca": false,
+      "olimpia_pb_casa": false,
+      "giocata": false,
+      "rinviata": true,
+      "data_originale": "2026-12-20"
+    },
+    {
       "id": "2027-02-17_gocce_di_ciclone_basic_olimpia_pb_basic",
       "ivl_id": 34227,
       "npartita": "BAS-GIR.D39",
@@ -867,5 +867,5 @@
       "data_originale": "2026-11-11"
     }
   ],
-  "ultimo_aggiornamento": "2026-11-10T23:56:42.387580+00:00"
+  "ultimo_aggiornamento": "2026-11-11T14:59:16.894303+00:00"
 }
