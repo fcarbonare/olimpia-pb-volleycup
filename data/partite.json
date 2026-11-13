@@ -175,10 +175,27 @@
       "indirizzo": "VIA FRATELLI DI DIO 101 SESTO SAN GIOVANNI",
       "lat": null,
       "lon": null,
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          21,
+          21,
+          21,
+          21,
+          21
+        ],
+        "set_ospite": [
+          9,
+          18,
+          13,
+          10,
+          14
+        ],
+        "set_vinti_casa": 5,
+        "set_vinti_ospite": 0
+      },
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "rinviata": false,
       "data_originale": null
     },
@@ -867,5 +884,5 @@
       "data_originale": "2026-11-11"
     }
   ],
-  "ultimo_aggiornamento": "2026-11-13T00:00:00.469599+00:00"
+  "ultimo_aggiornamento": "2026-11-13T15:12:56.075523+00:00"
 }

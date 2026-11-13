@@ -29,6 +29,20 @@
       "posizione": 2
     },
     {
+      "squadra": "FREE BALL FREE BEER Basic",
+      "punti": 0,
+      "partite_giocate": 1,
+      "partite_vinte": 1,
+      "partite_perse": 0,
+      "set_vinti": 5,
+      "set_persi": 0,
+      "quoziente_set": Infinity,
+      "punti_vinti": 105,
+      "punti_persi": 64,
+      "quoziente_punti": 1.641,
+      "posizione": 3
+    },
+    {
       "squadra": "GOCCE DI CICLONE Basic",
       "punti": 0,
       "partite_giocate": 1,
@@ -40,7 +54,7 @@
       "punti_vinti": 87,
       "punti_persi": 91,
       "quoziente_punti": 0.956,
-      "posizione": 3
+      "posizione": 4
     },
     {
       "squadra": "PM SPORT Basic",
@@ -54,7 +68,7 @@
       "punti_vinti": 78,
       "punti_persi": 102,
       "quoziente_punti": 0.765,
-      "posizione": 4
+      "posizione": 5
     },
     {
       "squadra": "ASDO MaaR Basic",
@@ -68,23 +82,23 @@
       "punti_vinti": 63,
       "punti_persi": 102,
       "quoziente_punti": 0.618,
-      "posizione": 5
+      "posizione": 6
     },
     {
       "squadra": "OLIMPIA PB Basic",
       "punti": 0,
-      "partite_giocate": 1,
+      "partite_giocate": 2,
       "partite_vinte": 0,
-      "partite_perse": 1,
+      "partite_perse": 2,
       "set_vinti": 0,
-      "set_persi": 5,
+      "set_persi": 10,
       "quoziente_set": 0.0,
-      "punti_vinti": 58,
-      "punti_persi": 105,
-      "quoziente_punti": 0.552,
-      "posizione": 6
+      "punti_vinti": 122,
+      "punti_persi": 210,
+      "quoziente_punti": 0.581,
+      "posizione": 7
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-11-13T00:00:01.565851+00:00"
+  "ultimo_aggiornamento": "2026-11-13T15:12:57.292321+00:00"
 }
