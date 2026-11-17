@@ -257,25 +257,6 @@
       "data_originale": null
     },
     {
-      "id": "2026-11-19_free_ball_free_beer_basic_alta_in_branda_007_basic",
-      "ivl_id": 34199,
-      "npartita": "BAS-GIR.D11",
-      "data": "2026-11-19",
-      "ora": "21:00",
-      "squadra_casa": "FREE BALL FREE BEER Basic",
-      "squadra_ospite": "ALTA IN BRANDA 007 Basic",
-      "palestra": "PALESTRA SCUOLA MEDIA CALVINO",
-      "indirizzo": "VIA FRATELLI DI DIO 101 SESTO SAN GIOVANNI",
-      "lat": null,
-      "lon": null,
-      "risultato": null,
-      "olimpia_pb_gioca": false,
-      "olimpia_pb_casa": false,
-      "giocata": false,
-      "rinviata": false,
-      "data_originale": null
-    },
-    {
       "id": "2026-11-23_olimpia_pb_basic_pm_sport_basic",
       "ivl_id": 34200,
       "npartita": "BAS-GIR.D12",
@@ -882,7 +863,26 @@
       "giocata": false,
       "rinviata": true,
       "data_originale": "2026-11-11"
+    },
+    {
+      "id": "2027-02-25_free_ball_free_beer_basic_alta_in_branda_007_basic",
+      "ivl_id": 34199,
+      "npartita": "BAS-GIR.D11",
+      "data": "2027-02-25",
+      "ora": "21:00",
+      "squadra_casa": "FREE BALL FREE BEER Basic",
+      "squadra_ospite": "ALTA IN BRANDA 007 Basic",
+      "palestra": "PALESTRA SCUOLA MEDIA CALVINO",
+      "indirizzo": "VIA FRATELLI DI DIO 101 SESTO SAN GIOVANNI",
+      "lat": null,
+      "lon": null,
+      "risultato": null,
+      "olimpia_pb_gioca": false,
+      "olimpia_pb_casa": false,
+      "giocata": false,
+      "rinviata": true,
+      "data_originale": "2026-11-19"
     }
   ],
-  "ultimo_aggiornamento": "2026-11-17T02:22:18.490620+00:00"
+  "ultimo_aggiornamento": "2026-11-17T16:46:27.249776+00:00"
 }
