@@ -211,10 +211,27 @@
       "indirizzo": "Via Papa Pio XI, 36 CARUGATE",
       "lat": 45.5538216,
       "lon": 9.3359777,
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          13,
+          20,
+          21,
+          17,
+          14
+        ],
+        "set_ospite": [
+          21,
+          22,
+          16,
+          21,
+          21
+        ],
+        "set_vinti_casa": 1,
+        "set_vinti_ospite": 4
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "rinviata": false,
       "data_originale": null
     },
@@ -230,10 +247,27 @@
       "indirizzo": "VIA PIAVE 62 VIMODRONE",
       "lat": 45.5201299,
       "lon": 9.2843638,
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          18,
+          21,
+          19,
+          21,
+          21
+        ],
+        "set_ospite": [
+          21,
+          13,
+          21,
+          12,
+          11
+        ],
+        "set_vinti_casa": 3,
+        "set_vinti_ospite": 2
+      },
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "rinviata": false,
       "data_originale": null
     },
@@ -884,5 +918,5 @@
       "data_originale": "2026-11-19"
     }
   ],
-  "ultimo_aggiornamento": "2026-11-18T01:31:20.039258+00:00"
+  "ultimo_aggiornamento": "2026-11-18T16:17:39.133830+00:00"
 }
