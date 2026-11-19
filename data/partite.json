@@ -283,10 +283,27 @@
       "indirizzo": "VIA STELLA POLARE 11/a MEDIGLIA",
       "lat": 45.4348072,
       "lon": 9.3409847,
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          14,
+          21,
+          20,
+          12,
+          14
+        ],
+        "set_ospite": [
+          21,
+          19,
+          22,
+          21,
+          21
+        ],
+        "set_vinti_casa": 1,
+        "set_vinti_ospite": 4
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "rinviata": false,
       "data_originale": null
     },
@@ -918,5 +935,5 @@
       "data_originale": "2026-11-19"
     }
   ],
-  "ultimo_aggiornamento": "2026-11-19T01:00:42.993685+00:00"
+  "ultimo_aggiornamento": "2026-11-19T16:26:19.842492+00:00"
 }

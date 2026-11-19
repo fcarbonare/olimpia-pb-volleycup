@@ -29,6 +29,34 @@
       "posizione": 2
     },
     {
+      "squadra": "GOCCE DI CICLONE Basic",
+      "punti": 0,
+      "partite_giocate": 2,
+      "partite_vinte": 1,
+      "partite_perse": 1,
+      "set_vinti": 6,
+      "set_persi": 4,
+      "quoziente_set": 1.5,
+      "punti_vinti": 191,
+      "punti_persi": 172,
+      "quoziente_punti": 1.11,
+      "posizione": 3
+    },
+    {
+      "squadra": "PM SPORT Basic",
+      "punti": 0,
+      "partite_giocate": 3,
+      "partite_vinte": 1,
+      "partite_perse": 2,
+      "set_vinti": 6,
+      "set_persi": 9,
+      "quoziente_set": 0.667,
+      "punti_vinti": 260,
+      "punti_persi": 291,
+      "quoziente_punti": 0.893,
+      "posizione": 4
+    },
+    {
       "squadra": "FREE BALL FREE BEER Basic",
       "punti": 0,
       "partite_giocate": 1,
@@ -40,34 +68,6 @@
       "punti_vinti": 105,
       "punti_persi": 64,
       "quoziente_punti": 1.641,
-      "posizione": 3
-    },
-    {
-      "squadra": "PM SPORT Basic",
-      "punti": 0,
-      "partite_giocate": 2,
-      "partite_vinte": 1,
-      "partite_perse": 1,
-      "set_vinti": 5,
-      "set_persi": 5,
-      "quoziente_set": 1.0,
-      "punti_vinti": 179,
-      "punti_persi": 187,
-      "quoziente_punti": 0.957,
-      "posizione": 4
-    },
-    {
-      "squadra": "GOCCE DI CICLONE Basic",
-      "punti": 0,
-      "partite_giocate": 1,
-      "partite_vinte": 0,
-      "partite_perse": 1,
-      "set_vinti": 2,
-      "set_persi": 3,
-      "quoziente_set": 0.667,
-      "punti_vinti": 87,
-      "punti_persi": 91,
-      "quoziente_punti": 0.956,
       "posizione": 5
     },
     {
@@ -100,5 +100,5 @@
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-11-19T01:00:44.439885+00:00"
+  "ultimo_aggiornamento": "2026-11-19T16:26:20.790662+00:00"
 }
