@@ -319,10 +319,27 @@
       "indirizzo": "Viale Abruzzi, 9 PESCHIERA BORROMEO",
       "lat": 45.4560153,
       "lon": 9.3166758,
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          15,
+          10,
+          15,
+          8,
+          18
+        ],
+        "set_ospite": [
+          21,
+          21,
+          21,
+          21,
+          21
+        ],
+        "set_vinti_casa": 0,
+        "set_vinti_ospite": 5
+      },
       "olimpia_pb_gioca": true,
       "olimpia_pb_casa": true,
-      "giocata": false,
+      "giocata": true,
       "rinviata": false,
       "data_originale": null
     },
@@ -935,5 +952,5 @@
       "data_originale": "2026-11-19"
     }
   ],
-  "ultimo_aggiornamento": "2026-11-23T19:04:52.647722+00:00"
+  "ultimo_aggiornamento": "2026-11-24T18:44:35.063342+00:00"
 }

@@ -15,6 +15,20 @@
       "posizione": 1
     },
     {
+      "squadra": "PM SPORT Basic",
+      "punti": 0,
+      "partite_giocate": 4,
+      "partite_vinte": 2,
+      "partite_perse": 2,
+      "set_vinti": 11,
+      "set_persi": 9,
+      "quoziente_set": 1.222,
+      "punti_vinti": 365,
+      "punti_persi": 357,
+      "quoziente_punti": 1.022,
+      "posizione": 2
+    },
+    {
       "squadra": "ALTA IN BRANDA 007 Basic",
       "punti": 0,
       "partite_giocate": 2,
@@ -26,7 +40,7 @@
       "punti_vinti": 196,
       "punti_persi": 145,
       "quoziente_punti": 1.352,
-      "posizione": 2
+      "posizione": 3
     },
     {
       "squadra": "GOCCE DI CICLONE Basic",
@@ -40,20 +54,6 @@
       "punti_vinti": 191,
       "punti_persi": 172,
       "quoziente_punti": 1.11,
-      "posizione": 3
-    },
-    {
-      "squadra": "PM SPORT Basic",
-      "punti": 0,
-      "partite_giocate": 3,
-      "partite_vinte": 1,
-      "partite_perse": 2,
-      "set_vinti": 6,
-      "set_persi": 9,
-      "quoziente_set": 0.667,
-      "punti_vinti": 260,
-      "punti_persi": 291,
-      "quoziente_punti": 0.893,
       "posizione": 4
     },
     {
@@ -87,18 +87,18 @@
     {
       "squadra": "OLIMPIA PB Basic",
       "punti": 0,
-      "partite_giocate": 3,
+      "partite_giocate": 4,
       "partite_vinte": 0,
-      "partite_perse": 3,
+      "partite_perse": 4,
       "set_vinti": 2,
-      "set_persi": 13,
-      "quoziente_set": 0.154,
-      "punti_vinti": 200,
-      "punti_persi": 310,
-      "quoziente_punti": 0.645,
+      "set_persi": 18,
+      "quoziente_set": 0.111,
+      "punti_vinti": 266,
+      "punti_persi": 415,
+      "quoziente_punti": 0.641,
       "posizione": 7
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-11-23T19:04:53.686785+00:00"
+  "ultimo_aggiornamento": "2026-11-24T18:44:35.968444+00:00"
 }
