@@ -355,10 +355,27 @@
       "indirizzo": "VIA LEONARDO DA VINCI snc SESTO SAN GIOVANNI",
       "lat": 45.541093000000004,
       "lon": 9.2299508,
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          18,
+          21,
+          21,
+          21,
+          21
+        ],
+        "set_ospite": [
+          21,
+          11,
+          17,
+          11,
+          14
+        ],
+        "set_vinti_casa": 4,
+        "set_vinti_ospite": 1
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "rinviata": false,
       "data_originale": null
     },
@@ -921,10 +938,10 @@
       "ora": "21:15",
       "squadra_casa": "GOCCE DI CICLONE Basic",
       "squadra_ospite": "PLESIOS Basic",
-      "palestra": "PALESTRA. COMUNALE.",
-      "indirizzo": "VIA PIAVE 62",
-      "lat": 45.5201299,
-      "lon": 9.2843638,
+      "palestra": "PALESTRA BREDA PICCOLA",
+      "indirizzo": "VIA LEONARDO DA VINCI snc",
+      "lat": 45.541093000000004,
+      "lon": 9.2299508,
       "risultato": null,
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
@@ -952,5 +969,5 @@
       "data_originale": "2026-11-19"
     }
   ],
-  "ultimo_aggiornamento": "2026-11-26T02:05:35.111672+00:00"
+  "ultimo_aggiornamento": "2026-11-26T17:37:06.380103+00:00"
 }
