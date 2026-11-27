@@ -391,10 +391,27 @@
       "indirizzo": "VIA TOMMASO PINI 1 MILANO",
       "lat": 45.4843848,
       "lon": 9.2395972,
-      "risultato": null,
+      "risultato": {
+        "set_casa": [
+          14,
+          12,
+          21,
+          21,
+          19
+        ],
+        "set_ospite": [
+          21,
+          21,
+          19,
+          7,
+          21
+        ],
+        "set_vinti_casa": 2,
+        "set_vinti_ospite": 3
+      },
       "olimpia_pb_gioca": false,
       "olimpia_pb_casa": false,
-      "giocata": false,
+      "giocata": true,
       "rinviata": false,
       "data_originale": null
     },
@@ -969,5 +986,5 @@
       "data_originale": "2026-11-19"
     }
   ],
-  "ultimo_aggiornamento": "2026-11-27T02:03:33.894529+00:00"
+  "ultimo_aggiornamento": "2026-11-27T17:19:15.777868+00:00"
 }

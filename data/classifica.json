@@ -3,15 +3,15 @@
     {
       "squadra": "PLESIOS Basic",
       "punti": 0,
-      "partite_giocate": 3,
-      "partite_vinte": 3,
+      "partite_giocate": 4,
+      "partite_vinte": 4,
       "partite_perse": 0,
-      "set_vinti": 11,
-      "set_persi": 4,
-      "quoziente_set": 2.75,
-      "punti_vinti": 304,
-      "punti_persi": 219,
-      "quoziente_punti": 1.388,
+      "set_vinti": 14,
+      "set_persi": 6,
+      "quoziente_set": 2.333,
+      "punti_vinti": 393,
+      "punti_persi": 306,
+      "quoziente_punti": 1.284,
       "posizione": 1
     },
     {
@@ -29,6 +29,20 @@
       "posizione": 2
     },
     {
+      "squadra": "ALTA IN BRANDA 007 Basic",
+      "punti": 0,
+      "partite_giocate": 3,
+      "partite_vinte": 2,
+      "partite_perse": 1,
+      "set_vinti": 10,
+      "set_persi": 5,
+      "quoziente_set": 2.0,
+      "punti_vinti": 283,
+      "punti_persi": 234,
+      "quoziente_punti": 1.209,
+      "posizione": 3
+    },
+    {
       "squadra": "GOCCE DI CICLONE Basic",
       "punti": 0,
       "partite_giocate": 3,
@@ -40,20 +54,6 @@
       "punti_vinti": 293,
       "punti_persi": 246,
       "quoziente_punti": 1.191,
-      "posizione": 3
-    },
-    {
-      "squadra": "ALTA IN BRANDA 007 Basic",
-      "punti": 0,
-      "partite_giocate": 2,
-      "partite_vinte": 2,
-      "partite_perse": 0,
-      "set_vinti": 8,
-      "set_persi": 2,
-      "quoziente_set": 4.0,
-      "punti_vinti": 196,
-      "punti_persi": 145,
-      "quoziente_punti": 1.352,
       "posizione": 4
     },
     {
@@ -100,5 +100,5 @@
     }
   ],
   "fonte": "calcolata_localmente",
-  "ultimo_aggiornamento": "2026-11-27T02:03:35.273609+00:00"
+  "ultimo_aggiornamento": "2026-11-27T17:19:17.062638+00:00"
 }
